@@ -11,7 +11,7 @@ url = 'http://mysap.sehir.edu.tr'
 chrome_options = Options()
 # chrome_options.add_argument("--headless")  
 # chrome_options.binary_location = '/Applications/Google Chrome   Canary.app/Contents/MacOS/Google Chrome Canary'  
-driver = webdriver.Chrome(executable_path='/chrome/chromedriver', options=chrome_options)
+driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', options=chrome_options)
 driver.get(url)
 username = driver.find_element_by_id('userNameInput')
 username.send_keys('aliibrahimzada')
@@ -27,11 +27,12 @@ wait.click()
 for i in range(9, 5, -1):
     for k in range(8):
         try:
-            course_grade = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, '__status{}-dynamicAcademicCourseTable{}-{}-text'.format(i-4, i-5, k))))
-            course_code = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, '__identifier{}-dynamicAcademicCourseTable{}-{}-txt'.format(i, i-5, k))))            
+            course_grade = WebDriverWait(driver, 0).until(EC.element_to_be_clickable((By.ID, '__status{}-dynamicAcademicCourseTable{}-{}-text'.format(i-4, i-5, k))))
+            course_code = WebDriverWait(driver, 0).until(EC.element_to_be_clickable((By.ID, '__identifier{}-dynamicAcademicCourseTable{}-{}-txt'.format(i, i-5, k))))            
             print(course_code.text, course_grade.text)
         except:
             pass
+
 
 # ENGR 101
 # '__identifier9-dynamicAcademicCourseTable4-0-txt'
