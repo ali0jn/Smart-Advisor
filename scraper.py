@@ -14,9 +14,9 @@ chrome_options = Options()
 driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', options=chrome_options)
 driver.get(url)
 username = driver.find_element_by_id('userNameInput')
-username.send_keys('aliibrahimzada')
+username.send_keys('')
 password = driver.find_element_by_id('passwordInput')
-password.send_keys('Larkimarki109$#%')
+password.send_keys('')
 driver.find_element_by_id('submitButton').click()
 wait = WebDriverWait(driver, 14).until(EC.element_to_be_clickable((By.ID, '__tile3')))
 wait.click()
@@ -27,12 +27,13 @@ wait.click()
 for i in range(9, 5, -1):
     for k in range(8):
         try:
-            course_grade = WebDriverWait(driver, 0).until(EC.element_to_be_clickable((By.ID, '__status{}-dynamicAcademicCourseTable{}-{}-text'.format(i-4, i-5, k))))
-            course_code = WebDriverWait(driver, 0).until(EC.element_to_be_clickable((By.ID, '__identifier{}-dynamicAcademicCourseTable{}-{}-txt'.format(i, i-5, k))))            
+            course_grade = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.ID, '__status{}-dynamicAcademicCourseTable{}-{}-text'.format(i-4, i-5, k))))
+            course_code = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.ID, '__identifier{}-dynamicAcademicCourseTable{}-{}-txt'.format(i, i-5, k))))            
             print(course_code.text, course_grade.text)
         except:
             pass
 
+print('Overall GPA', WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.ID, '__label5-bdi'))).text)
 
 # ENGR 101
 # '__identifier9-dynamicAcademicCourseTable4-0-txt'
