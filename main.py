@@ -5,9 +5,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '007'
 
 
-@app.route('/')
-def about():
-    return render_template('layout.html')
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/dashboard')
