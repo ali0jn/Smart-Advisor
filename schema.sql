@@ -1,168 +1,168 @@
-CREATE TABLE student (
-  student_google_id VARCHAR(),
-  student_id CHAR(9),
-  student_name VARCHAR(),
-  student_email VARCHAR(),
-  student_semester INTEGER
-  standing VARCHAR(),
-  completed_credits INTEGER,
-  completed_ects INTEGER,
-  gpa FLOAT(3, 2)
-  advisor VARCHAR()
-  PRIMARY KEY (student_google_id),
-  FOREIGN KEY (advisor) REFERENCES instructor
-);
-
-CREATE TABLE testimonials (
-  test_ID INTEGER AUTO_INCREMENT,
-  test_text TEXT,
-  test_description VARCHAR(),
-  testifier_image IMAGE
-  student_google_id VARCHAR(),
-  PRIMARY KEY (test_ID),
-  FOREIGN KEY (student_google_id) REFERENCES student
-);
-
 CREATE TABLE instructor (
-  instructor_google_id VARCHAR(),
-  instructor_id CHAR(),
-  instructor_name VARCHAR(),
-  instructor_email VARCHAR(),
-  PRIMARY KEY (instructor_google_id),
-  FOR
+  instructor_google_id VARCHAR(50),
+  instructor_name VARCHAR(50),
+  instructor_email VARCHAR(30),
+  PRIMARY KEY (instructor_google_id)
 );
 
-CREATE TABLE department (
-  department_name VARCHAR(),
-  department_code VARCHAR(),
-  PRIMARY KEY (department_name)
+CREATE TABLE student (
+  student_google_id VARCHAR(50),
+  student_id CHAR(9),
+  student_name VARCHAR(50),
+  student_email VARCHAR(30),
+  student_semester TINYINT UNSIGNED,
+  standing VARCHAR(10),
+  completed_credits SMALLINT UNSIGNED,
+  completed_ects SMALLINT UNSIGNED,
+  gpa DECIMAL(3, 2),
+  advisor VARCHAR(50),
+  PRIMARY KEY (student_google_id),
+  FOREIGN KEY (advisor) REFERENCES instructor(instructor_google_id)
+);
+
+CREATE TABLE testimonial (
+  testimonial_ID INTEGER UNSIGNED AUTO_INCREMENT,
+  testimonial_text TINYTEXT,
+  testimonial_description VARCHAR(20),
+  testifier_image VARCHAR(100),
+  student_google_id VARCHAR(50),
+  PRIMARY KEY (testimonial_ID, student_google_id),
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id) ON DELETE CASCADE
+);
+
+CREATE TABLE instructor_rating (
+  rating_id INTEGER UNSIGNED AUTO_INCREMENT,
+  rating_amount TINYINT UNSIGNED,
+  will_recommend BIT(1),
+  is_suitable BIT(1),
+  grading_policy VARCHAR(30),
+  explanation_method VARCHAR(30),
+  take_again BIT(1),
+  student_google_id VARCHAR(50),
+  instructor_google_id VARCHAR(50),
+  PRIMARY KEY (rating_id),
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
+  FOREIGN KEY (instructor_google_id) REFERENCES instructor(instructor_google_id) 
 );
 
 CREATE TABLE course (
-  course_id VARCHAR(8),
-  title VARCHAR(),
-  credit INTEGER,
-  ects INTEGER,
-  course_level VARCHAR(),
-  theoritical_credit INTEGER,
-  practical_credit INTEGER,
-  course_year INTEGER,
+  course_id VARCHAR(15),
+  title VARCHAR(50),
+  credit TINYINT UNSIGNED,
+  ects TINYINT UNSIGNED,
+  course_level VARCHAR(20),
+  theoritical_credit TINYINT,
+  practical_credit TINYINT,
+  course_year TINYINT
 );
 
-CREATE TABLE course_rating (
-  rating_id INTEGER AUTO_INCREMENT,
-  rating_amount INTEGER,
-  will_recommend BIT(1),
-  did_enjoy VARCHAR(),
-  take_similar VARCHAR(),
-  good_content VARCHAR(),
-  was_helpful VARCHAR(),
-  student_google_id (),
-  instructor_google_id (),
-  PRIMARY KEY (rating_id)
-  FOREIGN KEY (student_google_id) REFERENCES student,
-  FOREIGN KEY (instuctor_google_id) REFERENCES instructor 
-);
-
-
-CREATE TABLE instructor_rating (
-  rating_id INTEGER AUTO_INCREMENT,
-  rating_amount INTEGER,
-  will_recommend BIT(1),
-  is_suitable BIT(1),
-  grading_policy VARCHAR(),
-  explanation_method VARCHAR(),
-  take_again BIT(1),
-  student_google_id (),
-  instructor_google_id (),
-  PRIMARY KEY (rating_id)
-  FOREIGN KEY (student_google_id) REFERENCES student,
-  FOREIGN KEY (instuctor_google_id) REFERENCES instructor 
+CREATE TABLE prerequisite (
+  course_id VARCHAR(15),
+  prereq_id VARCHAR(15),
+  PRIMARY KEY (course_id, prereq_id),
+  FOREIGN KEY (course_id) REFERENCES course(course_id) ON DELETE CASCADE,
+  FOREIGN KEY (prereq_id) REFERENCES course(course_id)
 );
 
 CREATE TABLE Classroom (
-  building_no VARCHAR(),
-  room_no VARCHAR(),
+  building_no VARCHAR(30),
+  room_no VARCHAR(5),
   PRIMARY KEY (building_no, room_no)
 );
 
 CREATE TABLE section (
-  section_id CHAR(),
-  semester VARCHAR(),
-  section_year CHAR(4),
-  course_id VARCHAR(),
-  building_no VARCHAR(),
-  room_no VARCHAR(),
-  PRIMARY KEY (section_id, semester, section_year, course_id)
-  FOREIGN KEY (building_no, room_no) REFERENCES Classroom,
-  FOREIGN KEY course_id REFERENCES course ON DELETE CASCADE
+  section_id VARCHAR(3),
+  semester VARCHAR(6) check (semester IN ('Fall', 'Spring', 'Summer')),
+  section_year NUMERIC(4, 0) CHECK (section_year > 2010 and section_year < 2050),
+  course_id VARCHAR(15),
+  building_no VARCHAR(30),
+  room_no VARCHAR(5),
+  PRIMARY KEY (section_id, semester, section_year, course_id),
+  FOREIGN KEY (building_no, room_no) REFERENCES Classroom(building_no, room_no),
+  FOREIGN KEY (course_id) REFERENCES course(course_id) ON DELETE CASCADE
 );
 
-CREATE TABLE teaches (
-  section_id CHAR(),
-  semester VARCHAR(),
-  section_year CHAR(4),
-  course_id VARCHAR(),
-  instructor_google_id VARCHAR(),
-  PRIMARY KEY (section_id, semester, section_year, course_id, instructor_google_id),
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section,
-  FOREIGN KEY (instructor_google_id) REFERENCES instructor
+CREATE TABLE course_rating (
+  rating_id INTEGER UNSIGNED AUTO_INCREMENT,
+  rating_amount TINYINT UNSIGNED,
+  will_recommend VARCHAR(50),
+  did_enjoy VARCHAR(50),
+  take_similar VARCHAR(50),
+  good_content VARCHAR(50),
+  was_helpful VARCHAR(50),
+  student_google_id VARCHAR(50),
+  section_id VARCHAR(3),
+  semester VARCHAR(6) check (semester IN ('Fall', 'Spring', 'Summer')),
+  section_year NUMERIC(4, 0) CHECK (section_year > 2010 and section_year < 2050),
+  course_id VARCHAR(15),
+  PRIMARY KEY (rating_id),
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id) 
 );
 
 CREATE TABLE takes (
-  section_id CHAR(),
-  semester VARCHAR(),
-  section_year CHAR(4),
-  course_id VARCHAR(),
-  student_google_id VARCHAR(),
-  grade VARCHAR(2)
-  PRIMARY KEY (section_id, semester, section_year, course_id, student_google_id)
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section,
-  FOREIGN KEY (student_google_id) REFERENCES student
+  section_id VARCHAR(3),
+  semester VARCHAR(6),
+  section_year NUMERIC(4, 0),
+  course_id VARCHAR(15),
+  student_google_id VARCHAR(50),
+  grade VARCHAR(5),
+  PRIMARY KEY (section_id, semester, section_year, course_id, student_google_id),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id),
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id)
 );
 
-CREATE TABLE time_slot (
-  time_slot_id INTEGER AUTO_INCREMENT,
-  section_day VARCHAR(),
-  start_hr CHAR(),
-  start_min CHAR(),
-  end_hr CHAR(),
-  end_min CHAR(),
-  section_id CHAR(),
-  semester VARCHAR(),
-  section_year CHAR(4),
-  course_id VARCHAR(),
-  PRIMARY KEY (time_slot_id, section_day, start_hr, start_min, section_id, semester, section_year, course_id)
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section  
+CREATE TABLE teaches (
+  section_id VARCHAR(3),
+  semester VARCHAR(6),
+  section_year NUMERIC(4, 0),
+  course_id VARCHAR(15),
+  instructor_google_id VARCHAR(15),
+  PRIMARY KEY (section_id, semester, section_year, course_id, instructor_google_id),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id),
+  FOREIGN KEY (instructor_google_id) REFERENCES instructor(instructor_google_id)
 );
 
-CREATE TABLE course_dept (
-  course_id VARCHAR(),
-  department_name VARCHAR(),
-  course_type VARCHAR()
-  PRIMARY KEY (course_id, department_name),
-  FOREIGN KEY (course_id) REFERENCES course,
-  FOREIGN KEY (department_name) REFERENCES department_name
+CREATE TABLE department (
+  department_name VARCHAR(50),
+  department_code VARCHAR(10),
+  PRIMARY KEY (department_name)
 );
 
 CREATE TABLE student_department (
-  student_google_id VARCHAR(),
-  department_name VARCHAR(),
+  student_google_id VARCHAR(50),
+  department_name VARCHAR(50),
   PRIMARY KEY (student_google_id, department_name),
-  FOREIGN KEY (student_google_id) REFERENCES student,
-  FOREIGN KEY (department_name) REFERENCES department
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
+  FOREIGN KEY (department_name) REFERENCES department(department_name)
 );
 
 CREATE TABLE instructor_department (
-  instructor_google_id VARCHAR(),
-  department_name VARCHAR(),
+  instructor_google_id VARCHAR(50),
+  department_name VARCHAR(50),
   PRIMARY KEY (instructor_google_id, department_name)
 );
 
-CREATE TABLE prerequisite (
-  course_id VARCHAR(),
-  prereq_id VARCHAR(),
-  PRIMARY KEY (course_id, prereq_id),
-  FOREIGN KEY (course_id) REFERENCES course ON DELETE CASCADE,
-  FOREIGN KEY (prereq_id) REFERENCES course
+CREATE TABLE course_department (
+  course_id VARCHAR(15),
+  department_name VARCHAR(50),
+  course_type VARCHAR(30),
+  PRIMARY KEY (course_id, department_name),
+  FOREIGN KEY (course_id) REFERENCES course(course_id),
+  FOREIGN KEY (department_name) REFERENCES department(department_name)
+);
+
+CREATE TABLE time_slot (
+  time_slot_id INTEGER UNSIGNED AUTO_INCREMENT,
+  section_day VARCHAR(10),
+  start_hr NUMERIC(2, 0) CHECK (start_hr >= 0 and start_hr < 24),
+  start_min NUMERIC(2, 0) CHECK (start_min >= 0 and start_min < 60),
+  end_hr NUMERIC(2, 0) CHECK (end_hr >= 0 and end_hr < 24),
+  end_min NUMERIC(2, 0) CHECK (end_min >= 0 and end_min < 60),
+  section_id VARCHAR(3),
+  semester VARCHAR(6),
+  section_year NUMERIC(4, 0),
+  course_id VARCHAR(15),
+  PRIMARY KEY (time_slot_id, section_day, start_hr, start_min, section_id, semester, section_year, course_id),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id) ON DELETE CASCADE
 );

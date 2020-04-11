@@ -50,14 +50,7 @@ def load_user(user_id):
 @app.route('/home')
 def home():
     if current_user.is_authenticated:
-        return (
-            "<p>Hello, {}! You're logged in! Email: {}</p>"
-            "<div><p>Google Profile Picture:</p>"
-            '<img src="{}" alt="Google profile pic"></img></div>'
-            '<a class="button" href="/logout">Logout</a>'.format(
-                current_user.name, current_user.email, current_user.profile_pic
-            )
-        )
+        return redirect(url_for('profile'))
     else:
         return render_template('home.html')
 
@@ -129,11 +122,26 @@ def logout():
     logout_user()
     return redirect(url_for("home"))
 
-@app.route('/dashboard')
-@login_required
-def dashboard():
-    return render_template('dashboard.html')
 
+@app.route('/rate_instructor')
+@login_required
+def rate_instructor():
+    return render_template('rate_instructor.html')
+
+@app.route('/fetch_sap', methods=['POST', 'GET'])
+@login_required
+def fetch_sap():
+    if request.method == 'GET':
+        return render_template('fetch_sap.html')
+    else:
+        email = request.form['email']
+        password = request.form['password']
+        return redirect(url_for('profile'))
+
+@app.route('/profile')
+@login_required
+def profile():
+    return render_template('profile.html', name=current_user.name, email=current_user.email, profile_pic=current_user.profile_pic)
 
 if __name__ == '__main__':
     app.run(debug=True)
