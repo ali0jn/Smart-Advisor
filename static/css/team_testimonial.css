@@ -80,14 +80,8 @@
 
 
 
-.testimonials {
-    padding: 40px 0;
-    background: #f1f1f1;
-    color: #434343;
-    text-align: center;
-}
-
 .inner {
+    color: #434343;
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
@@ -101,43 +95,117 @@
     margin: 26px auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+  
+/*** TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 ***/
+.testimonial_slider_2{
+    overflow:hidden;
+    box-sizing:border-box;
+    padding-bottom:30px;
 
-.col {
-    flex: 33.33%;
-    max-width: 33.33%;
-    box-sizing: border-box;
-    padding: 15px;
+    background: #ffffff;
+    margin-left: 25px;
+    margin-right: 25px;
 }
-
-.testimonial {
-    background: #fff;
-    padding: 30px;
-    transition: 0.4s;
+.testimonial_slider_2 input {
+    display: none;
 }
+  
+.testimonial_slider_2 #slide_2_1:checked ~ .boo_inner { margin-left:0; }
+.testimonial_slider_2 #slide_2_2:checked ~ .boo_inner { margin-left:-100%; }
+.testimonial_slider_2 #slide_2_3:checked ~ .boo_inner { margin-left:-200%; }
+.testimonial_slider_2 #slide_2_4:checked ~ .boo_inner { margin-left:-300%; }
+.testimonial_slider_2 .boo_inner {
+    width:400%;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 
-.testimonial:hover {
-    transform: scale(1.08);
+    -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 }
-
-.testimonial p {
-    padding-top: 10px;
+.testimonial_slider_2 .slide_content{
+    width:25%;
+    float:left;
 }
-
-.testimonial img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    zoom: 1.5;
+.testimonial_slider_2 #controls {
+    text-align:center;
 }
-
-.name {
-    font-size: 20px;
+.testimonial_slider_2 #controls label{
+    width:8px;
+    height:8px;
+    margin:0 2px;
+    display:inline-block;
+    background:#999; /* Change controls background color */
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+.testimonial_slider_2 #slide_2_1:checked ~ #controls label:nth-child(1), 
+.testimonial_slider_2 #slide_2_2:checked ~ #controls label:nth-child(2), 
+.testimonial_slider_2 #slide_2_3:checked ~ #controls label:nth-child(3), 
+.testimonial_slider_2 #slide_2_4:checked ~ #controls label:nth-child(4){
+    background:#000; /* Change controls background color when mouse click */
+}
+.testimonial_2 {
+    font-size: 16px !important;
+    color: #333; /* Change testimonial paragraph text color */
+    padding: 30px 30px 23px;
+}
+.content_2 {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+.content_2:before,
+.content_2:after {
+    content: "";
+    height: 15px;
+    width: 19px;
+    position: absolute;
+}
+.content_2:before {
+    background: url(icon_testimonial_2_before.png) 0 0 no-repeat;
+    left: 0;
+}
+.content_2:after {
+    background: url(icon_testimonial_2_after.png) 0 0 no-repeat;
+    margin: 5px 10px;
+}
+.testimonial_2 p {
+    display: inline;
+    font-size: xx-large;
+}
+.author_2 {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.author_2 h3 {
+    color: #333;
+    font-weight: 600px;
+    margin: 16px 0;
     text-transform: uppercase;
-    margin: 20px 0;
+    font-size: 16px;
+
+}
+.author_2 h4 {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: #3498db;
 }
 
+.profile_pic img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    zoom: 2;
+    float: left; 
+    margin-right: 20px; 
+    margin-left: 20px;
+}

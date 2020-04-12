@@ -16,6 +16,7 @@ import requests
 
 from db import init_db_command
 from user import User
+from testimonials import fetch_testifiers
 
 # GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
 # GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
@@ -52,7 +53,8 @@ def home():
     if current_user.is_authenticated:
         return redirect(url_for('profile'))
     else:
-        return render_template('home.html')
+        block, radio, label = fetch_testifiers()
+        return render_template('home.html', testifiers=block, radio_buttons=radio, labels=label)
 
 def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
