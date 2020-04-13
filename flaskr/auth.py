@@ -86,7 +86,7 @@ def callback():
 
     # Begin user session by logging the user in
     session['user_id'] = std.id
-    return redirect(url_for('profile.profile', current_user=std.id))
+    return redirect(url_for('profile.profile'))
 
 @bp.before_app_request
 def load_logged_in_user():

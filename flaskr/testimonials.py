@@ -1,4 +1,5 @@
 from flask import Markup
+from flaskr.db import get_db
 
 
 def create_radio_button(n):
@@ -35,14 +36,26 @@ def slide_content(testimony, image, name, desc):
 			        </div>".format(testimony, image, name, desc))
     return content
 
+def get_testimonies():
+	testifiers = {}
+	db = get_db()
+	cursor = db.cursor()
+	testimonies = cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
+	result = cursor.fetchall()
+	for res in result:
+		testifiers[res[0]] = [res[1], res[3], res[2]]
+	return testifiers
 
 def fetch_testifiers():
-	testifiers = {'Asem Okby': ['This app is nice', 'asem', 'Athlete'],
-                  'Elon Musk': ['OMG!', 'elon', 'CEO'],
-                  'Ibrahim Tigrek': ['Cool', 'ibrahim', 'Data Scientist']}
+	testifiers = {}
+	db = get_db()
+	cursor = db.cursor()
+	testimonies = cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
+	result = cursor.fetchall()
 	html_ = ''
-	for test_name in testifiers:
-		html_ += slide_content(testifiers[test_name][0], '/static/media/users/{}.jpg'.format(testifiers[test_name][1]), test_name, testifiers[test_name][2])
+	for res in result:
+		html_ += slide_content(res[1], res[3], res[0], res[2])
+		testifiers[res[0]] = [res[1], res[3], res[2]]
 
 	radio_button_block = create_radio_button(len(testifiers))
 	label_block = create_label_button(len(testifiers))
