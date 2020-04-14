@@ -91,17 +91,13 @@ def callback():
 @bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
-
     if user_id is None:
         g.user = None
     else:
         db = get_db()
         cursor = db.cursor()
-        query = cursor.execute(
-            'SELECT * FROM student WHERE student_google_id = {}'.format(user_id)
-        )
+        query = cursor.execute('SELECT * FROM student WHERE student_google_id = {}'.format(user_id))
         g.user = cursor.fetchall()[0]
-
 
 @bp.route('/logout')
 def logout():

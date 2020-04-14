@@ -23,9 +23,15 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!--begin::Fonts -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://use.fontawesome.com/5a8a7bb461.js"></script>
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
 
 		<!--end::Fonts -->
+		<link href="static/css/team_testimonial.css" rel="stylesheet" type="text/css" />
 
 		<!--begin::Global Theme Styles(used by all pages) -->
 
@@ -144,9 +150,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<ul class="kt-menu__nav ">
 								<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-user"></i><span class="kt-menu__link-text">Profile</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
 								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/fetch_sap" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-arrow-down"></i><span class="kt-menu__link-text">Fetch My Courses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/predict" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-laptop"></i><span class="kt-menu__link-text">Predict Grades</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-laptop"></i><span class="kt-menu__link-text">Rate Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-laptop"></i><span class="kt-menu__link-text">Rate Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/predict" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-statistics"></i><span class="kt-menu__link-text">Predict Grades</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-poll-symbol"></i><span class="kt-menu__link-text">Rate Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics"></i><span class="kt-menu__link-text">Rate Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Analyze Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text">Analyze Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/testify" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-comment"></i><span class="kt-menu__link-text">Give Feedback</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -199,9 +208,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 										<div class="kt-user-card__name">
 											{{ name }}
-										</div>
-										<div class="kt-user-card__badge">
-											<span class="btn btn-success btn-sm btn-bold btn-font-md">23 messages</span>
 										</div>
 									</div>
 
@@ -330,6 +336,33 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 
 		<!-- end::Scrolltop -->
+
+		<script>
+			$(document).ready(function(){
+				pagenum = 1;
+				var counterLabel = document.getElementById("counterLabel");
+				const total_testifiers = counterLabel.textContent;
+				function AutoRotate() {
+					var myele = null;
+					var allElements = document.getElementsByTagName('label');
+					for (var i = 0, n = allElements.length; i < n; i++) {
+						var myfor = allElements[i].getAttribute('for');
+						if ((myfor !== null) && (myfor == ('slide_2_' + pagenum))) {
+							allElements[i].click();
+							counterLabel.textContent = pagenum + ' of ' + total_testifiers;
+							break;
+						}
+					}
+				
+					if (pagenum == 3) {
+						pagenum = 1;
+					} else {
+						pagenum++;
+					}
+				}
+				setInterval(AutoRotate, 5000);
+			});
+		</script>
 
 		<!-- begin::Global Config(global config for global JS sciprts) -->
 		<script>

@@ -15,3 +15,7 @@ def home():
     else:
         block, radio, label, total = fetch_testifiers()
         return render_template('home/home.html', testifiers=block, radio_buttons=radio, labels=label, total_testifiers=total)
+
+@bp.route('/faq')
+def faqs():
+    return render_template('home/faq.html')
