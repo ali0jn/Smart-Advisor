@@ -3,7 +3,7 @@ from flask import (
 )
 from flaskr.auth import login_required
 from flaskr.user import Student
-from flaskr.testimonials import fetch_testifiers
+from flaskr.testimonials import fetch_testifiers, save_testimony
 
 bp = Blueprint('profile', __name__, url_prefix='/profile')
 
@@ -49,5 +49,17 @@ def fetch_sap():
     else:
         email = request.form['email']
         password = request.form['password']
+        return redirect(url_for('profile.profile'))
+
+@bp.route('/testify', methods=['POST', 'GET'])
+@login_required
+def testify():
+    current_user = g.user
+    if request.method == 'GET':
+        return render_template('profile/testimonial.html', name=current_user[2], profile_pic=current_user[4])
+    else:
+        headline = request.form['headline']
+        testimony = request.form['testimony']
+        save_testimony(testimony, headline, current_user[0])
         return redirect(url_for('profile.profile'))
 

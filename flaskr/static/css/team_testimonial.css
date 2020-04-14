@@ -272,7 +272,7 @@
 .contact_info .box .icon h4:before {
     left: initial;
     right: 100%;
-    background: #9c27b0;
+    background: #ff1313;
 }
 
 .contact_info .box .kt-menu__link-icon:hover ~ h3:before {

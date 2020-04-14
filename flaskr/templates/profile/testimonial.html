@@ -1,0 +1,48 @@
+{% extends 'profile/profile_template.html' %}
+{% block content %}
+	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+		<!--begin::Portlet-->
+		<div class="kt-portlet">
+			<div class="kt-portlet__head">
+				<div class="kt-portlet__head-label">
+					<h3 class="kt-portlet__head-title">
+						Give Feedback
+					</h3>
+				</div>
+			</div>
+
+			<!--begin::Form-->
+			<form class="kt-form" method="POST" action="profile/testify">
+				<div class="kt-portlet__body">
+					<div class="form-group form-group-last">
+						<div class="alert alert-secondary" role="alert">
+							<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+							<div class="alert-text">
+								Please fill in the form below to share your experience from our website. Your name, profile picture, position and comments will be publicly available to everyone.
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Headline (i.e. Manager, Athlete,...)</label>
+						<input type="text" name="headline" class="form-control" aria-describedby="emailHelp" placeholder="Enter headline">
+					</div>
+					<div class="form-group form-group-last">
+						<label for="exampleTextarea">Feedback (max. 255 characters)</label>
+						<textarea class="form-control" name="testimony" id="exampleTextarea" rows="3" maxlength="255" placeholder="Write your comments here..."></textarea>
+					</div>
+				</div>
+				<div class="kt-portlet__foot">
+					<div class="kt-form__actions">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+					</div>
+				</div>
+			</form>
+
+			<!--end::Form-->
+		</div>
+
+		<!--end::Portlet-->
+		
+	</div>
+{% endblock %}

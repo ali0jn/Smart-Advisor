@@ -10,7 +10,7 @@ def create_radio_button(n):
 			radio_html += Markup("<input type='radio' name='slider_2' id='slide_2_{}' checked />".format(i+1))
 			check = False
 		else:
-			radio_html += Markup("<input type='radio' name='slider_2' id='slide_2_{}' checked />".format(i+1))
+			radio_html += Markup("<input type='radio' name='slider_2' id='slide_2_{}' />".format(i+1))
 	return radio_html
 	
 def create_label_button(n):
@@ -47,16 +47,21 @@ def get_testimonies():
 	return testifiers
 
 def fetch_testifiers():
-	testifiers = {}
 	db = get_db()
 	cursor = db.cursor()
 	testimonies = cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
 	result = cursor.fetchall()
 	html_ = ''
+	c = 0
 	for res in result:
 		html_ += slide_content(res[1], res[3], res[0], res[2])
-		testifiers[res[0]] = [res[1], res[3], res[2]]
+		c += 1
+	radio_button_block = create_radio_button(c)
+	label_block = create_label_button(c)
+	return html_, radio_button_block, label_block, c
 
-	radio_button_block = create_radio_button(len(testifiers))
-	label_block = create_label_button(len(testifiers))
-	return html_, radio_button_block, label_block, len(testifiers)
+def save_testimony(testimony, headline, std_google_id):
+	db = get_db()
+	cursor = db.cursor()
+	cursor.execute("INSERT INTO testimonial (testimonial_text, testifier_position, student_google_id) VALUES(%s, %s, %s);", (testimony, headline, std_google_id))
+	db.commit()

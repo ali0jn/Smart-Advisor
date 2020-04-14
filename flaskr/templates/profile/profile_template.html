@@ -109,10 +109,10 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- begin:: Page -->
 
 		<!-- begin:: Header Mobile -->
-		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="padding-left: 7px;">
 			<div class="kt-header-mobile__logo">
 				<a href="index&demo=demo12.html">
-					<img alt="Logo" src="static/media/logos/sehir-logo.png" />
+					<img alt="Logo" src="static/media/logos/logo.png" style="width: 200px; height: 40.1px; margin-right: 7px;">
 				</a>
 			</div>
 			<div class="kt-header-mobile__toolbar">
@@ -131,10 +131,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
 
 					<!-- begin:: Aside -->
-					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand" style="padding-left: 7px;">
 						<div class="kt-aside__brand-logo">
-							<a href="index&demo=demo12.html">
-								<img alt="Logo" src="static/media/logos/sehir-logo.png" style="border-radius: 5px;">
+							<a href="/home">
+								<img alt="Logo" src="static/media/logos/logo.png" style="width: 200px; height: 40.1px; margin-right: 7px;">
 							</a>
 						</div>
 						<div class="kt-aside__brand-tools">
@@ -341,7 +341,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			$(document).ready(function(){
 				pagenum = 1;
 				var counterLabel = document.getElementById("counterLabel");
-				const total_testifiers = counterLabel.textContent;
+				var total_testifiers = counterLabel.textContent.split(" ");
+				total_testifiers = total_testifiers[total_testifiers.length-1];
 				function AutoRotate() {
 					var myele = null;
 					var allElements = document.getElementsByTagName('label');
@@ -354,7 +355,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						}
 					}
 				
-					if (pagenum == 3) {
+					if (pagenum == parseInt(total_testifiers)) {
 						pagenum = 1;
 					} else {
 						pagenum++;

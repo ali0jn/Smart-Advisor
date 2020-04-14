@@ -19,3 +19,4 @@ def home():
 @bp.route('/faq')
 def faqs():
     return render_template('home/faq.html')
+
