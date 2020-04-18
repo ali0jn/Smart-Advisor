@@ -13,10 +13,10 @@ from flask_login import (
     login_user,
     logout_user,
 )
-from flaskr.testimonials import fetch_testifiers
+from app.testimonials import fetch_testifiers
 from oauthlib.oauth2 import WebApplicationClient
-from flaskr.user import Student
-from flaskr.db import get_db
+from app.user import Student
+from app.db import get_db
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -77,6 +77,9 @@ def callback():
         users_name = userinfo_response.json()["name"]
     else:
         return "User email not available or not verified by Google.", 400
+
+    if users_email.split('@')[1] != 'std.sehir.edu.tr':
+        return render_template('auth/error.html')
 
     std = Student(id_=unique_id, name=users_name, email=users_email, profile_pic=picture)
 

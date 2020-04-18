@@ -1,7 +1,7 @@
 from flask_login import UserMixin
 from unicode_tr.extras import slugify
 
-from flaskr.db import get_db
+from app.db import get_db
 
 class Student(UserMixin):
     def __init__(self, id_, name, email, profile_pic):
@@ -40,6 +40,16 @@ class Student(UserMixin):
         db = get_db()
         cursor = db.cursor()
         cursor.execute("UPDATE student "
-                       "SET student_id = %s, student_semester = %d, advisor = (select instructor_google_id from instructor where instructor_name = %s), standing = %s, gpa = %f, completed_credits = %d, completed_ects = %d "
-                       "WHERE student_google_id = %s;", (student_number, student_semester, slugify(advisor).upper().replace('-', ' '), standing, gpa, completed_credits, completed_ects, std_google_id))
+                       "SET student_id = %s, student_semester = %s, advisor = (select instructor_google_id from instructor where instructor_name = %s), standing = %s, gpa = %s, completed_credits = %s, completed_ects = %s "
+                       "WHERE student_google_id = %s;", (student_number, int(student_semester), slugify(advisor).upper().replace('-', ' '), standing, float(gpa), int(completed_credits), int(completed_ects), std_google_id))
         db.commit()
+
+    @staticmethod
+    def get_details(std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT student_id, student_semester, (SELECT instructor_name FROM instructor WHERE instructor_google_id = advisor), standing, gpa, completed_credits, completed_ects "
+                       "FROM student "
+                       "WHERE student_google_id = {};".format(std_google_id))
+        details = cursor.fetchall()[0]
+        return details[0], details[1], details[2], details[3], details[4], details[5], details[6]

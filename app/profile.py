@@ -1,10 +1,10 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
-from flaskr.auth import login_required
-from flaskr.user import Student
-from flaskr.testimonials import fetch_testifiers, save_testimony
-from flaskr.scrapers.sap_scraper import fetch_sap_data
+from app.auth import login_required
+from app.user import Student
+from app.testimonials import fetch_testifiers, save_testimony
+from app.scrapers.sap_scraper import fetch_sap_data
 
 bp = Blueprint('profile', __name__, url_prefix='/profile')
 
@@ -14,7 +14,10 @@ bp = Blueprint('profile', __name__, url_prefix='/profile')
 def profile():
     current_user = g.user
     block, radio, label = fetch_testifiers()
-    return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label)
+    student_number, semester_of_student, advisor, standing, gpa, completed_credits, completed_ects = Student.get_details(current_user[0])
+    return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label,
+                           student_number=student_number, semester_of_student=semester_of_student, advisor=advisor, standing=standing, gpa=gpa, completed_credits=completed_credits,
+                           completed_ects=completed_ects)
 
 @bp.route('/rate_instructor')
 @login_required

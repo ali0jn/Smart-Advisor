@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-from flaskr.user import Student
+from app.user import Student
 
 
 parent = os.path.normpath(os.getcwd() + os.sep + os.pardir)
@@ -16,7 +16,7 @@ def setup_driver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument('window-size=1920x1080')
-    driver = webdriver.Chrome(executable_path=os.getcwd()+'/Smart-Advisor/flaskr/drivers/chromedriver', options=chrome_options)
+    driver = webdriver.Chrome(executable_path=os.getcwd()+'/Smart-Advisor/app/drivers/chromedriver', options=chrome_options)
     return driver
 
 def login(student_username, student_password):

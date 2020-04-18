@@ -1,5 +1,5 @@
 from flask import Markup
-from flaskr.db import get_db
+from app.db import get_db
 import random
 
 def create_radio_button(n):
