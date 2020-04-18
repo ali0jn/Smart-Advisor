@@ -13,8 +13,8 @@ def home():
     if user_id is not None:
         return redirect(url_for('profile.profile', current_user=user_id))
     else:
-        block, radio, label, total = fetch_testifiers()
-        return render_template('home/home.html', testifiers=block, radio_buttons=radio, labels=label, total_testifiers=total)
+        block, radio, label = fetch_testifiers()
+        return render_template('home/home.html', testifiers=block, radio_buttons=radio, labels=label)
 
 @bp.route('/faq')
 def faqs():

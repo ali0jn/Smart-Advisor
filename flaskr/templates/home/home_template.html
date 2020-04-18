@@ -225,8 +225,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			$(document).ready(function(){
 				pagenum = 1;
 				var counterLabel = document.getElementById("counterLabel");
-				var total_testifiers = counterLabel.textContent.split(" ");
-				total_testifiers = total_testifiers[total_testifiers.length-1];
 				function AutoRotate() {
 					var myele = null;
 					var allElements = document.getElementsByTagName('label');
@@ -234,12 +232,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						var myfor = allElements[i].getAttribute('for');
 						if ((myfor !== null) && (myfor == ('slide_2_' + pagenum))) {
 							allElements[i].click();
-							counterLabel.textContent = pagenum + ' of ' + total_testifiers;
+							counterLabel.textContent = pagenum + ' of ' + 4;
 							break;
 						}
 					}
 				
-					if (pagenum == parseInt(total_testifiers)) {
+					if (pagenum == 4) {
 						pagenum = 1;
 					} else {
 						pagenum++;

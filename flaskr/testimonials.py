@@ -1,6 +1,6 @@
 from flask import Markup
 from flaskr.db import get_db
-
+import random
 
 def create_radio_button(n):
 	radio_html = ''
@@ -36,29 +36,24 @@ def slide_content(testimony, image, name, desc):
 			        </div>".format(testimony, image, name, desc))
     return content
 
-def get_testimonies():
-	testifiers = {}
-	db = get_db()
-	cursor = db.cursor()
-	testimonies = cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
-	result = cursor.fetchall()
-	for res in result:
-		testifiers[res[0]] = [res[1], res[3], res[2]]
-	return testifiers
-
 def fetch_testifiers():
 	db = get_db()
 	cursor = db.cursor()
-	testimonies = cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
+	cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
 	result = cursor.fetchall()
 	html_ = ''
+	random_testimonies = []
 	c = 0
-	for res in result:
+	while c < 4:
+		random_idx = random.randint(0, len(result)-1)
+		if result[random_idx] not in random_testimonies:
+			random_testimonies.append(result[random_idx])
+			c += 1
+	for res in random_testimonies:
 		html_ += slide_content(res[1], res[3], res[0], res[2])
-		c += 1
-	radio_button_block = create_radio_button(c)
-	label_block = create_label_button(c)
-	return html_, radio_button_block, label_block, c
+	radio_button_block = create_radio_button(4)
+	label_block = create_label_button(4)
+	return html_, radio_button_block, label_block
 
 def save_testimony(testimony, headline, std_google_id):
 	db = get_db()

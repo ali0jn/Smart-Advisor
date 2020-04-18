@@ -4,6 +4,7 @@ from flask import (
 from flaskr.auth import login_required
 from flaskr.user import Student
 from flaskr.testimonials import fetch_testifiers, save_testimony
+from flaskr.scrapers.sap_scraper import fetch_sap_data
 
 bp = Blueprint('profile', __name__, url_prefix='/profile')
 
@@ -12,8 +13,8 @@ bp = Blueprint('profile', __name__, url_prefix='/profile')
 @login_required
 def profile():
     current_user = g.user
-    block, radio, label, total = fetch_testifiers()
-    return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label, total_testifiers=total)
+    block, radio, label = fetch_testifiers()
+    return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label)
 
 @bp.route('/rate_instructor')
 @login_required
@@ -49,6 +50,7 @@ def fetch_sap():
     else:
         email = request.form['email']
         password = request.form['password']
+        fetch_sap_data(email, password, current_user[0])
         return redirect(url_for('profile.profile'))
 
 @bp.route('/testify', methods=['POST', 'GET'])
@@ -63,3 +65,8 @@ def testify():
         save_testimony(testimony, headline, current_user[0])
         return redirect(url_for('profile.profile'))
 
+
+@bp.route('/handle_rating', methods=['POST', 'GET'])
+@login_required
+def handle_rating():
+    return redirect(url_for('profile.profile'))

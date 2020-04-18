@@ -1,6 +1,104 @@
 {% extends 'profile/profile_template.html' %}
 {% block content %}
 	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-		Content goes here... 
+		<!--begin::Portlet-->
+		<div class="kt-portlet">
+			<div class="kt-portlet__head">
+				<div class="kt-portlet__head-label">
+					<h3 class="kt-portlet__head-title">
+						Rate Instructor
+					</h3>
+				</div>
+			</div>
+
+			<!--begin::Form-->
+			<form class="kt-form" action="profile/handle_rating">
+				<div class="kt-portlet__body">
+					<div class="form-group form-group-last">
+						<div class="alert alert-secondary" role="alert">
+							<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+							<div class="alert-text">
+								Please fill in all of the following to record your rating successfully. You can rate a instructor only once.
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">Rate intructor's overall performance out of 10</label>
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">Will you recommend this instructor to your friends?</label>												
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+							<option value="3">Not Sure Yet</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">Do you think this instructor is suitable for teaching this course?</label>
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">Yes, I am absolutely sure they are a good match</option>
+							<option value="2">Yes, but I think better instructors can teach it</option>
+							<option value="3">No, but I do not have any opinion</option>
+							<option value="4">No, this instructor should never teach this course again</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">What do you think about instructor's grading policy?</label>												
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">The instructor is very generous in grading</option>
+							<option value="2">I think the instructor is balanced in terms of grading</option>
+							<option value="3">I did not get a good grade but Instructor is not the one to be blamed</option>
+							<option value="4">Instructor's grading policy is totally unfair</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">Are you satisfied with instructor's teaching methodology?</label>
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">I am very satisfied with instructor's teaching policy</option>
+							<option value="2">Overall, instructor had a balanced teaching method</option>
+							<option value="3">I was really interested in course, so I don't have any opinion</option>
+							<option value="4">I am completely against instructor's teaching method</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelectd">Are you interested in taking another course with this instructor?</label>
+						<select class="form-control" id="exampleSelectd" required>
+							<option value="">-- None --</option>
+							<option value="1">Definitely, Yes!</option>
+							<option value="2">Impossible, No!</option>
+							<option value="3">I have not decided yet</option>
+						</select>
+					</div>
+				</div>
+				<div class="kt-portlet__foot">
+					<div class="kt-form__actions">
+						<button type="submit" class="btn btn-success">Submit</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+					</div>
+				</div>
+			</form>
+
+			<!--end::Form-->
+		</div>
+
+		<!--end::Portlet-->
+		
 	</div>
 {% endblock %}
