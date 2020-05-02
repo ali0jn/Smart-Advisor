@@ -1,10 +1,10 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
-from app.auth import login_required
-from app.user import Student
-from app.testimonials import fetch_testifiers, save_testimony
-from app.scrapers.sap_scraper import fetch_sap_data
+from flaskr.auth import login_required
+from flaskr.user import Student
+from flaskr.testimonials import fetch_testifiers, save_testimony
+from flaskr.scrapers.sap_scraper import fetch_transcript
 
 bp = Blueprint('profile', __name__, url_prefix='/profile')
 
@@ -14,10 +14,10 @@ bp = Blueprint('profile', __name__, url_prefix='/profile')
 def profile():
     current_user = g.user
     block, radio, label = fetch_testifiers()
-    student_number, semester_of_student, advisor, standing, gpa, completed_credits, completed_ects = Student.get_details(current_user[0])
+    student_number, semester_of_student, advisor, standing, gpa, completed_credits, completed_ects, department = Student.get_details(current_user[0])
     return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label,
                            student_number=student_number, semester_of_student=semester_of_student, advisor=advisor, standing=standing, gpa=gpa, completed_credits=completed_credits,
-                           completed_ects=completed_ects)
+                           completed_ects=completed_ects, department=department)
 
 @bp.route('/rate_instructor')
 @login_required
@@ -53,7 +53,7 @@ def fetch_sap():
     else:
         email = request.form['email']
         password = request.form['password']
-        fetch_sap_data(email, password, current_user[0])
+        fetch_transcript(email, password, current_user[0])
         return redirect(url_for('profile.profile'))
 
 @bp.route('/testify', methods=['POST', 'GET'])

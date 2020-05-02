@@ -2,7 +2,7 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for, session
 )
 
-from app.testimonials import fetch_testifiers
+from flaskr.testimonials import fetch_testifiers
 
 bp = Blueprint('home', __name__)
 

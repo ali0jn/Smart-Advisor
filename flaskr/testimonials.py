@@ -1,5 +1,5 @@
 from flask import Markup
-from app.db import get_db
+from flaskr.db import get_db
 import random
 
 def create_radio_button(n):
@@ -39,12 +39,14 @@ def slide_content(testimony, image, name, desc):
 def fetch_testifiers():
 	db = get_db()
 	cursor = db.cursor()
-	cursor.execute("SELECT student_name, testimonial_text, testifier_position, google_profile_picture FROM testimonial AS t, student AS s WHERE t.student_google_id = s.student_google_id;")
+	cursor.execute("SELECT student_name, testimonial_text, testifier_position, student_profile_picture "
+			   	   "FROM testimonial AS t, student AS s "
+				   "WHERE t.student_google_id = s.student_google_id;")
 	result = cursor.fetchall()
 	html_ = ''
 	random_testimonies = []
 	c = 0
-	while c < 4:
+	while c < 4 and result != []:
 		random_idx = random.randint(0, len(result)-1)
 		if result[random_idx] not in random_testimonies:
 			random_testimonies.append(result[random_idx])
@@ -58,5 +60,6 @@ def fetch_testifiers():
 def save_testimony(testimony, headline, std_google_id):
 	db = get_db()
 	cursor = db.cursor()
-	cursor.execute("INSERT INTO testimonial (testimonial_text, testifier_position, student_google_id) VALUES(%s, %s, %s);", (testimony, headline, std_google_id))
+	cursor.execute("INSERT INTO testimonial (testimonial_text, testifier_position, student_google_id) "
+				   "VALUES(%s, %s, %s);", (testimony, headline, std_google_id))
 	db.commit()

@@ -13,10 +13,10 @@ from flask_login import (
     login_user,
     logout_user,
 )
-from app.testimonials import fetch_testifiers
+from flaskr.testimonials import fetch_testifiers
 from oauthlib.oauth2 import WebApplicationClient
-from app.user import Student
-from app.db import get_db
+from flaskr.user import Student
+from flaskr.db import get_db
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
