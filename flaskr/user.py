@@ -54,7 +54,7 @@ class Student(UserMixin):
         if cursor == []:
             dept = None
         else:        
-            dept = cursor.fetchall()[0][0]
+            dept = cursor.fetchall()
         return details[0], details[1], details[2], details[3], details[4], details[5], details[6], dept
 
     @staticmethod

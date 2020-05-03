@@ -6,9 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
-from user import Student
+from flaskr.user import Student
 
 parent = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 os.chdir(parent)

@@ -1,18 +1,10 @@
 import os
-import mysql.connector
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options  
 from selenium.common.exceptions import StaleElementReferenceException, ElementClickInterceptedException
-
+from flaskr.db import get_db
 parent = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 os.chdir(parent)
-
-def get_db():
-    db = mysql.connector.connect(host="localhost",
-                                 user ="root",
-                                 password = "ali109110",
-                                 database ="SMART_ADVISOR")
-    return db
 
 def setup_driver():
     chrome_options = Options()

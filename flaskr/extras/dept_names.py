@@ -1,4 +1,4 @@
-import mysql.connector
+from flaskr.db import get_db
 
 dept_info = {'Political Science and International Relations (English)': 'POLS',
              'Political Science and International Relations (Turkish)': 'SYS',
@@ -42,14 +42,6 @@ dept_info = {'Political Science and International Relations (English)': 'POLS',
              'Social Services (Turkish)': 'SOP',
              'Public Relations and Publicity (Turkish)': 'HTP',
              'Interior Design (Turkish)': 'ICP'}
-
-
-def get_db():
-    db = mysql.connector.connect(host="localhost",
-                                 user ="root",
-                                 password = "ali109110",
-                                 database ="SMART_ADVISOR")
-    return db
 
 def insert_dept_names():
     db = get_db()

@@ -6,7 +6,6 @@ from flaskr.testimonials import fetch_testifiers
 
 bp = Blueprint('home', __name__)
 
-
 @bp.route('/home')
 def home():
     user_id = session.get('user_id')
