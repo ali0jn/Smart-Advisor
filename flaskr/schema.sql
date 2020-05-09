@@ -1,9 +1,9 @@
 CREATE TABLE instructor (
+  instructor_email VARCHAR(100),
   instructor_google_id VARCHAR(50),
   instructor_name VARCHAR(100),
-  instructor_email VARCHAR(100),
   instructor_profile_picture VARCHAR(512),
-  PRIMARY KEY (instructor_google_id)
+  PRIMARY KEY (instructor_email)
 );
 
 CREATE TABLE student (
@@ -17,9 +17,9 @@ CREATE TABLE student (
   completed_credits SMALLINT UNSIGNED,
   completed_ects SMALLINT UNSIGNED,
   gpa DECIMAL(3, 2),
-  advisor VARCHAR(50),
+  advisor VARCHAR(100),
   PRIMARY KEY (student_google_id),
-  FOREIGN KEY (advisor) REFERENCES instructor(instructor_google_id)
+  FOREIGN KEY (advisor) REFERENCES instructor(instructor_email)
 );
 
 CREATE TABLE testimonial (
@@ -40,10 +40,10 @@ CREATE TABLE instructor_rating (
   explanation_method VARCHAR(100),
   take_again VARCHAR(100),
   student_google_id VARCHAR(50),
-  instructor_google_id VARCHAR(50),
+  instructor_email VARCHAR(100),
   PRIMARY KEY (rating_id),
   FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
-  FOREIGN KEY (instructor_google_id) REFERENCES instructor(instructor_google_id) 
+  FOREIGN KEY (instructor_email) REFERENCES instructor(instructor_email) 
 );
 
 CREATE TABLE course (
@@ -118,10 +118,10 @@ CREATE TABLE teaches (
   semester VARCHAR(6),
   section_year NUMERIC(4, 0),
   course_id VARCHAR(15),
-  instructor_google_id VARCHAR(15),
-  PRIMARY KEY (section_id, semester, section_year, course_id, instructor_google_id),
+  instructor_email VARCHAR(100),
+  PRIMARY KEY (section_id, semester, section_year, course_id, instructor_email),
   FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id),
-  FOREIGN KEY (instructor_google_id) REFERENCES instructor(instructor_google_id)
+  FOREIGN KEY (instructor_email) REFERENCES instructor(instructor_email)
 );
 
 CREATE TABLE department (
@@ -140,10 +140,10 @@ CREATE TABLE student_department (
 );
 
 CREATE TABLE instructor_department (
-  instructor_google_id VARCHAR(50),
+  instructor_email VARCHAR(100),
   department_name VARCHAR(100),
-  PRIMARY KEY (instructor_google_id, department_name),
-  FOREIGN KEY (instructor_google_id) REFERENCES instructor(instructor_google_id),
+  PRIMARY KEY (instructor_email, department_name),
+  FOREIGN KEY (instructor_email) REFERENCES instructor(instructor_email),
   FOREIGN KEY (department_name) REFERENCES department(department_name)
 );
 

@@ -1,0 +1,1799 @@
+course_id,title,credit,ects,theoritical_credit,practical_credit,course_year
+"ADP 101","Touch Typing Techniques I",2,6,1,2,1
+"ADP 102","Touch Typing Techniques II",2,6,1,2,1
+"ADP 103","Fundamental Concepts Of Law",3,5,3,0,1
+"ADP 104","Office Management And Ergonomics",3,5,3,0,1
+"ADP 105","Civil Law",3,5,3,0,1
+"ADP 106","Law Of Obligations",3,4,3,0,1
+"ADP 107","Constitutional Law",3,5,3,0,1
+"ADP 108","Administrative Law",3,4,3,0,1
+"ADP 110","Law Of Civil Procedure",3,4,3,0,1
+"ADP 200",Internship,0,8,0,0,2
+"ADP 201","Touch Typing Techniques III",2,5,1,2,2
+"ADP 202","Touch Typing Techniques IV",2,5,1,2,2
+"ADP 203","Commercial Law",3,5,3,0,2
+"ADP 204","Law Of Criminal Procedure",3,4,3,0,2
+"ADP 205","Criminal Law",3,5,3,0,2
+"ADP 206","Tax Law",3,3,3,0,2
+"ADP 207","Administrative Jurisdiction",2,4,2,0,2
+"ADP 208","Law Of Commercial Papers",2,3,2,0,2
+"ADP 209",Forensics,2,4,2,0,2
+"ADP 210","Prison Administration And Criminal Enforcement Law",2,4,2,0,2
+"ADP 211","Written Notice Law And Legal Correspondence",2,4,2,0,2
+"ADP 212","Labor And Social Security Law",2,4,2,0,2
+"ADP 214",Accounting,3,4,3,0,2
+"ADP 215","Banking Law",2,4,2,0,2
+"ARAB 101","Arabic I",3,5,3,0,1
+"ARAB 102","Arabic II",3,5,3,0,1
+"ARAB 201","Arabic III",3,5,3,0,2
+"ARAB 202","Arabic IV",3,5,3,0,2
+"ARCH 101","Design Studio I",6,10,4,4,1
+"ARCH 102","Design Studio II",6,10,4,4,1
+"ARCH 103","Communications I",3,5,2,2,1
+"ARCH 104","Communications II",3,5,2,2,1
+"ARCH 106","Introduction to Architecture I",3,5,3,0,1
+"ARCH 201","Design Studio III",6,10,4,4,2
+"ARCH 202","Design Studio IV",6,10,4,4,2
+"ARCH 203","Communications III",2,3,1,2,2
+"ARCH 204","Communications IV",2,3,1,2,2
+"ARCH 205","Material and Technology I",3,4,2,2,2
+"ARCH 206","Material and Technology II",3,4,2,2,2
+"ARCH 207","History and Theory I",3,3,3,0,2
+"ARCH 208","History and Theory II",3,3,3,0,2
+"ARCH 209","Structure I",2,2,2,0,2
+"ARCH 210","Structure II",2,2,2,0,2
+"ARCH 221","Vocabulary of Modern Architecture",2,3,2,0,2
+"ARCH 301","Design Studio V",6,10,4,4,3
+"ARCH 302","Design Studio VI",6,10,4,4,3
+"ARCH 303","Conservation and Design",2,3,1,2,3
+"ARCH 304","City and Design",2,3,2,0,3
+"ARCH 305","Material and Technology III",3,4,2,2,3
+"ARCH 306","Material and Technology IV",3,4,2,2,3
+"ARCH 307","History and Theory III",3,3,3,0,3
+"ARCH 308","History and Theory IV",3,3,3,0,3
+"ARCH 309","Summer Internship I",1,2,0,2,3
+"ARCH 401","Design Studio VII",6,10,4,4,4
+"ARCH 402","Diploma Project",6,12,4,4,4
+"ARCH 403","Detail and Design",2,2,2,0,4
+"ARCH 404","Profession and Practice",3,3,3,0,4
+"ARCH 405","Introduction to Architecture II",2,2,2,0,4
+"ARCH 407","Summer Internship II",1,1,0,2,4
+"ARM 101",Armenian,3,5,3,0,1
+"BIL 101","Information Technologies",2,2,2,0,1
+"BIO 101","Life Sciences II - Biology",3,5,3,0,1
+"BÖL 101","Departmental Elective",3,5,0,0,1
+"BÖL 102","Bölüm Seçmeli",3,5,0,0,1
+"BPP 101","Object-Based Programming I",3,6,2,2,1
+"BPP 102","Object-Based Programming II",3,6,2,2,1
+"BPP 103","Introduction To Algorithm And Programming",3,6,2,2,1
+"BPP 104","Fundamentals Of Database Systems",3,6,2,2,1
+"BPP 105","Fundamentals Of Network Systems",3,4,3,0,1
+"BPP 106","Fundamentals Of Web Design",3,6,3,0,1
+"BPP 107","Computer Hardware",3,4,3,0,1
+"BPP 108","Professional Mathematics",3,5,3,0,1
+"BPP 109",Mathematics,2,3,2,0,1
+"BPP 200","Yaz Stajı",0,8,0,0,2
+"BPP 201","Visual Programing I",3,6,2,2,2
+"BPP 202","Visual Programing II",3,6,2,2,2
+"BPP 203","Internet Programming I",3,6,2,2,2
+"BPP 204","Internet Programming II",3,6,2,2,2
+"BPP 205","Graphics And Animation",2,4,1,2,2
+"BPP 206","Temel Elektronik",2,6,2,0,2
+"BPP 207","System Analysis And Design",2,4,1,2,2
+"BPP 208","Web Project Management",3,4,3,0,2
+"BPP 209","Database Applications",3,4,2,2,2
+"BPP 210","Mobile Programming",2,4,2,0,2
+"BPP 211","Content Management Systems",3,4,2,2,2
+"CE 200","Summer Practice",0,5,3,0,2
+"CE 300","Summer Practice",0,5,3,0,3
+"CE 331","Structural Analysis",3,5,2,2,3
+"CE 332","Reinforced Concrete Structures",3,5,2,2,3
+"CE 341","Earth Science",3,5,2,2,3
+"CE 351","Fluid Mechanics",3,5,2,2,3
+"CE 352",Hydraulics,3,5,2,2,3
+"CE 431","Steel Structures",3,5,2,2,4
+"CE 441","Soil Mechanics",3,5,2,2,4
+"CE 442","Foundation Enginnering",3,5,3,0,4
+"CE 461","Introduction to Environmental Engineering",3,5,2,2,4
+"CE 471","Transportation Systems",3,5,3,0,4
+"CE 491","Construction Management",3,5,3,0,4
+"CGP 101","Special Education I",3,5,3,0,1
+"CGP 102","Special Education II",3,5,3,0,1
+"CGP 103","Child Development I",3,5,3,0,1
+"CGP 104","Child Development II",3,5,3,0,1
+"CGP 105","Introduction To Pre-School Education",2,3,2,0,1
+"CGP 106","Curriculum Development In Early Childhood Education",3,4,3,0,1
+"CGP 107","Play And Play Materials",3,5,3,0,1
+"CGP 108","Science And Mathematics For Pre-School Children",3,3,3,0,1
+"CGP 109","Communicating With Children",2,3,2,0,1
+"CGP 110","Pre-School Education Institution Placement I",4,6,0,8,1
+"CGP 200",Staj,0,8,0,0,2
+"CGP 201","Pre-School Education Institution Placement II",4,5,0,8,2
+"CGP 202","Private Education Institution Placement",4,5,0,8,2
+"CGP 203","Child Psychology And Mental Health",3,3,3,0,2
+"CGP 204","Child Abuse, Negligence And Children In Need Of Protection",2,3,2,0,2
+"CGP 205","Children And Music",3,3,3,0,2
+"CGP 206","Learning And Teaching Techniques",3,4,3,0,2
+"CGP 207","Children’s Literature And Media",3,3,3,0,2
+"CGP 208","Children’s Healthand Diseases",3,4,3,0,2
+"CGP 209","Mother And Child Nutrition",2,4,2,0,2
+"CGP 210","Family Education",2,4,2,0,2
+"CGP 211","Art And Creativity In Childhood",2,4,2,0,2
+"CGP 212","Sensory Education",2,4,2,0,2
+"CGP 213","Techniques For Evaluating Children",3,4,3,0,2
+"CGP 214","Early Literacy",2,4,2,0,2
+"CGP 215","Children And Drama",3,4,3,0,2
+"CGP 216","Early Childhood Education Approach",2,0,0,0,2
+"CHI 101","Chinese I",3,5,3,0,1
+"CHI 102","Chinese II",3,5,0,0,1
+"CS 200","Summer Practice",0,5,0,0,2
+"CS 201","Data Structures and Algorithms",3,5,3,0,2
+"CS 202","Advanced Algorithms",3,5,3,0,2
+"CS 240","Exploratory Data Analysis",3,4,3,0,2
+"CS 300","Summer Practice",0,5,0,0,3
+"CS 340","Computer Systems",3,5,3,0,3
+"CS 350","Database Systems",3,5,3,0,3
+"CS 351","Computer Architecture",3,5,3,0,3
+"CS 352","Operating Systems",3,5,3,0,3
+"CS 361",Software,3,5,3,0,3
+"CS 362","Machine Intelligence",3,5,3,0,3
+"CS 364","Computer Networks",3,5,3,0,3
+"CS 381","Object Oriented Programming",3,5,3,0,3
+"CTV 201","Basic Photography",3,5,2,2,2
+"CTV 202","Advanced Photography",3,5,2,2,2
+"CTV 203","Art of Storytelling",3,5,3,0,2
+"CTV 204",Screenwriting,3,5,3,0,2
+"CTV 205","Key Concepts in Moving Image Studies",3,5,3,0,2
+"CTV 206","History of Cinema",3,5,3,0,2
+"CTV 207","Introduction to Media and Communication Studies",3,5,3,0,2
+"CTV 208","Sociology of Media",3,5,3,0,2
+"CTV 209","Media Arts Management",3,5,3,0,2
+"CTV 210","Video Production",3,5,3,0,2
+"CTV 211","Introduction to Cinematography and Lighting",3,5,2,2,2
+"CTV 212",Editing,3,5,2,1,2
+"CTV 214","Film Sound",3,5,2,1,2
+"CTV 253","Business Communication",3,5,3,0,2
+"CTV 301","Introduction to Cinematography",3,5,3,0,3
+"CTV 303","Film Theory and Aesthetics",3,5,3,0,3
+"CTV 305","Television Studies",3,5,2,2,3
+"CTV 306","Ethnography in/of Media",3,5,2,2,3
+"CTV 307","Television Production",3,10,2,2,3
+"CTV 308","TV and Film Production",3,5,3,0,3
+"CTV 309","Film Culture",3,5,3,0,3
+"CTV 310","Film Production",3,10,2,2,3
+"CTV 312","Unforgotten Cinema",3,5,3,0,3
+"CTV 313","Auteur Cinema",3,5,3,0,3
+"CTV 314","Music and Sound Design in Film",3,5,3,0,3
+"CTV 315","Cinema in Turkey",3,5,3,0,3
+"CTV 320","Popular Culture and Media",3,5,3,0,3
+"CTV 321","History of Art and Culture",3,5,3,0,3
+"CTV 322","Brand Management",3,5,3,0,3
+"CTV 324","Media Ethics",3,5,3,0,3
+"CTV 331",Cyberculture,3,5,3,0,3
+"CTV 332","Urban Imagery and Visual Narrative",3,5,3,0,3
+"CTV 335","Critical Approaches to Modern Image",3,5,3,0,3
+"CTV 341","Anthropology of Media",3,5,3,0,3
+"CTV 342","Gender, Race, Class in Media",3,5,3,0,3
+"CTV 344","Intercultural Communication",3,5,3,0,3
+"CTV 347","Advanced Screenwriting",3,5,1,2,3
+"CTV 349","Imagined Networks: Media and Migration",3,5,2,2,3
+"CTV 351","New Approaches in Marketing Communication",3,5,3,0,3
+"CTV 353","Services Marketing",3,5,3,0,3
+"CTV 355","Digital Marketing",3,5,3,0,3
+"CTV 358","International Journalism",3,5,3,0,3
+"CTV 401","Graduation Project",4,10,3,2,4
+"CTV 402","Senior Graduation Project",4,15,3,2,4
+"CTV 403","Documentary Making",3,10,2,2,4
+"CTV 404","World Cinema",3,5,3,0,4
+"CTV 406","New Ways of Seeing",3,5,3,0,4
+"CTV 411","Silent Cinema",3,5,3,0,4
+"CTV 413","Cinema and Politics",3,5,3,0,4
+"CTV 414","Cinema and Feminism",3,5,3,0,4
+"CTV 415","Filmmaking / Cinematography",3,5,3,0,4
+"CTV 417","Film Genres",3,5,3,0,4
+"CTV 419","History of Turkish Media",3,5,3,0,4
+"CTV 421","Cultural Studies",3,5,3,0,4
+"CTV 422","Media as Text",3,5,3,0,4
+"CTV 430","Art of Animation",3,5,2,2,4
+"CTV 431","Mediated Arts Research",3,5,3,0,4
+"CTV 432","Visual Communication and Design",3,5,2,2,4
+"CTV 433","Experimantel Film and Video",3,5,3,0,4
+"CTV 436","The Way to the Narrative",3,5,3,0,4
+"CTV 453","News Reporting and Writing",3,5,2,2,4
+"CTV 454","Multimedia Journalism",3,5,2,2,4
+"CTV 457","Digital Media and Culture",3,5,3,0,4
+"CTV 481","Special Topics in Cinema and Television I",3,5,3,0,4
+"CTV 482","Special Topics in Cinema and Television II",3,5,3,0,4
+"ECON 201",Macroeconomics,3,5,3,0,2
+"ECON 202",Microeconomics,3,5,3,0,2
+"ECON 204","Advanced Microeconomics",3,5,3,0,2
+"ECON 205","Intermediate Microeconomics",3,5,3,0,2
+"ECON 206","Intermediate Macroeconomics",3,5,3,0,2
+"ECON 208","Advanced Macroeconomics",3,5,3,0,2
+"ECON 300","Internship I",0,5,0,0,3
+"ECON 302","Economic Policy",3,5,3,0,3
+"ECON 303","Evolution of Economies and Economics",3,5,3,0,3
+"ECON 305","Economic History of Turkey",3,5,3,0,3
+"ECON 306","Economic History of Europe",3,5,3,0,3
+"ECON 307","Behavioral Economics",3,5,3,0,3
+"ECON 308","World Economy",3,5,3,0,3
+"ECON 309","Managerial Economics",3,5,3,0,3
+"ECON 331",Econometrics,3,5,3,0,3
+"ECON 400","Internship II",0,5,0,0,4
+"ECON 401","Global Economic Thought",3,7,3,0,4
+"ECON 402","Economic History of the Ottoman Empire",3,6,3,0,4
+"ECON 403","Turkish Economy",3,7,3,0,4
+"ECON 405","Institutional Economics ",3,5,3,0,4
+"ECON 406","Financial Economics",3,5,3,0,4
+"ECON 407","Economic Methodology and Philosophy of Economics ",3,5,3,0,4
+"ECON 408","Growth and Development",3,5,3,0,4
+"ECON 409","Applied Economic Analysis",3,5,3,0,4
+"ECON 410","Real Estate Economics and Finance",3,5,3,0,4
+"ECON 411","Topics in İslamic Economics and Finance",3,5,3,0,4
+"ECON 412","Topics in Islamic Economics",3,5,3,0,4
+"ECON 413","Analytical Political Economy",3,5,3,0,4
+"ECON 414","Labor Economics",3,5,3,0,4
+"ECON 415","Making Better Decisions",3,5,3,0,4
+"ECON 450","Economics Through Fiction",3,5,3,0,4
+"EDU 111","Eğitim Bilimine Giriş",2,2,2,0,1
+"EDU 112","Öğretim İlke ve Yöntemleri",2,2,2,0,1
+"EDU 211","Eğitimde Ölçme ve Değerlendirme",2,2,2,0,2
+"EDU 212","Sınıf Yönetimi",2,2,2,0,2
+"EDU 311","Özel Öğretim Yöntemleri",2,2,2,0,3
+"EDU 312","Öğretim Teknolojileri ve Materyal Tasarımı",3,2,2,0,3
+"EDU 411","Eğitim Psikolojisi",2,2,2,0,4
+"EDU 412","Öğretmenlik Uygulaması",5,2,2,6,4
+"EDU 413",,2,2,2,0,4
+"EDU 414",,2,2,2,0,4
+"EE 200","Summer Practice",0,5,0,0,2
+"EE 201","Circuit Analysis",4,5,3,2,2
+"EE 232","Probability and Stochastic Processes",3,5,3,0,2
+"EE 300","Summer Practice",0,5,0,0,3
+"EE 302","Microelectronic Circuit Design",4,5,3,1,3
+"EE 311","Introduction to Electronic Devices",3,5,3,0,3
+"EE 312","Introduction to Communication Systems",3,5,3,0,3
+"EE 321",Electromagnetics,3,5,3,0,3
+"EE 322","Electromagnetics II",3,5,3,0,3
+"EE 324","Control Systems",3,5,3,0,3
+"EE 331","Digital Electronics",3,5,3,0,3
+"EE 332",Microprocessors,4,5,3,2,3
+"EE 407","Advanced Analog Integ.Circuit Design",3,5,3,0,4
+"EECS 201","System Design Fundamentals",4,6,3,2,2
+"EECS 202","Basic Digital Communication with Networking",4,6,3,2,2
+"EECS 214","Unix Operating System",2,4,1,2,2
+"EECS 216","Signals and Systems",3,5,3,0,2
+"EECS 218","Digital Logic Design",3,5,3,0,2
+"EECS 221","Embedded Systems Programming in C",3,5,3,0,2
+"EECS 241","Discrete Mathematics",3,4,3,0,2
+"EECS 244","Differential Equations and Linear Algebra",3,5,3,0,2
+"EECS 401","Engineering Practice and Professionalism",2,2,2,0,4
+"EECS 402",Entrepreneurship,3,5,2,0,4
+"EECS 403","Digital Circuit Design",3,5,3,0,4
+"EECS 404","Communication Circuits",3,5,3,0,4
+"EECS 405","RF Circuit Design",3,5,3,0,4
+"EECS 407","Advanced Integrated Analog Circuit Design",3,5,3,0,4
+"EECS 408","Analog-Digital Interface Integrated Circuits",3,5,3,0,4
+"EECS 413","Wireless Communications",3,5,3,0,4
+"EECS 415","Digital Signal Processing",3,5,3,0,4
+"EECS 416","Image and Video Processing",3,5,3,0,4
+"EECS 417","Digital Communication",3,5,0,0,4
+"EECS 418","Information Theory",3,5,3,0,4
+"EECS 420","Software Based Startups",3,5,3,0,4
+"EECS 421","Antennas and Propagations",3,5,3,0,4
+"EECS 422","Wave Propagation and Antennas",3,5,3,0,4
+"EECS 423",Optics,3,5,3,0,4
+"EECS 424","Photonics and Lasers",3,5,3,0,4
+"EECS 428","Data Visualization",3,5,3,0,4
+"EECS 429",Multimedia,3,5,3,0,4
+"EECS 432","Mobile Programming",3,5,3,0,4
+"EECS 436","Embedded Sytem Design",3,5,3,0,4
+"EECS 441","Nano and Micro Electro Mechanical System",3,5,3,0,4
+"EECS 451","Database Systems",3,5,3,0,4
+"EECS 456","Principles of Computer Systems",3,5,3,0,4
+"EECS 457","Performance Engineering of Software Systems",3,5,3,0,4
+"EECS 461","Machine Learning",3,5,3,0,4
+"EECS 462","Automata Theory, Languages and Computation",3,5,3,0,4
+"EECS 464","Computer Vision",3,5,3,0,4
+"EECS 465","Introduction to Robotics",3,5,3,0,4
+"EECS 466","Enterprise Software Development",3,5,0,0,4
+"EECS 468",Bioinformatics,3,5,3,0,4
+"EECS 471","Distributed Algorithms",3,5,3,0,4
+"EECS 474",Networks,3,5,3,0,4
+"EECS 476","Advanced Computer Networks",3,5,3,0,4
+"EECS 481",Cryptography,3,5,3,0,4
+"EECS 482","Cryptographic Engineering",3,5,3,0,4
+"EECS 483","Network Security",3,5,3,0,4
+"EECS 486","Computational Genomics",3,5,3,0,4
+"EECS 487","Cryptography and Cyber Security",3,5,3,0,4
+"EECS 489","Deep Learning for Natural Language Processing",3,5,3,0,4
+"EKON 201",Macroeconomics,3,5,3,0,2
+"EKON 202",Microeconomics,3,5,3,0,2
+"ELIT 201",Mythologies,3,6,3,0,2
+"ELIT 203","Linguistics I",3,7,3,0,2
+"ELIT 204","Linguistics II",3,6,3,0,2
+"ELIT 205","Introduction to Literary Genres",3,6,3,0,2
+"ELIT 206",Poetry,3,7,3,0,2
+"ELIT 208","Reading Classics",3,6,3,0,2
+"ELIT 214","Eighteenth Century Novel",3,6,3,0,2
+"ELIT 301","History of English Literature I",3,6,3,0,3
+"ELIT 302","History of English Literature II",3,6,3,0,3
+"ELIT 303","Literary Theory I",3,6,3,0,3
+"ELIT 304","Literary Theory II",3,6,3,0,3
+"ELIT 305","Victorian Period",3,6,3,0,3
+"ELIT 306",Modernism,3,6,3,0,3
+"ELIT 308","Renaissance Literature",3,6,3,0,3
+"ELIT 401","Postcolonial Litearture",3,6,3,0,4
+"ELIT 402","Literature and Film",3,6,3,0,4
+"ELIT 403",Drama,3,6,3,0,4
+"ELIT 404","World Literature",3,6,3,0,4
+"ELIT 414","Postmodern Novel",3,6,3,0,4
+"EM 200","Staj Dersi I",0,5,0,0,2
+"EM 210","Ekonomiye Giriş",3,5,3,0,2
+"EM 300","Staj Dersi II",0,5,3,0,3
+"EM 306","Maliyet Muhasebesi",3,5,3,0,3
+"EM 316","Mühendislik Ekonomisi",3,5,2,2,3
+"EM 321","Yöneylem Araştırması I",3,5,2,2,3
+"EM 322","Yöneylem Araştırması II",3,5,2,2,3
+"EM 324",Simülasyon,3,5,2,2,3
+"EM 344","Üretim Sistemleri Tasarım ve Analizi",3,5,2,2,3
+"EM 371","İş Etüdü ve Ergonomi",3,5,3,0,3
+"EM 425","Tesis Planlama",3,5,3,0,4
+"EM 433","Kalite Mühendisliği ve Güvenirlik",3,5,3,0,4
+"EM 435","Zaman Serisi Analizi ve Tahminleri",3,5,3,0,4
+"EM 436",Ekonometri,3,5,0,0,4
+"EM 446","Üretim Planlama ve Kontrol",3,5,2,2,4
+"EM 451","Project Management",3,5,2,2,4
+"EM 458","Çizelgeleme ve Sıralama Teknikleri",3,5,3,0,4
+"EM 461","Bilgisayar Destekli Mühendislik",3,5,3,0,4
+"EM 462","Tedarik Zinciri Yönetimi",3,5,3,0,4
+"EM 463","Mühendisler için Finans",3,5,3,0,4
+"EM 471","Technology And R&D Management",3,5,3,0,4
+"EM 475","Stratejik Yönetim",3,5,3,0,4
+"ENG 101","English I",3,5,3,0,1
+"ENG 102","English II",3,5,3,0,1
+"ENG 201","English III",3,5,3,0,2
+"ENG 202","English IV",3,5,3,0,2
+"ENGM 101","English I",3,3,3,0,1
+"ENGM 102","English II",3,3,3,0,1
+"ENGM 201","English III",3,3,3,0,2
+"ENGM 202","English IV",3,3,3,0,2
+"ENGR 100","Computer Skills",1,2,0,0,1
+"ENGR 101","Introduction to Programming",3,5,2,2,1
+"ENGR 102","Programming Practice",3,5,2,2,1
+"ENGR 105","Introduction to Engineering",1,2,0,2,1
+"ENGR 201","Technical Drawing",3,5,2,2,2
+"ENGR 204","Engineering Mechanics",3,5,3,0,2
+"ENGR 205","Statics and Strength of Materials",3,5,2,2,2
+"ENGR 244","Engineering Materials",3,5,3,0,2
+"ENGR 246","Manufacturing Processes",3,5,3,0,2
+"ENGR 251","Probability for Engineers",3,5,2,2,2
+"ENGR 252","Statistics for Engineers",3,5,2,2,2
+"ENGR 255","Probability and Statistics for Engineers",3,5,2,2,2
+"ENGR 271","Construction Materials",3,5,2,2,2
+"ENGR 313","Scientific Computing",4,6,3,2,3
+"ENGR 314","Database Management",3,5,2,2,3
+"ENGR 422","Numerical Methods",3,5,3,0,4
+"ENGR 461","Computer Aided Engineering (CAE)",3,5,3,0,4
+"ENGR 497","Global Design Project I Analysis",2,10,1,2,4
+"ENGR 498","Global Design Project II Synthesis",2,10,1,2,4
+"FIZ 101","Physics I - Mechanics and Dynamics",4,6,3,2,1
+"FIZ 101L","Physics I - Lab",1,1,0,2,1
+"FIZ 102","Physics II - Electromagnetics and Modern Physics",4,6,3,2,1
+"FIZ 102L","Physics II - Lab",1,1,0,2,1
+"FKP 101","Video Shooting Techniques I",3,6,2,2,1
+"FKP 102","Video Shooting Techniques II",3,6,2,2,1
+"FKP 103","Basic Photography I",3,6,3,0,1
+"FKP 104","Basic Photography II",3,6,3,0,1
+"FKP 105","Lighting Techniques",3,5,3,0,1
+"FKP 106","Video Editing",2,6,1,2,1
+"FKP 107","Basic Communication",3,4,3,0,1
+"FKP 108","Stüdyo Fotoğrafçıığına Giriş",3,5,3,0,1
+"FKP 200",Staj,0,8,0,0,2
+"FKP 201","Video Shooting Techniques II",3,5,2,2,2
+"FKP 202","Video Shooting Techniques IV",2,5,1,2,2
+"FKP 203","Studio Photography",3,5,2,2,2
+"FKP 204","Video Reporting",3,6,2,2,2
+"FKP 205","Image Processing Techniques",3,5,2,2,2
+"FKP 206","Reading Photography",2,4,2,0,2
+"FKP 207","Visual Techniques In Photography",2,4,2,0,2
+"FKP 208","Press Photography",2,4,2,0,2
+"FKP 209",Screenplays,3,4,3,0,2
+"FKP 210","Short Film Production",2,4,1,2,2
+"FKP 211","Documentary Photography",3,4,3,0,2
+"FKP 212","Developing A Photography Project",2,4,2,0,2
+"FRE 101","French I",3,5,0,0,1
+"FRE 102","French II",3,5,0,0,1
+"FRE 201","French III",3,5,0,0,2
+"FRE 202","French IV",3,5,0,0,2
+"GER 101","German I",3,5,0,0,1
+"GER 102","German II",3,5,0,0,1
+"GER 201","German III",3,5,3,0,2
+"GER 202","German IV",3,5,3,0,2
+"GES 101","General Elective",3,5,0,0,1
+"GES 102","General Elective",3,5,0,0,1
+"GIR 100","Introduction To Business",3,4,3,0,1
+"GIR 200","Internship I",0,5,0,0,2
+"GIR 201","Sectors In Business World I",3,5,3,0,2
+"GIR 202","Sectors In Business World II",3,5,3,0,2
+"GIR 203","Financial Accounting",3,5,3,0,2
+"GIR 204","Managerial Accounting",3,5,3,0,2
+"GIR 205","Introduction To Statistics",3,5,2,2,2
+"GIR 206","Statistical Analysis",3,5,2,2,2
+"GIR 208","Management And Organization",3,5,3,0,2
+"GIR 232","Law Of Obligations",3,5,3,0,2
+"GIR 300","Internship 2",0,5,0,0,3
+"GIR 301","Human Resource Management",3,5,3,0,3
+"GIR 302",Entrepreneurship,3,5,3,0,3
+"GIR 303","Financial Management",3,5,3,0,3
+"GIR 304","Organizational Behavior",3,5,3,0,3
+"GIR 305","Marketing Management",3,5,3,0,3
+"GIR 306","Innovation Management",3,5,3,0,3
+"GIR 307","Business Model Development",3,5,3,0,3
+"GIR 309","Operations Management",3,5,3,0,3
+"GIR 331","Business Law",3,5,3,0,3
+"GIR 332","Tax Law",3,5,3,0,3
+"GIR 401","Strategic Management",3,7,3,0,4
+"GIR 402","Business Model Design",3,7,3,0,4
+"GIR 403","Social Entrepreneurship",3,5,3,0,4
+"GIR 404","Capital Markets And Financial Institutions",3,5,3,0,4
+"GIR 405","Digital Marketing",3,5,3,0,4
+"GIR 406","Venture Financing",3,5,3,0,4
+"GIR 407","Lean Entrepreneurship",3,5,3,0,4
+"GIR 408","Business Ethics And Corporate Social Responsibility",3,5,3,0,4
+"GIR 411","Family Business Management",3,6,3,0,4
+"GIR 432","Labor Law",3,5,3,0,4
+"GRE 101",Greek,3,5,3,0,1
+"GRE 102","Greek II",3,5,3,0,1
+"GTP 101","Bilgisayar Destekli Tasarım I",3,6,2,2,1
+"GTP 102","Computer-Aided Design II",3,6,2,2,1
+"GTP 103","Temel Grafik Tasarım",3,6,2,2,1
+"GTP 104","Perspective And Pattern",3,6,2,2,1
+"GTP 105","Lettering And Typography",2,5,1,2,1
+"GTP 106","Desktop Publishing",3,5,3,0,1
+"GTP 107","Basic Photography",3,4,3,0,1
+"GTP 108","Advertisement And Design",2,6,2,0,1
+"GTP 200",Staj,0,8,0,0,2
+"GTP 201","Visual Design Standards",3,6,2,2,2
+"GTP 202","Visual Design In Practice",3,6,2,2,2
+"GTP 203","Illustration I",3,5,2,2,2
+"GTP 204","Illustration II",3,5,2,2,2
+"GTP 205","Publication Graphics I",2,4,1,2,2
+"GTP 206","Publication Graphics II",2,4,1,2,2
+"GTP 207","Packaging Design",2,4,1,2,2
+"GTP 208","History Of Graphic Design",2,4,2,0,2
+"GTP 209","Interface Design",2,4,2,0,2
+"GTP 210","Printing Techniques",2,4,2,0,2
+"GTP 212","Graphics And Animation II",3,4,2,2,2
+"HIL 201","Introduction to Public Relations",3,7,3,0,2
+"HIL 202","Integrated Marketing Communication",3,7,3,0,2
+"HIL 205","Creative Thinking",3,8,3,0,2
+"HIL 206",Copywriting,3,8,3,0,2
+"HIL 213","Kurumsal Sosyal Sorumluluk",3,5,2,2,2
+"HIL 214","Sosyal Medya Ve Halkla Ilişkiler",3,5,3,0,2
+"HIL 216","Masaüstü Yayıncılık",3,5,3,0,2
+"HIL 220","Advertising Analysis",3,5,3,0,2
+"HIL 221","Introduction to Advertising",3,5,3,0,2
+"HIL 223","Interpersonal Communication",3,5,3,0,2
+"HIL 225","Social Advertising and Visual Applications",3,5,2,2,2
+"HIL 301","Corporate Communication",3,7,2,2,3
+"HIL 302","Brand Management",3,6,3,0,3
+"HIL 303","Public Relations Campaign",3,7,3,0,3
+"HIL 304","Advertising Campaigns",3,7,3,0,3
+"HIL 305","Public Relations and Social Media",3,6,3,0,3
+"HIL 306","Research Design",3,7,3,0,3
+"HIL 313","Stratejik Iletişim",3,5,3,0,3
+"HIL 314","Pazarlama Iletişimi",3,5,3,0,3
+"HIL 315","Halkla İlişkiler Ve Etik",3,5,3,0,3
+"HIL 317","Tasarım Uygulamalari",3,5,3,0,3
+"HIL 319","Journalism Applications",3,5,3,0,3
+"HIL 321","Sectoral dynamics in Communication",3,5,0,0,3
+"HIL 322","Political Communication",3,5,3,0,3
+"HIL 323","Global Marketing",3,5,3,0,3
+"HIL 401","Senior Project",4,10,3,2,4
+"HIL 402","Senior Project Production",4,10,3,2,4
+"HIL 403","Media Planning",3,5,2,2,4
+"HIL 404","Consumer Behaviour",3,5,3,0,4
+"HIL 411","Televizyon Haberciliği",3,5,3,0,4
+"HIL 412","Yaratici Yazarlik",3,5,3,0,4
+"HIL 413","Kamuoyu Araştırmaları",3,5,2,2,4
+"HIL 414","Kurumsal Imaj",3,5,3,0,4
+"HIL 421","Media and intellectual Property Rights",3,5,3,0,4
+"HIL 423","Media and Ethics",3,5,3,0,4
+"HIST 201","Historical Methodology",3,5,3,0,2
+"HIST 202","Ottoman History: Beylik to Empire",3,5,3,0,2
+"HIST 203","Early Islamic History",3,5,3,0,2
+"HIST 204","Muslim Empires: A Concise History",3,5,3,0,2
+"HIST 205","Mediterranean History",3,5,3,0,2
+"HIST 206","History of Central Eurasia and Turkic Peoples",3,5,3,0,2
+"HIST 207","Ottoman Turkish I",3,5,3,0,2
+"HIST 208","Ottoman Turkish II",3,5,3,0,2
+"HIST 209","Seljuk History",3,5,3,0,2
+"HIST 301","Statistics for Social Sciences",4,7,2,2,3
+"HIST 302","Research Methods",3,7,3,0,3
+"HIST 303","Classical Ottoman History",3,6,3,0,3
+"HIST 304","Late Ottoman History",3,5,3,0,3
+"HIST 305","History of Medieval Europe",3,5,3,0,3
+"HIST 306","History of Modern Europe",3,5,3,0,3
+"HIST 307","Ottoman Paleography",3,5,3,0,3
+"HIST 308","Ottoman Diplomatica",3,5,3,0,3
+"HIST 310","Black Sea History",3,5,3,0,3
+"HIST 311","Ottoman Urban History",3,5,3,0,3
+"HIST 312","Istanbul in History",3,5,3,0,3
+"HIST 313","History of Islamic Civilization",3,5,3,0,3
+"HIST 314","History of Muslim Spain",3,5,3,0,3
+"HIST 315","History of the Mamluks",3,5,3,0,3
+"HIST 316","History of Art and Architecture",3,5,3,0,3
+"HIST 317","History of Science",3,5,3,0,3
+"HIST 318","Byzantine History",3,5,3,0,3
+"HIST 319","History of the Crusades",3,5,3,0,3
+"HIST 320","History of Colonialism",3,5,3,0,3
+"HIST 401","Historiography: Ancient to Modern",3,7,3,0,4
+"HIST 402","Contemporary Historiography",3,7,3,0,4
+"HIST 403","Arab Lands in the Ottoman Era",3,5,3,0,4
+"HIST 404","Contemporary Middle East",3,5,3,0,4
+"HIST 405","Historical Geography",3,7,3,0,4
+"HIST 406","Senior Project",3,9,3,0,4
+"HIST 407","History and Archaeology",3,5,3,0,4
+"HIST 411","History of Muslim Institutions",3,5,3,0,4
+"HIST 412","History of the Balkans",3,5,3,0,4
+"HIST 413","History of Americas to 1876",3,5,3,0,4
+"HIST 414","History of Africa",3,5,3,0,4
+"HIST 415","Economic History",3,5,3,0,4
+"HIST 416","History of the Russian Empire",3,5,3,0,4
+"HIST 417","History of Imperial China: Tradition and Transformation",3,5,3,0,4
+"HIST 418","History of India",3,5,3,0,4
+"HIST 419","Biography and History",3,5,3,0,4
+"HIST 420","History of Religions",3,5,3,0,4
+"HIST 421","Readings in History",3,5,3,0,4
+"HIST 422","Rise and Fall of Atlantic Slavery",3,5,3,0,4
+"HIST 423","Environmental History",3,5,3,0,4
+"HIST 424","History of Classical Islamic Denominations",3,6,0,0,4
+"HIST 426","The Mongol World Empire",3,5,3,0,4
+"HIST 444","Psychology, History and Memory",3,6,3,0,4
+"HIST 495","Internship in History",0,6,0,0,4
+"HTP 101","Halkla İlişkilere Giriş",3,6,3,0,1
+"HTP 102","Halkla İlişkiler Yönetimi",3,6,3,0,1
+"HTP 103",Reklamcılık,3,6,3,0,1
+"HTP 104","Medya ve İletişim",3,5,3,0,1
+"HTP 105","Temel İletişim",3,6,3,0,1
+"HTP 106","Kurumsal İletişim Yönetimi",3,5,3,0,1
+"HTP 107","Pazarlama İlkeleri",3,5,3,0,1
+"HTP 108","Etkili Sunum Teknikleri",2,5,2,0,1
+"HTP 200",Staj,0,8,0,0,2
+"HTP 201","Halkla İlişkiler Uygulama Teknikleri",3,5,2,2,2
+"HTP 202","Kurumsal Sosyal Sorumluluk",3,5,3,0,2
+"HTP 203","Halkla İlişkiler Kampanyaları",3,5,3,0,2
+"HTP 204","Müşteri İlişkileri Yönetimi",3,5,3,0,2
+"HTP 205","Görsel Tasarım Uygulamaları",3,5,3,0,2
+"HTP 206","Halkla İlişkilerde Metin Yazarlığı",3,5,3,0,2
+"HTP 207","Marka Yönetimi",2,4,2,0,2
+"HTP 208","Yeni Medya ve Halkla İlişkiler",2,4,2,0,2
+"HTP 209","Reklam ve Tanıtım Kampanyaları",2,4,2,0,2
+"HTP 210",Fotoğrafçılık,2,4,2,0,2
+"HTP 211","Kriz Yönetimi",2,4,2,0,2
+"HTP 212","Araştırma Yöntem ve Teknikleri",2,4,2,0,2
+"HUK 101","Introduction to Law",3,5,3,0,1
+"HUK 102","Genel Kamu Hukuku",3,5,3,0,1
+"HUK 103","Civil Law I",3,5,2,2,1
+"HUK 104","Civil Law II",3,5,2,2,1
+"HUK 105","Constitutional Law I",3,5,2,2,1
+"HUK 106","Constitutional Law II",3,5,2,2,1
+"HUK 108","Roman Law",2,4,2,0,1
+"HUK 201","Administrative Law I",3,4,3,0,2
+"HUK 202","Administrative Law II",3,4,3,0,2
+"HUK 205","Criminal Law I",3,4,2,2,2
+"HUK 206","Criminal Law II",3,4,2,2,2
+"HUK 207","Law of Obligations I",3,4,2,2,2
+"HUK 208","Law of Obligations II",3,4,2,2,2
+"HUK 210","Roma Hukuku",3,5,3,0,2
+"HUK 212","Methodology of Law",3,5,3,0,2
+"HUK 215","Anayasa Yargısı",3,5,3,0,2
+"HUK 216","Intellectual Property Law",2,3,2,0,2
+"HUK 218","Bilişim Hukuku",3,5,3,0,2
+"HUK 301","Law of Civil Procedure I",3,4,2,2,3
+"HUK 302","Law of Civil Procedure II",3,4,2,2,3
+"HUK 303","Law of Property I",3,3,2,2,3
+"HUK 304","Law of Property II",3,3,2,2,3
+"HUK 305","Commercial Law I",3,4,2,2,3
+"HUK 306","Commercial Law II",3,4,2,2,3
+"HUK 307","Law of Obligations (Special Provisions)",3,4,2,2,3
+"HUK 308","Criminal Law (Special Provisions)",3,4,2,2,3
+"HUK 309","Human Rights Law",2,3,2,0,3
+"HUK 310","Administrative Procedure Law",3,3,3,0,3
+"HUK 311","Turkish Legal History I",2,4,2,0,3
+"HUK 312","Turkish Legal History II",2,4,2,0,3
+"HUK 313","Tender Law",2,3,2,0,3
+"HUK 314","Zoning Law",2,3,2,0,3
+"HUK 315","Environmental Law",2,3,2,0,3
+"HUK 317",Criminology,2,3,2,0,3
+"HUK 320","Consumer Law",2,3,2,0,3
+"HUK 324","Law of Security",2,3,2,0,3
+"HUK 325","Constitutional Jurisdiction",2,3,2,0,3
+"HUK 328","Information and Technology Law",2,3,2,0,3
+"HUK 401","Law of Execution and Bankruptcy I",3,5,2,2,4
+"HUK 402","Law of Execution and Bankruptcy II",3,5,2,2,4
+"HUK 403","Insurance Law",2,3,2,0,4
+"HUK 404","Tax Law",3,4,3,0,4
+"HUK 405","Labor and Social Security Law I",3,4,3,0,4
+"HUK 406","Labor and Social Security Law II",3,4,3,0,4
+"HUK 407","Law of Criminal Procedure I",3,5,2,2,4
+"HUK 408","Law of Criminal Procedure II",3,5,2,2,4
+"HUK 409","Negotiable Instruments Law",2,3,2,0,4
+"HUK 410","Maritime Commercial Law",2,3,2,0,4
+"HUK 414","Islamic Law",2,3,2,0,4
+"HUK 416","Law of Inheritance",2,3,2,0,4
+"HUK 417","Procedure of Judicial Correspondence",2,3,2,0,4
+"HUK 418","Industrial Property Law",2,3,2,0,4
+"HUK 419","Energy Law",2,3,2,0,4
+"HUK 420","Health Law",2,3,2,0,4
+"HUK 422","Notification Law",2,3,2,0,4
+"HUK 424","Forensic Medicine",2,3,2,0,4
+"HUK 431","Judicial Ethics",2,3,2,0,4
+"IE 200","Summer Practice",0,5,0,0,2
+"IE 300","Summer Practice",0,5,0,0,3
+"IE 316","Engineering Economics",3,5,2,2,3
+"IE 321","Deterministic Models in OR",3,5,2,2,3
+"IE 322","Stochastic Models in OR",3,5,2,2,3
+"IE 324",Simulation,3,5,2,2,3
+"IE 333","Quality Engineering and Reliability",3,5,3,0,3
+"IE 343","Production Planning and Control",3,5,3,0,3
+"IE 344","Design and Analysis of Manufacturing Systems",3,5,2,2,3
+"IE 371",Ergonomics,3,5,3,0,3
+"IE 426","Nonlinear Programming",3,5,2,2,4
+"IE 427","Graph Theory",3,5,0,0,4
+"IE 434","Data Mining",3,5,0,0,4
+"IE 435","Forecasting and Time Series",3,5,0,0,4
+"IE 438","Design of Experiments",3,5,0,0,4
+"IE 442","Advanced Materials Science for Engineers",3,5,0,0,4
+"IE 445","Modern Manufacturing Technologies",3,5,3,0,4
+"IE 446","Manufacturing Planning and Control",3,5,2,2,4
+"IE 448","Product Design and Innovation",3,5,0,0,4
+"IE 450","Nanomanufacturing and Devices",3,5,3,0,4
+"IE 451","Project Management",3,5,2,2,4
+"IE 452","Stochastic Processes and Queueing",3,5,0,0,4
+"IE 458","Scheduling and Sequencing",3,5,3,0,4
+"IE 462","Supply Chain Management",3,5,3,0,4
+"IE 463","Finance for Engineers",3,5,3,0,4
+"IE 465","Integrated Business Processes in ERP",3,5,3,0,4
+"IE 488","Agile Methods",3,5,3,0,4
+"IE 493","Seminars in Industrial Engineering",3,5,3,0,4
+"IE 494","Special Topics in Industrial Engineering",3,5,3,0,4
+"IF 200","Internship I",0,5,0,0,2
+"IF 300","Internship II",0,5,0,0,3
+"IF 301","Corporate Finance I",3,5,3,0,3
+"IF 302","Corporate Finance II",3,5,3,0,3
+"IF 303","Securities Analysis",3,0,0,0,3
+"IF 304","Data Analysis and Econometric Modelling",3,5,3,0,3
+"IF 306",Investments,3,5,3,0,3
+"IF 401",Derivatives,3,7,3,0,4
+"IF 402","Risk Management in Financial Institutions",3,0,0,0,4
+"IF 403","Financial Markets Regulation",3,0,0,0,4
+"IF 404","International Trade and Business Law",3,5,3,0,4
+"IF 405","Behavioral Finance",3,5,3,0,4
+"IF 406","Advanced Portfolio Management",3,5,3,0,4
+"IF 407","Insurance and Risk Management",3,5,3,0,4
+"IF 408","Turkish Banking Sector and Bank Management",3,5,3,0,4
+"IF 409","Issues in Corporate Governance",3,5,3,0,4
+"IF 410","Real Estate Finance",3,5,3,0,4
+"IF 411","Forecasting Financial Markets",3,5,3,0,4
+"ILT 201","Communication and Media",3,5,3,0,2
+"ILT 202","Communication Theories",3,5,3,0,2
+"ILT 220","Visual Design",3,5,3,0,2
+"IMIM 101","Design Studio I",6,10,4,4,1
+"IMIM 102","Tasarım Atölyesi II",6,10,4,4,1
+"IMIM 103","Communications I",3,5,2,2,1
+"IMIM 104","İletişim II",3,5,2,2,1
+"IMIM 106","İç Mimarlık ve Çevre Tasarımına Giriş",3,5,3,0,1
+"IMIM 201","Tasarım Atölyesi III",6,10,4,4,2
+"IMIM 202","Tasarım Atölyesi IV",6,10,4,4,2
+"IMIM 203","İletişim III",2,3,1,2,2
+"IMIM 204","İletişim IV",2,3,1,2,2
+"IMIM 205","Malzeme ve Teknoloji I",2,3,1,2,2
+"IMIM 206","Malzeme ve Teknoloji II",2,3,1,2,2
+"IMIM 207","Tarih ve Kuram I",3,3,3,0,2
+"IMIM 208","Tarih ve Kuram II",3,3,3,0,2
+"IMIM 209","Yapı Bilgisi",2,3,1,2,2
+"IMIM 210","Ergonomi ve Tasarım",2,3,1,2,2
+"IMIM 221","Spatial Design for Corporate Events",2,3,2,0,2
+"IMIM 301","Tasarım Atölyesi V",6,10,4,4,3
+"IMIM 302","Tasarım Atölyesi VI",6,10,4,4,3
+"IMIM 303","Koruma ve Tasarım",2,3,1,2,3
+"IMIM 304","Mobilya Tasarımı ve Konstrüksiyonu",4,6,2,4,3
+"IMIM 305","Malzeme ve Teknoloji III",2,4,1,2,3
+"IMIM 306","Malzeme ve Teknoloji IV",3,4,2,2,3
+"IMIM 307","Tarih ve Kuram III",3,3,3,0,3
+"IMIM 309","Staj I",1,2,0,2,3
+"IMIM 401","Tasarım Atölyesi VII",6,10,4,4,4
+"IMIM 402","Diploma Projesi",6,12,4,4,4
+"IMIM 403","Detay ve Tasarım",2,2,2,0,4
+"IMIM 404","Meslek ve Uygulama Bilgisi",3,3,3,0,4
+"IMIM 405","Portfolyo Tasarımı",2,2,2,0,4
+"IMIM 407","Staj II",1,1,0,2,4
+"INDD 101","Design Studio I",6,10,4,4,1
+"INDD 102","Design Studio II",6,10,4,4,1
+"INDD 103","Design Communications I",3,5,2,2,1
+"INDD 104","Design Communication II",3,5,2,2,1
+"INDD 106","Introduction to Industrial Design",3,5,3,0,1
+"INDD 201","Design Studio III",6,10,4,4,2
+"INDD 202","Design Studio IV",6,10,4,4,2
+"INDD 203","Design Communication III",2,5,1,2,2
+"INDD 204","Design Communication IV",2,5,1,2,2
+"INDD 205","Material and Technology I",3,4,2,2,2
+"INDD 206","Material and Technology II",3,4,2,2,2
+"INDD 207","Design History",3,3,3,0,2
+"INDD 208","Design Research and Methods",3,3,3,0,2
+"INDD 301","Design Studio V",6,10,4,4,3
+"INDD 302","Design Studio VI",6,10,4,4,3
+"INDD 303","Ergonomy and Design",2,4,1,2,3
+"INDD 304","Portfolio Design",2,3,2,0,3
+"INDD 305","Material and Technology III",3,4,2,2,3
+"INDD 306","Material and Technology IV",3,4,2,2,3
+"INDD 307","Design and Culture",3,3,3,0,3
+"INDD 308","Marketing and Management in Design",3,3,3,0,3
+"INDD 309","Summer Internship I",1,1,0,2,3
+"INDD 401","Design Studio VII",6,11,4,4,4
+"INDD 402","Diploma Project",6,12,4,4,4
+"INDD 403","Sustainability in Product Design",3,3,3,0,4
+"INDD 404","Profession and Practice",3,3,3,0,4
+"INDD 405","Summer Internship II",1,1,0,2,4
+"ISP 101","Introduction To Occupational Health And Safety",4,6,4,0,1
+"ISP 102","Code Of Practice For Occupational Health And Safety",4,6,4,0,1
+"ISP 103","Personal Protective Equipment",2,6,2,0,1
+"ISP 104","Risk Analysis And Assessment",3,6,3,0,1
+"ISP 105",Ergonomics,2,5,2,0,1
+"ISP 106","Management Systems",3,6,3,0,1
+"ISP 108","Occupational Hygiene",2,5,2,0,1
+"ISP 200",Staj,0,8,0,0,2
+"ISP 201","Occupational Safety Legislation I",3,5,3,0,2
+"ISP 202","Occupational Safety Legislation II",3,5,3,0,2
+"ISP 203","Labor And Social Security Law",3,5,3,0,2
+"ISP 204","Handling And Storage",3,5,3,0,2
+"ISP 205","Work Accidents And Occupational Diseases",2,5,2,0,2
+"ISP 206","Labeling And Marking",2,4,2,0,2
+"ISP 207","Emergency Management",2,4,2,0,2
+"ISP 208","Occupational Health And Safety In Mines And Underground Structures",2,4,2,0,2
+"ISP 210","Recording And Reporting",2,4,2,0,2
+"ISP 211","Occupational Health And Safety In Construction",3,4,3,0,2
+"ISP 212","Machinery And Equipment",3,5,3,0,2
+"ISS 101","Tajwid and Tashih al-Huruf (Tajwid and Proper Pronouncement)",2,2,2,0,1
+"ISS 102","Art of The Qur'an Recitation",2,2,2,0,1
+"ISS 103","Arabic Language I",6,7,2,8,1
+"ISS 104","Arabic Language II",5,5,2,8,1
+"ISS 105","Ottoman Turkish",3,3,2,0,1
+"ISS 106","Turkish Islamic Literature",2,2,2,0,1
+"ISS 108","Preaching and Vocational Internship",1,2,0,2,1
+"ISS 181","H:el-Medhal ile'n-Nususi't-Turasiye",2,3,2,0,1
+"ISS 182","H:Edebu'z-Zühd ve'r-Rekaik",2,3,2,0,1
+"ISS 183","H:el-Maksud fi's-Sarf",2,3,2,0,1
+"ISS 184",H:et-Tuhfetu's-Seniyye,2,3,2,0,1
+"ISS 201","Practice of The Noble Qur'an Memorization",2,4,2,1,2
+"ISS 202","Kur'an Okuma ve Tecvid IV",3,5,3,0,2
+"ISS 203","Introdcution to Ulum al-Quran and Tafseer",3,5,2,1,2
+"ISS 204","Fiqh of Worship",2,4,2,2,2
+"ISS 205","Mustalah al-Haidth (Hadith Terminologies) and its History",3,4,2,2,2
+"ISS 206","Introduction to the Studies of Usul al-Fiqh (Islamic Jurisprudance)",2,3,2,0,2
+"ISS 207","Introduction to Islamic Theology",2,2,2,0,2
+"ISS 208","History of Islamic Thought: Early Period",3,4,3,0,2
+"ISS 209","Sirat al-Nabi (The Life of The Prophet)",3,4,2,2,2
+"ISS 210","History of Islamic Denominations",3,4,2,0,2
+"ISS 211","History of Islam: 7-13th Centuries",3,4,2,0,2
+"ISS 212","History of Islam: 13-20th Centuries",3,4,2,2,2
+"ISS 214","Türk İslam Sanatları Tarihi",3,5,3,0,2
+"ISS 216","History of Philosophy",2,4,2,0,2
+"ISS 251","Islamic History: 7th-13th Centuries",3,5,3,0,2
+"ISS 252","Islamic History: 13th-20th Centuries",3,5,3,2,2
+"ISS 275","Denominations and Religious Movements in the Muslim World",3,5,3,0,2
+"ISS 276","Introduction to Islamic Law (Fiqh)",3,5,3,0,2
+"ISS 280","Introduction to Islamic Studies",3,5,3,0,2
+"ISS 281","H:el-Kıraa fi'I-Edebi'l-Muasir",3,4,3,0,2
+"ISS 282","H:et-Takrib li'n-Nevevi",2,3,2,0,2
+"ISS 283","Arabic Grammer book by Muhammad Birgvi",4,6,4,0,2
+"ISS 284","H:izharu'l-Esrar li'I-Birgivi: Mamulat ve irab",4,6,4,0,2
+"ISS 285","H:el-Emali fi'I-Akide",2,3,2,0,2
+"ISS 286","H:Klasik Mantık ve Münazara",3,4,3,0,2
+"ISS 303","Major Themes in The Noble Qur'an",3,5,3,0,3
+"ISS 304","Basic Qur’anic Concepts",3,4,3,0,3
+"ISS 305","The Fiqh of Personal Status Law",4,4,3,2,3
+"ISS 306","Usul al-Fiqh: Legal Evidence (Daleel)",2,4,2,1,3
+"ISS 307","Hadith: The Nine Books of The Hadith",3,4,2,3,3
+"ISS 308","The Fiqh of Transactions",4,4,3,2,3
+"ISS 309","Major Themes in Claasical Islamic Theology",2,3,2,0,3
+"ISS 310","Main hadith books before the fifth century",3,4,2,3,3
+"ISS 311","History of Islamic Thought: From Avicenna to Fakhr al-Din al-Razi",2,3,2,0,3
+"ISS 312","History of Islamic Thought: From the time of Razi to Modernity",2,3,2,0,3
+"ISS 313","Sociology of Religion",2,3,2,0,3
+"ISS 314","History of Islamic Arts",1,2,1,0,3
+"ISS 316","Major Themes in the History of The Islamic Civilization",2,3,2,0,3
+"ISS 351","Art of Qur’an Recitation",2,3,2,0,3
+"ISS 353","Main Topics in the Qur’an",2,3,2,0,3
+"ISS 354","Advenced Tafseer Texts",2,3,2,0,3
+"ISS 355","Hadith Takhrij and Rijal",2,3,2,0,3
+"ISS 356","Hadith Literature",2,3,2,0,3
+"ISS 357","Comperative Principles of Islamic Ibadat",2,3,2,0,3
+"ISS 358","Comperative Islamic Law II",2,3,2,0,3
+"ISS 359","Comperative Islamic Law I",2,3,2,0,3
+"ISS 360","Classical Kalam Texts II",2,3,2,0,3
+"ISS 361","Classical Kalam Texts I",2,3,2,0,3
+"ISS 362","History of Islamic Thought III",2,3,2,0,3
+"ISS 371","Major Themes in Classical Islamic Theology",2,3,2,0,3
+"ISS 372","Major Themes of Islamic Civilization",2,3,2,0,3
+"ISS 381","Muhtasaru'I-Kuduri: Chapter on Marriage (A classic fiqh textbook)",2,3,2,0,3
+"ISS 382","H:Muhtasaru'I-Kuduri: Muamelat",3,3,3,0,3
+"ISS 383","Arabic Literature",3,4,3,0,3
+"ISS 384","H: Mebahis fi Usuli'd-Din: Mutun Muhtara",3,4,3,0,3
+"ISS 403","Islamic Jurisprudance, Rule and Evidence",3,4,2,2,4
+"ISS 404","Islamic Criminal Law and International Relations",3,5,2,2,4
+"ISS 405","Selected Topics in Islamic Theology",2,3,2,0,4
+"ISS 406","Applied Munazara Techniques",2,2,2,0,4
+"ISS 407","Islamic Etheical and Political Thought",3,4,3,0,4
+"ISS 408","Turkish Islamic Literature",2,3,2,0,4
+"ISS 409","Tasawwuf I",2,2,2,0,4
+"ISS 410","History of Tasavvuf",3,5,3,0,4
+"ISS 411","History of Religion: Major Faith Traditions",3,5,2,1,4
+"ISS 412","History of Religion: Christianity and Contemporary Religious Movements",3,5,2,1,4
+"ISS 413","Contemporary Muslim Societies and Islamic World",3,4,2,2,4
+"ISS 414","Modern Islamic Thought",2,3,2,0,4
+"ISS 415","Psychology of Religion",2,3,2,0,4
+"ISS 416","Philolosphy of Religion",2,3,2,0,4
+"ISS 417","Preaching and Vocational Internship",1,2,0,2,4
+"ISS 418","Graduation Project",2,3,1,3,4
+"ISS 419","Religious Education",1,2,2,0,4
+"ISS 441","Introduction to the Bible",3,5,3,0,4
+"ISS 442","Spiritual Counseling and Guidance",3,5,3,0,4
+"ISS 451","Classic Logic",2,3,2,0,4
+"ISS 452","Relation between Seerah and Hadith",2,3,2,0,4
+"ISS 453","Issues in Contemporary Tafseer",2,3,2,0,4
+"ISS 454","Orientalism and Hadith",2,3,2,0,4
+"ISS 455","Jurisprudencial Hadiths",2,3,2,0,4
+"ISS 456","Modern Approaches to Sunnah",2,3,2,0,4
+"ISS 457","Current Fiqh Problems/Issues in Fıqh I",2,3,2,0,4
+"ISS 458","Comperative Islamic Jurisprudance",2,3,2,0,4
+"ISS 459","Contemporary Issues in Kalam",2,3,2,0,4
+"ISS 460","Current Fiqh Problems/Issues II",2,3,2,0,4
+"ISS 461","Classic texts of Tasawwuf",2,3,2,0,4
+"ISS 462","Texts of Ottoamns Sufi Thinking",2,3,2,0,4
+"ISS 463","Islamic Calligraprhy",2,3,2,0,4
+"ISS 464","Philosophy of Tasawwuf",2,3,2,0,4
+"ISS 465","Persian Langauge",2,3,2,0,4
+"ISS 466","Issues in Current Tasawwuf",2,3,2,0,4
+"ISS 467","Malay Language",2,3,2,0,4
+"ISS 468","Religion and Social Sciences",2,3,2,0,4
+"ISS 469","Islamic History of Sciences",2,3,2,0,4
+"ISS 470","Intorduction to Judaism",2,3,2,0,4
+"ISS 471","History of Islamic Economy",2,3,2,0,4
+"ISS 473","Hristiyanlığa Giriş",2,3,2,0,4
+"ISS 474","Urdu Language",2,3,2,0,4
+"ISS 475","Political Ideas and Institutions in Islamic Civilization",2,3,2,0,4
+"ISS 476","Classics of Islamic History",2,3,2,0,4
+"ISS 478","Problematic Issues in Hadith",2,3,2,0,4
+"ISS 481","Selected Topics in Systematic Theology",2,4,2,0,4
+"ISS 482","H: en-Nazariyyatu'I-Kevniyye: Mutun Muhtara",3,4,3,0,4
+"ISS 483","History of Religion: Major Faith Traditions",3,5,2,1,4
+"ISS 484","History of Religion: Christianity and Contemporary Religious Trends",3,5,2,1,4
+"ISS 485","A classic textbook in Usul al-Fqih by Molla Husrev",2,3,2,0,4
+"ISS 486","Philosophy of Religion",2,3,2,0,4
+"ISS 487","A classic book of Fiqh by Muhammad al-Shaibani",3,4,3,0,4
+"ISS 488",H:el-Muvatta,3,4,3,0,4
+"ISS 489","Selected Readings in Islamic Political Thought",2,3,2,0,4
+"ISS 490","Readings on Tefsir bi'd-Diraye (Qur’anic Exegesis)",5,4,3,0,4
+"ITM 200","Internship I",0,5,0,0,2
+"ITM 300","Internship II",0,5,0,0,3
+"ITM 301","International Economics",3,5,3,0,3
+"ITM 302","Global Entrepreneurship",3,5,3,0,3
+"ITM 303","Innovation Management",3,5,3,0,3
+"ITM 304","International Transport and Logistics",3,5,3,0,3
+"ITM 306","Import and Export Management",3,5,3,0,3
+"ITM 308","International Trade Operations",3,5,3,0,3
+"ITM 310","Supply Chain Management",3,5,3,0,3
+"ITM 312","International Finance",3,5,3,0,3
+"ITM 401","International Business Management",4,7,3,2,4
+"ITM 403","International Marketing",3,5,3,0,4
+"ITM 405","Business Consulting Models",3,5,3,0,4
+"ITM 406","Global Business Strategy",4,8,3,2,4
+"ITM 411","Cross Cultural Management",3,5,3,0,4
+"ITM 412","Management of Multinational Corporations",3,5,3,0,4
+"ITM 413","International Business Comm.",3,5,3,0,4
+"ITM 414","International Human Resource Management",3,5,3,0,4
+"ITM 415","E-Business and Trade",3,5,3,0,4
+"ITM 416","Special Topics in International Trade",3,5,3,0,4
+"ITM 417","Brand Management",3,5,3,0,4
+"ITM 418","History of Trade",3,5,3,0,4
+"ITM 420","Special Topics in International Marketing",3,5,3,0,4
+"ITM 422","Managerial Decision Making",3,5,3,0,4
+"ITM 429","Digital Marketing in Business",3,5,3,0,4
+"ITM 430","Digital and Social Media Marketing",3,5,3,0,4
+"ITM 431","Special Topics in Marketing Management I",3,5,3,0,4
+"ITM 432","Special Topics in Marketing Management II",3,5,3,0,4
+"ITM 440","Foreign Trade Financing",3,5,3,0,4
+"ITM 441","Special Topics in International Finance",3,5,3,0,4
+"ITM 442","Special Topics in International Accounting",3,5,3,0,4
+"ITM 450","International Economic and Trade Organizations",3,5,3,0,4
+"ITM 451","International Econonomic Law",3,5,3,0,4
+"ITM 452","International Political Economy",3,5,3,0,4
+"ITM 453","Turkish Foreign Trade and Investment Policy",3,5,3,0,4
+"ITM 454","Region Studies in International Trade",3,5,3,0,4
+"ITM 455","Customs and Applications",3,5,3,0,4
+"ITM 456","Customs and Applications II",3,5,3,0,4
+"ITP 101",Mathematıcs,2,3,2,0,1
+"ITP 102",Strength,3,5,3,0,1
+"ITP 103",Physıcs,2,3,2,0,1
+"ITP 104","Building Statics",3,5,3,0,1
+"ITP 105","Mechanics And Statics",2,4,1,2,1
+"ITP 106","Concrete Technology",2,5,1,2,1
+"ITP 107","Materials Science And Building Materials",2,4,2,0,1
+"ITP 108","Professional Drawing",3,6,2,2,1
+"ITP 109","Construction Technology",2,4,2,0,1
+"ITP 111","Technical Drawing",2,5,1,2,1
+"ITP 200",Staj,0,8,0,0,2
+"ITP 201","Steel Structures",3,5,3,0,2
+"ITP 202","Construction Quantity Survey And Cost",3,6,3,0,2
+"ITP 203","Reinforced Concrete",3,5,3,0,2
+"ITP 204","Highway Construction",3,6,3,0,2
+"ITP 205","Soil Mechanics",3,5,3,0,2
+"ITP 206","System Analysis",3,7,2,2,2
+"ITP 207","Land Surveys",2,4,1,2,2
+"ITP 208","Project Survey And Application",2,4,1,2,2
+"ITP 209","Computer-Aided Design",2,4,1,2,2
+"ITP 211","Water Supply And Delivery",2,4,2,0,2
+"ITP 212","Construction Site Organization",2,4,2,0,2
+"KIM 101","Life Sciences I - Chemistry",3,5,3,0,1
+"LAT 101",Latin,3,5,3,0,1
+"LAT 102","Latin II",3,5,3,0,1
+"LAW 203","International Law I",2,4,2,0,2
+"LAW 204","International Law II",2,4,2,0,2
+"LAW 209","Sociology of Law",2,4,2,0,2
+"LAW 210","Philosophy of Law",2,4,2,0,2
+"LAW 213","Introduction to European Union Law",2,3,2,0,2
+"LAW 220","International Protection Of Human Rights",2,3,2,0,2
+"LAW 222","International Humanitarian Law",2,3,2,0,2
+"LAW 231","Introduction to Law",3,5,3,0,2
+"LAW 232","Business Law",3,5,3,0,2
+"LAW 315","Environmental Law",2,3,2,0,3
+"LAW 316","Law of Torts and Contract",2,3,2,0,3
+"LAW 317",Criminology,2,3,2,0,3
+"LAW 318","International Investment Law",2,3,2,0,3
+"LAW 319","Introduction to Common Law",2,3,2,0,3
+"LAW 321","International Commercial Law",2,3,2,0,3
+"LAW 322","Banking Law",2,3,2,0,3
+"LAW 326","International Sales and Arbitration Law",2,3,2,0,3
+"LAW 327","The Rights of the Child in International Law",2,3,2,0,3
+"LAW 411","International Private Law I",3,5,2,2,4
+"LAW 412","International Private Law II",3,5,2,2,4
+"LAW 415","Competition Law",2,3,2,0,4
+"LAW 416","International Arbitration",2,3,2,0,4
+"LAW 421","Law of Stock-Exchange",2,3,2,0,4
+"LAW 423","Legal Writing",2,3,2,0,4
+"LAW 424","Communications Law",2,3,2,0,4
+"LAW 425","Democracy and Law",2,3,2,0,4
+"LAW 426","Law and Ethics",2,3,2,0,4
+"LAW 427","International Trade Law",2,3,2,0,4
+"LAW 429","Intellectual Property Law",2,3,2,0,4
+"LIFE 101","Life Sciences I - Chemistry",3,5,3,0,1
+"LIFE 102","Life Sciences II - Biology",3,5,3,0,1
+"LING 201","Ottoman Turkish I",4,6,4,0,2
+"LING 202","Ottoman Turkish II",4,6,4,0,2
+"LING 203","Turkish Linguistics",4,5,4,0,2
+"LING 204","Historical Linguistics of Turkish",3,4,3,0,2
+"LING 411","Turkish Phonology",3,6,3,0,4
+"LING 412","Turkish Morphology",3,6,3,0,4
+"LING 413","Turkish Syntax",3,6,3,0,4
+"LING 414","Discourse Analysis",3,6,3,0,4
+"LING 415","Linguistic Methodology",3,6,3,0,4
+"LING 416","Textual Linguistics",3,6,3,0,4
+"LING 417",Dialectology,3,6,3,0,4
+"LING 418","English Turkish Contrastive Analysis",3,6,3,0,4
+"LING 431","Ottoman Paleography",3,6,3,0,4
+"LING 432","Ottoman Diplomatica",3,6,3,0,4
+"LING 433",Translation,3,6,3,0,4
+"LING 434","Translation Studies",3,6,3,0,4
+"LIT 201","Origins of Modern Literatures",3,5,3,0,2
+"LIT 202","Modernities and Literatures",3,5,3,0,2
+"LIT 203","Classical Islamic Literatures I: Major Themes and Sources",3,5,3,0,2
+"LIT 204","Classical Islamic Literatures II: Major Literary Spaces, Main Actors and Genres",3,5,3,0,2
+"LIT 205","Literary and Linguistic Research Methods",2,4,2,0,2
+"LIT 206","Edebiyat ve İnsan Bilimleri",3,5,3,0,2
+"LIT 301","Modern Turkish Literature in the Ottoman Period",3,5,3,0,3
+"LIT 302","Modern Turkish Literature in the Republican Peirod",3,5,3,0,3
+"LIT 303","Classical Turkish Literature: Main Concepts",3,5,3,0,3
+"LIT 304","History of Classical Turkish Literature",3,5,3,0,3
+"LIT 305","Origins of Literary Theory and Criticism",3,5,3,0,3
+"LIT 306","Modern Literary Theory and Criticism",3,5,3,0,3
+"LIT 401","Literature and Folklore",3,6,3,0,4
+"LIT 404","Graduation Project",3,7,1,4,4
+"LIT 406","Literature and Humanities",3,6,3,0,4
+"LIT 411","Ottoman Novel and Modernity",3,6,3,0,4
+"LIT 412","Republican Novel and Modernity",3,6,3,0,4
+"LIT 413","Modern Poetry",3,6,3,0,4
+"LIT 414","Drama and Representation",3,6,3,0,4
+"LIT 415","Modern Short Story",3,6,3,0,4
+"LIT 416","Criticism in Modern Turkish Literature",3,6,3,0,4
+"LIT 417","Literary Magazines",3,6,3,0,4
+"LIT 418","Turkish Literature and Urban Experience",3,6,3,0,4
+"LIT 419","Children’s Literature",3,6,3,0,4
+"LIT 421","Advanced Literary Theory",3,6,3,0,4
+"LIT 422","Literature and Gender",3,6,3,0,4
+"LIT 423","Literature and Nationalism",3,6,3,0,4
+"LIT 424","Literature and History",3,6,3,0,4
+"LIT 425","Literature and Politics",3,6,3,0,4
+"LIT 426","Literature, Psychoanalysis and Subjectivity",3,6,3,0,4
+"LIT 427","Literature and Law",3,6,3,0,4
+"LIT 428",Narratology,3,6,3,0,4
+"LIT 429","Literature, Orientalism and Postcolonialism",3,6,3,0,4
+"LIT 431","Ghazal in Classical Turkish Literature",3,6,3,0,4
+"LIT 432","Qasida in Classical Turkish Literature",3,6,3,0,4
+"LIT 433","Masnavi in Classical Turkish Literature",3,6,3,0,4
+"LIT 434","Literature and Sufism",3,6,3,0,4
+"LIT 435","Allegory in Classical Turkish Literature",3,6,3,0,4
+"LIT 436","Gender in Classical Turkish Literature",3,6,3,0,4
+"LIT 437","Indian Style in Classical Islamic Literatures",3,6,3,0,4
+"LIT 438","Classical Turkish Prose",3,6,3,0,4
+"LIT 439","Autobiography and Biography in Classical Islamic Literarures",3,6,3,0,4
+"LIT 441","Creative Writing",3,6,1,4,4
+"LIT 450","Economics Through Fiction",3,6,3,0,4
+"LIT 480","Contemporary Literature and Social Change in Turkey",3,6,0,0,4
+"LIT 495","Internship in Turkish Language and Literature",0,6,0,0,4
+"MAT 100","Mathematics for Business",4,6,3,2,1
+"MAT 103","Calculus I - Differential",4,6,3,2,1
+"MAT 104","Calculus II - Integral",4,6,3,2,1
+"MAT 205","Doğrusal Cebir",3,5,3,0,2
+"MATH 100","Mathematics for Business",4,6,3,0,1
+"MATH 101","Calculus for Business",3,5,2,2,1
+"MATH 102","Applied Math for Business",3,5,2,2,1
+"MATH 103","Calculus I - Differential",4,6,3,2,1
+"MATH 104","Calculus II - Integral",4,6,3,2,1
+"MATH 205","Linear Algebra",3,5,2,2,2
+"MATH 206","Differential Equations",3,4,3,0,2
+"MDB 100","Computer Skills",1,2,0,0,1
+"MDB 101","Introduction to Programming",3,5,2,2,1
+"MDB 102","Programming Practice",3,5,2,2,1
+"MDB 105","Introduction to Engineering",1,2,0,0,1
+"MDB 244","Malzeme Bilimi",3,5,3,0,2
+"MDB 246","Üretim Süreçleri",3,5,3,0,2
+"MDB 251","Olasılık Teorisi",3,5,2,2,2
+"MDB 252",İstatistik,3,5,2,2,2
+"MDB 497","Bitirme Projesi I",2,10,1,2,4
+"MDB 498","Bitirme Projesi II",2,10,1,2,4
+"ME 200","Summer Practice",0,5,0,0,2
+"ME 261",Thermodynamics,3,5,2,2,2
+"ME 300","Summer Practice",0,5,0,0,3
+"ME 321","System Dynamics and Control",3,0,0,0,3
+"ME 331","Machine Design",3,5,2,2,3
+"ME 352",Dynamics,3,5,2,2,3
+"ME 361","Fluid Mechanics",3,5,2,2,3
+"ME 362","Heat Transfer",3,5,2,2,3
+"ME 401","Experimental Methods for ME",3,5,2,2,4
+"ME 416","Mechanics of Composite Materials",3,5,0,0,4
+"ME 419","Introduction to Finite Element Analysis",3,5,0,0,4
+"ME 421","Machine Dynamics and Vibrations",3,5,0,0,4
+"ME 422","Introduction to Mechatronics Engineering",3,5,0,0,4
+"ME 433","Designing Quality Products",3,5,0,0,4
+"ME 434","Optimization of Mechanical Systems",3,5,0,0,4
+"ME 441","Computer Aided Analysis",3,5,2,2,4
+"ME 442","Computer Aided Manufacturing",3,5,0,0,4
+"ME 465",Robotics,3,5,0,0,4
+"ME 467","Digital Control",3,5,0,0,4
+"ME 468","Industrial Automation",3,5,0,0,4
+"ME 479","Artificial Neural Networks",3,5,0,0,4
+"ME 481","Energy Conversion Systems",3,5,0,0,4
+"ME 483","Internal Combustion Engines",3,5,0,0,4
+"ME 485","Artificial Intelligence",3,5,0,0,4
+"ME 488","Metaheuristic Algorithms",3,5,0,0,4
+"ME 493","Special Topics in ME I",3,5,0,0,4
+"ME 494","Special Topics in ME II",3,5,0,0,4
+"MGRE 101","Modern Greek I",3,5,3,0,1
+"MGRE 102","Modern Greek II",3,5,3,0,1
+"MGT 100","Introduction to Business",3,3,3,0,1
+"MGT 200","Internship I",0,5,0,0,2
+"MGT 201","Principles of Management",3,5,3,0,2
+"MGT 202","Organizational Behavior",3,5,3,0,2
+"MGT 203","Financial Accounting",3,5,3,0,2
+"MGT 204","Managerial Accounting",3,5,3,0,2
+"MGT 205","Introduction to Statistics",3,5,2,2,2
+"MGT 206","Statistical Analysis",3,5,2,2,2
+"MGT 207","Business Data Processing and Programming",3,5,3,1,2
+"MGT 255","Business Communication",3,5,3,0,2
+"MGT 300","Internship II",0,5,0,0,3
+"MGT 302","Human Resource Management",3,5,3,0,3
+"MGT 303","Financial Management",3,5,3,0,3
+"MGT 304","Money and Banking",3,5,3,0,3
+"MGT 305","Marketing Management",3,5,3,0,3
+"MGT 308","Organization Theory",3,5,3,0,3
+"MGT 309","Operations Management",3,5,3,0,3
+"MGT 332","Management Information Systems",3,5,3,0,3
+"MGT 401","Strategic Management",4,7,3,2,4
+"MGT 404","Capital Market and Institutions",3,5,3,0,4
+"MGT 410","History of Management Thought",3,5,3,0,4
+"MGT 411","Family Business Management",3,5,3,0,4
+"MGT 412","Business Simulation",3,5,3,0,4
+"MGT 413","Business Ethics and Corporate Social Responsibility",3,5,3,0,4
+"MGT 414","Game Theory for Managers",3,5,3,0,4
+"MGT 415","Management of NGOs",3,5,3,0,4
+"MGT 416","Psychology of Work and Career",3,5,3,0,4
+"MGT 417","Special Topics in Consultancy",3,5,3,0,4
+"MGT 418","Special Topics in Management",3,5,3,0,4
+"MGT 419","Special Topics in Management and Economics",3,5,3,0,4
+"MGT 420","Marketing Research",3,5,3,0,4
+"MGT 421","Special Topics in Marketing",3,5,3,0,4
+"MGT 422","Consumer Behavior",3,5,3,0,4
+"MGT 423","Marketing Communications",3,5,3,0,4
+"MGT 424","Customer Relationship Management",3,5,3,0,4
+"MGT 427","Sustainability and Governance",3,5,3,0,4
+"MGT 429","Descriptive Analytics",3,5,3,0,4
+"MGT 430","Operations Research",3,5,3,0,4
+"MGT 431","Management of Information Systems",3,5,3,0,4
+"MGT 432","Project Management",3,5,3,0,4
+"MGT 435","Digital Transformation and Innovation",3,5,3,0,4
+"MGT 436",Entrepreneurship,3,6,3,0,4
+"MGT 438","Interest-Free Banks & Participation Banking System",3,5,3,0,4
+"MGT 439","Coaching and Guidance in Business",3,5,3,0,4
+"MGT 440","Special Topics in Accounting",3,5,3,0,4
+"MGT 441","Tax Law",3,5,3,0,4
+"MGT 442","Cost Accounting",3,5,3,0,4
+"MGT 446","CO-OP: Cooperative Learning I",3,5,3,0,4
+"MGT 448","CO-OP: Cooperative Learning II",3,5,3,0,4
+"MGT 449","Risk Management",3,5,3,0,4
+"MGT 450","Public Finance",3,5,3,0,4
+"MGT 451","Special Topics in Finance",3,5,3,0,4
+"MGT 452","Business Research",3,5,3,0,4
+"MGT 453","Business Intelligence and Marketing Analytics",4,7,3,2,4
+"MGT 457","Research for Honours Student",3,5,3,0,4
+"MGT 458","Research and Practice for Honors",3,5,3,0,4
+"MGT 459","Narrative Economics and Business",3,5,3,0,4
+"MGT 462","Data Oriented Programming",3,5,3,0,4
+"MGT 464","Predictive Analytics",3,5,3,0,4
+"MIM 101","Design Studio I",6,10,4,4,1
+"MIM 102","Design Studio II",6,10,4,4,1
+"MIM 103","Communications I",3,5,2,2,1
+"MIM 104","Communications II",3,5,2,2,1
+"MIM 106","Introduction to Architecture I",3,5,3,0,1
+"MIM 201","Design Studio III",6,10,4,4,2
+"MIM 202","Design Studio IV",6,10,4,4,2
+"MIM 203","Communications III",2,3,1,2,2
+"MIM 204","Communications IV",2,3,1,2,2
+"MIM 205","Material and Technology I",3,4,2,2,2
+"MIM 206","Material and Technology II",3,4,2,2,2
+"MIM 207","History and Theory I",3,3,3,0,2
+"MIM 208","History and Theory II",3,3,3,0,2
+"MIM 209","Structure I",2,2,2,0,2
+"MIM 210","Structure II",2,2,2,0,2
+"MIM 221","Intersections in Architecture",2,3,2,0,2
+"MIM 301","Design Studio V",6,10,4,4,3
+"MIM 302","Design Studio VI",6,10,4,4,3
+"MIM 303","Conservation and Design",2,3,1,2,3
+"MIM 304","City and Design",2,3,2,0,3
+"MIM 305","Material and Technology III",3,4,2,2,3
+"MIM 306","Material and Technology IV",3,4,2,2,3
+"MIM 307","History and Theory III",3,3,3,0,3
+"MIM 308","History and Theory IV",3,3,3,0,3
+"MIM 309","Summer Internship I",1,2,0,2,3
+"MIM 401","Design Studio VII",6,10,4,4,4
+"MIM 402","Diploma Project",6,12,4,4,4
+"MIM 403","Detail and Design",2,2,2,0,4
+"MIM 404","Profession and Practice",3,3,3,0,4
+"MIM 405","Introduction to Architecture II",2,2,2,0,4
+"MIM 407","Summer Internship II",1,1,0,2,4
+"ODP 101","Introduction To Law",2,4,2,0,1
+"ODP 201","Behavioral Sciences",2,3,2,0,2
+"ODP 202","Business Ethics",2,3,2,0,2
+"ODP 203","Occupational Health And Safety",2,3,2,0,2
+"ODP 204","First Aid",2,3,2,0,2
+"ODP 205","Corporate Communications",2,3,2,0,2
+"ODP 206",Entrepreneurship,2,3,2,0,2
+"ODP 207","Public Relations",2,3,2,0,2
+"ODP 208","New Media",2,3,2,0,2
+"ODP 209","Effective Communication Techniques",2,3,2,0,2
+"OTM 101","Ottoman Turkish I",3,5,3,0,1
+"OTM 102","Ottoman Turkish II",3,5,3,0,1
+"OTM 201","Advanced Readings in Ottoman Turkish",3,5,3,0,2
+"PERS 101","Persian I",3,5,3,0,1
+"PERS 102","Persian II",3,5,3,0,1
+"PHIL 101","Logic I",3,5,3,0,1
+"PHIL 102","Modern Logic",3,5,3,0,1
+"PHIL 103","Philosophical Thinking",3,5,3,0,1
+"PHIL 104","Philosophy in Axile Ages",3,5,3,0,1
+"PHIL 201","Ancient Philosophy I:Plato",3,5,3,0,2
+"PHIL 202","Ancient Philosophy II:Aristo",3,5,3,0,2
+"PHIL 203",Epistemology,3,5,3,0,2
+"PHIL 204",Ontology,3,5,3,0,2
+"PHIL 211",Anthropology,3,5,3,0,2
+"PHIL 212","Philosophy of Art/Aesthetic",3,5,3,0,2
+"PHIL 213","Chinese Philosophy",3,5,3,0,2
+"PHIL 214","Indian Philosophy",3,5,3,0,2
+"PHIL 215","Philosophy and Literature",3,5,3,0,2
+"PHIL 216","Mysticism and Philosophy",3,5,3,0,2
+"PHIL 217","Philosophy of Nature",3,5,3,0,2
+"PHIL 218","History of Religion",3,5,3,0,2
+"PHIL 219",Mythology,3,5,3,0,2
+"PHIL 220","History of Philosopy",3,5,3,0,2
+"PHIL 222","Philosophy in Late Antiquity",3,5,3,0,2
+"PHIL 223","Advanced Logic",3,5,3,0,2
+"PHIL 224","Classical-Aristotelian Logic",3,5,3,0,2
+"PHIL 225",Arabic,3,5,3,0,2
+"PHIL 226","Early Greek Philosophy",3,5,3,0,2
+"PHIL 301","Islamic Thought",3,5,3,0,3
+"PHIL 302","Early Modern Philosophy",3,5,3,0,3
+"PHIL 303","Arabic/Islamic Philosophy:Ibn Sina",3,5,3,0,3
+"PHIL 304","Philosophy of Religion",3,5,3,0,3
+"PHIL 305","Latin/Christian Philosophy:Aquinas",3,5,3,0,3
+"PHIL 306","History and Philosophy of Science",3,5,3,0,3
+"PHIL 311",Eng.Empiricism:Locke&Hume,3,5,3,0,3
+"PHIL 312","German Idealism:Fic.&Sch.&Hegel",3,5,3,0,3
+"PHIL 313","Topics in Islamic Philosophy",3,5,3,0,3
+"PHIL 314",Phenomenology,3,5,3,0,3
+"PHIL 315","Philosophy of Language",3,5,3,0,3
+"PHIL 316","Selected Philosophical Texts",3,5,3,0,3
+"PHIL 317","Contemporary Philosophical Texts",3,5,3,0,3
+"PHIL 318",Philosophy&Theology/Kalam,3,5,3,0,3
+"PHIL 319",Philosophy&Economics,3,5,3,0,3
+"PHIL 321","Philosophy of Mathematics",3,5,3,0,3
+"PHIL 322",Philosophy&Psychoanalyses,3,5,3,0,3
+"PHIL 401","Modern Philosophy:Kant",3,5,3,0,4
+"PHIL 402","Contemporary Philosophy",3,6,3,0,4
+"PHIL 403",Ethics,3,5,3,2,4
+"PHIL 404","Political Philosophy",3,6,3,0,4
+"PHIL 406","Graduate Project",3,6,3,0,4
+"PHIL 411","Philosophy of Cognitive Sciences",3,5,3,0,4
+"PHIL 412","Philosophy of Natural Sciences",3,6,3,0,4
+"PHIL 413",Existentialism,3,5,3,0,4
+"PHIL 414",Hermeneutics,3,6,3,0,4
+"PHIL 415","Topics in Contemporary Philosophy",3,5,3,0,4
+"PHIL 416","Philosophy of Tech./Bioethics",3,6,3,0,4
+"PHIL 417","Philosophy of Mind/Nat.of Consciousness",3,5,3,0,4
+"PHIL 418","Artificial Intelligence",3,6,3,0,4
+"PHIL 419","Contemporary Turkish Thought",3,5,3,0,4
+"PHIL 422","Contemporary Islamic Thought",3,6,3,0,4
+"PHIL 423","Philosophy Of Cinema",3,5,3,0,4
+"PHIL 424","Topics in Analytical Philosophy",3,6,3,0,4
+"PHIL 425","Topics in Continental Philosophy",3,5,3,0,4
+"PHIL 426","Topics in History of Philosophy",3,6,3,0,4
+"PHYS 103","Physics I - Mechanics and Dynamics",4,6,3,2,1
+"PHYS 103L","Physics I - Lab",1,1,0,2,1
+"PHYS 104","Physics II - Electromagnetics and Modern Physics",4,6,3,2,1
+"PHYS 104L","Physics II - Lab",1,1,0,2,1
+"POLS 201","Political Science",3,5,3,0,2
+"POLS 202","International Relations",3,5,3,0,2
+"POLS 203","Classics of Political Thought: The Ancients",3,5,3,0,2
+"POLS 204","Classics of Political Thought: The Moderns",3,5,3,0,2
+"POLS 205","Emergence of Modern International Order",3,5,3,0,2
+"POLS 207","Fundamentals of Law",3,5,3,0,2
+"POLS 208","Constitutional Politics",3,5,3,0,2
+"POLS 210","Comparative Politics",3,5,3,0,2
+"POLS 214","Contemporary International Politics",3,5,3,0,2
+"POLS 219","Macro Economics",3,5,3,0,2
+"POLS 220","Micro Economics",3,5,3,0,2
+"POLS 301","International Law and Organizations",3,6,3,0,3
+"POLS 302","Contemporary Political Ideologies",3,7,3,0,3
+"POLS 303","Research Methods",3,7,3,0,3
+"POLS 305","Political Sociology",3,6,3,0,3
+"POLS 308","Comparative Political Systems",3,6,3,0,3
+"POLS 312","Ethics and Law",3,6,3,0,3
+"POLS 313",Geopolitics,3,6,3,0,3
+"POLS 315","Diplomatic Correspondence",3,6,3,0,3
+"POLS 316","European Union",3,6,3,0,3
+"POLS 317","Comparative Foreign Policy",3,6,3,0,3
+"POLS 318","Administrative Structure of Turkey",3,6,3,0,3
+"POLS 319","Classical Islamic Political Thought",3,6,3,0,3
+"POLS 321","Public Administration",3,6,3,0,3
+"POLS 322","Political Parties and Pressure Groups",3,6,3,0,3
+"POLS 323","Administrative Law",3,6,3,0,3
+"POLS 324","History of Public Administration in Turkey",3,6,3,0,3
+"POLS 325","Turkish Constitutional Law",3,6,3,0,3
+"POLS 327","Conflicts in the Modern Middle East",3,6,3,0,3
+"POLS 328","Theories of International Relations",3,6,3,0,3
+"POLS 330","Public Administration in Turkey",3,6,0,0,3
+"POLS 339","Islamic Political Thought in The Modern Era",3,6,3,0,3
+"POLS 340",Diplomacy,3,6,3,0,3
+"POLS 401","Current Issues in Turkish Politics",3,6,3,0,4
+"POLS 402","Turkish Foreign Policy",3,6,3,0,4
+"POLS 403","International Political Economy",3,6,3,0,4
+"POLS 404","Conflict Analysis and Resolution",3,6,3,0,4
+"POLS 405","Comparative Political Economy",3,6,3,0,4
+"POLS 406","Politics of East Asia",3,6,3,0,4
+"POLS 407","China in World Politics",3,6,3,0,4
+"POLS 411","Foreign Policy Analysis",3,6,3,0,4
+"POLS 412","Nationalism and Ethnicity",3,6,3,0,4
+"POLS 413","Issues in State, Politics and Society in Turkey",3,5,3,0,4
+"POLS 414","Democratic Theory",3,6,3,0,4
+"POLS 415","American Politics",3,6,3,0,4
+"POLS 416","Global Governance",3,6,3,0,4
+"POLS 417","Politics, Society and State in the Middle East",3,6,3,0,4
+"POLS 418",Globalization,3,6,3,0,4
+"POLS 419","Russia in World Politics",3,6,3,0,4
+"POLS 421","Central Asia in World Politics",3,6,3,0,4
+"POLS 422","American Foreign Policy",3,6,3,0,4
+"POLS 423","Globalization Citizenship and Multiculturalism",3,6,3,0,4
+"POLS 424","Politics, Society and State in the Balkans",3,6,3,0,4
+"POLS 427","International Order and Great Power Politics",3,6,3,0,4
+"POLS 428","Issues of International Security",3,6,3,0,4
+"POLS 429","Human Rights Law",3,6,3,0,4
+"POLS 430","Politics of Energy and Sources",3,6,3,0,4
+"POLS 432","Islam and Politics",3,6,3,0,4
+"POLS 434","Russian Politics",3,6,3,0,4
+"POLS 435","Topics in Political Theory",3,6,3,0,4
+"POLS 436","Comparative Political Thought",3,6,3,0,4
+"POLS 437","Special Topics in Political Science",3,6,3,0,4
+"POLS 438","Media and Foreign Policy",3,6,3,0,4
+"POLS 439","Globalization and the Muslim World",3,6,3,0,4
+"POLS 440","Political Violence and Terrorism",3,6,3,0,4
+"POLS 441","Europe and Islam",3,6,3,0,4
+"POLS 442","Politics in Eurasia",3,6,3,0,4
+"POLS 443","Gender in the Middle East",3,6,3,0,4
+"POLS 444","Human Rights in Global Order",3,6,3,0,4
+"POLS 446","Europe and the Middle East",3,6,3,0,4
+"POLS 448","Africa in World Politics",3,6,3,0,4
+"POLS 454","Identity and Nationalism in Modern Turkey",3,6,3,0,4
+"POLS 465","Developing World in Global Politics",3,6,3,0,4
+"POLS 490","Research and Readings in Political Science and International Relations",3,6,3,0,4
+"POLS 491","Research Design in Political Science",3,6,3,0,4
+"POLS 493","Turkish-American Relations",3,6,3,0,4
+"POLS 495","Internship in Political Science and International Relations",0,6,0,0,4
+"PSI 102","Introduction to Psychology",3,5,3,0,1
+"PSI 203",Statistics,4,7,3,2,2
+"PSI 204","Research Methods",4,8,3,2,2
+"PSI 212","Social Psychology",3,6,3,0,2
+"PSI 231","Biological Psychology",3,6,3,0,2
+"PSI 252","Lifespan Developmental Psychology",3,6,3,0,2
+"PSI 261",Personality,3,6,3,0,2
+"PSI 311","Politik Psikoloji",3,6,3,0,3
+"PSI 312","Kadın ve Cinsiyet Psikolojisi",3,6,3,0,3
+"PSI 313","Kültür ve Çeşitlilik Psikolojisi",3,6,3,0,3
+"PSI 314","Evrimsel Psikoloji",3,6,3,0,3
+"PSI 317","Yakın İlişkiler",3,6,3,0,3
+"PSI 319","Trafik Psikolojisi",3,6,3,0,3
+"PSI 322","Introduction to Clinical Psychology",3,6,3,0,3
+"PSI 323","Çocuk ve Ergen Psikopatolojisi",3,6,3,0,3
+"PSI 325","Abnormal Psychology",3,6,3,0,3
+"PSI 326","Cognitive Psychology",3,6,2,2,3
+"PSI 328","Eğitim Psikolojisi",3,6,3,0,3
+"PSI 330","School Psychology",3,6,3,0,3
+"PSI 331","Duyum ve Algı",3,6,3,0,3
+"PSI 332",Neuropsychology,3,6,3,0,3
+"PSI 333","Organizational Psychology",3,6,3,0,3
+"PSI 341",Learning,3,6,3,0,3
+"PSI 371","Selected Topics in Psychology: Creative Drama and Experiental Leraning",3,6,3,0,3
+"PSI 377","Group Dynamics",3,6,3,0,3
+"PSI 380","Positive Psychology",3,6,3,0,3
+"PSI 388","Vaka Çalışmaları",3,6,3,0,3
+"PSI 391","Psikolojide Seçme Konular I",3,6,3,0,3
+"PSI 392","Yönetimli Araştırma I",3,6,3,0,3
+"PSI 393","Yönetimli Araştırma II",3,6,3,0,3
+"PSI 394","Bağımsız Araştırma I",3,6,3,0,3
+"PSI 402","Psikolojide Tarih ve Sistemler",3,6,3,0,4
+"PSI 407","Psikolojide Meslek Etiği",3,6,3,0,4
+"PSI 413","Family Psychology",3,6,3,0,4
+"PSI 423","Travma Psikolojisi",3,6,3,0,4
+"PSI 431","Sağlık Psikolojisi",3,6,3,0,4
+"PSI 441","İnsan Hafızası",3,6,3,0,4
+"PSI 452","Forensic Pyschology",3,6,3,0,4
+"PSI 453","Counseling Psychology",3,6,3,0,4
+"PSI 454","Cognitive Neuroscience",3,6,3,0,4
+"PSI 461","Motivasyon ve Duygu",3,6,3,0,4
+"PSI 491","Psikolojide Seçme Konular II",3,6,3,0,4
+"PSI 492","Yönetimli Araştırma III",3,6,3,0,4
+"PSI 493","Yönetimli Araştırma IV",3,6,3,0,4
+"PSI 494","Bağımsız Araştırma II",3,6,3,0,4
+"PSI 495","Psikoloji Stajı",0,6,3,0,4
+"PSY 102","Introduction to Psychology",3,5,3,0,1
+"PSY 203",Statistics,4,7,3,2,2
+"PSY 204","Research Methods",4,8,3,2,2
+"PSY 212","Social Psychology",3,6,3,0,2
+"PSY 231","Biological Psychology",3,6,3,0,2
+"PSY 252","Lifespan Developmental Psychology",3,6,3,0,2
+"PSY 261",Personality,3,6,3,0,2
+"PSY 301","Infant Psychology",3,6,3,0,3
+"PSY 302","Advanced Research Methods",3,6,3,0,3
+"PSY 311","Political Psychology",3,6,3,0,3
+"PSY 312","Psychology of Women and Gender",3,6,3,0,3
+"PSY 313","Psychology of Culture and Diversity",3,6,3,0,3
+"PSY 314","Evolutionary Psychology",3,6,3,0,3
+"PSY 315","Social Cognition",3,6,3,0,3
+"PSY 316","Adolescent Psychology",3,6,3,0,3
+"PSY 317","Intimate Relationships",3,6,3,0,3
+"PSY 319","Traffic Psychology",3,6,3,0,3
+"PSY 322","Introduction to Clinical Psychology",3,6,3,0,3
+"PSY 323","Child and Adolescent Psychopathology",3,6,3,0,3
+"PSY 325","Abnormal Psychology",3,6,3,0,3
+"PSY 326","Cognitive Psychology",3,6,3,0,3
+"PSY 328","Educational Psychology",3,6,3,0,3
+"PSY 330","School Psychology",3,6,3,0,3
+"PSY 331","Sensation and Perception",3,6,3,0,3
+"PSY 332",Neuropsychology,3,6,3,0,3
+"PSY 333","Organizational Psychology",3,6,3,0,3
+"PSY 341",Learning,3,6,3,0,3
+"PSY 371","Selected Topics in Psychology 3",3,6,3,0,3
+"PSY 372","Selected Topics in Psychology 4",3,6,3,0,3
+"PSY 373","Selected Topics in Psychology 5",3,6,3,0,3
+"PSY 374","Selected Topics in Psychology 6",3,6,3,0,3
+"PSY 375","Selected Topics in Psychology 7",3,6,3,0,3
+"PSY 376","Collective Memory",3,6,3,0,3
+"PSY 380","Positive Psychology",3,6,3,0,3
+"PSY 388","Clinical Case Studies",3,6,3,0,3
+"PSY 391","Selected Topics in Psychology I",3,6,3,0,3
+"PSY 392","Directed Research",3,6,3,0,3
+"PSY 393","Directed Research II",3,6,3,0,3
+"PSY 394","Independent Research I",3,6,3,0,3
+"PSY 402","Measurement in Psychology",3,6,3,0,4
+"PSY 403","Advanced Statistics for Psychology",3,6,3,0,4
+"PSY 407","Ethics and Professionalism",3,6,3,0,4
+"PSY 412","Advanced Social Psychology",3,6,3,0,4
+"PSY 413","Family Psychology",3,6,3,0,4
+"PSY 414","History and Systems in Psychology",3,6,3,0,4
+"PSY 423","Psychology of Trauma",3,6,3,0,4
+"PSY 424","Advanced Seminar in Current Issues of Psychology",3,6,3,0,4
+"PSY 431","Health Psychology",3,6,3,0,4
+"PSY 432",Psychopharmacology,3,6,3,0,4
+"PSY 441","Human Memory",3,6,3,0,4
+"PSY 442","Clinical Interview Skills",3,6,3,0,4
+"PSY 452","Forensic Pyschology",3,6,3,0,4
+"PSY 454","Cognitive Neuroscience",3,6,3,0,4
+"PSY 461","Motivation and Emotion",3,6,3,0,4
+"PSY 462","Psychology of Language",3,6,0,0,4
+"PSY 471","Selected Topics in Psychology 8",3,6,3,0,4
+"PSY 472","Selected Topics in Psychology 9",3,6,3,0,4
+"PSY 473","Selected Topics in Social Psychology I",3,6,3,0,4
+"PSY 474","Selected Topics in Psychology 11",3,6,3,0,4
+"PSY 475","Selected Topics in Psychology 12",3,6,3,0,4
+"PSY 487","Creativity, Motivation and Well Being",3,6,3,0,4
+"PSY 491","Selected Topics in Psychology II",3,6,3,0,4
+"PSY 492","Directed Research III",3,6,3,0,4
+"PSY 493","Directed Research IV",3,6,3,0,4
+"PSY 494","Independent Research II",3,6,3,0,4
+"PSY 495","Internship in Psychology",0,6,0,0,4
+"RUS 101","Russian I",3,5,3,0,1
+"RUS 102","Russian II",3,5,0,0,1
+"RUS 201","Russian III",3,5,3,0,2
+"RUS 202","Russian IV",3,5,0,0,2
+"SOC 201","Sociological Imagination",3,6,3,0,2
+"SOC 203",Statistics,4,7,4,0,2
+"SOC 207","Introduction to Media and Communication Studies",3,6,3,0,2
+"SOC 210","Ethnography in/of Media",3,6,3,0,2
+"SOC 221","Social Stratification",3,6,3,0,2
+"SOC 225","Research Methods",3,7,3,2,2
+"SOC 230","Sociology of Work and Organizations",3,6,3,0,2
+"SOC 232","Social Theory II :Contemporary Sociology",3,5,3,0,2
+"SOC 233","Sociology of the Family",3,6,3,0,2
+"SOC 241","Social Anthropology",3,6,3,0,2
+"SOC 242","Urban Sociology",3,6,3,0,2
+"SOC 244","International Migration in a Globalized World",3,6,3,0,2
+"SOC 254","Power and Inequality",3,6,3,0,2
+"SOC 256","Population and Society",3,6,3,0,2
+"SOC 260","Social Movements",3,6,3,0,2
+"SOC 261","Welfare and Social Policy",3,6,3,0,2
+"SOC 268","Sociology of Law",3,6,3,0,2
+"SOC 302","Contemporary Political Ideologies",3,6,3,0,3
+"SOC 303","Ottoman-Turkish Modernization",3,6,3,0,3
+"SOC 305","Nations and Nationalism",3,6,3,0,3
+"SOC 307","Political Sociology",3,7,3,0,3
+"SOC 312","Social Psychology",3,6,3,0,3
+"SOC 315","Social Networks",3,6,3,0,3
+"SOC 321","Sociology of Agriculture and Food",3,6,3,0,3
+"SOC 322","Nationalism and Ethnicity",3,6,3,0,3
+"SOC 323","Public Space and the Contemporary City",3,6,3,0,3
+"SOC 326","Citizenship, Multiculturalism and Globalization",3,6,3,0,3
+"SOC 331","Social Theory I : Classics",3,6,3,0,3
+"SOC 332","Social Theory II: Contemporary Sociology",3,6,3,0,3
+"SOC 334","Social Change and Modernization",3,6,3,0,3
+"SOC 337","Introduction to New Media",3,6,3,0,3
+"SOC 344","Urban Studies: Contemp. Approaches",3,6,3,0,3
+"SOC 356","Data Analysis",3,6,2,2,3
+"SOC 361","Environmental Sociology",3,6,3,0,3
+"SOC 371","Development of Sociology in Turkey",3,6,3,0,3
+"SOC 391","Historical-Geographical Perspectives on Urban Studies",3,5,0,0,3
+"SOC 392","Sociology of Contemporary Muslim Experiences",3,6,3,0,3
+"SOC 393","Sociology of the Heritage of Islam",3,6,3,0,3
+"SOC 405","Historical-Geographical Perspectives on Urban Studies",3,6,3,0,4
+"SOC 406","Philosophy of Science",3,6,3,0,4
+"SOC 411","Selected Topics in Anthropology",3,6,3,0,4
+"SOC 412","Political Anthropology",3,6,3,0,4
+"SOC 414","Political Anthropology",3,6,3,0,4
+"SOC 415","Sociology of Everyday Life",3,6,3,0,4
+"SOC 416","Understanding Globalization and Localization",3,6,3,0,4
+"SOC 417","Economic Sociology",3,6,3,0,4
+"SOC 418",Globalization,3,6,3,0,4
+"SOC 420","Sociology of Religion",3,6,3,0,4
+"SOC 424","Identity, Cult. & Ethnicity in Turkey",3,5,3,0,4
+"SOC 425","Gender and Society",3,6,3,0,4
+"SOC 427","Identity, Culture and Ethnicity in Turkey",3,6,3,0,4
+"SOC 439","Globalization and the Muslim World",3,6,3,0,4
+"SOC 441","Europe and Islam",3,6,3,0,4
+"SOC 446","Anthropology of Information Technology",3,6,3,0,4
+"SOC 448","Sociology of Popular Culture and Media",3,6,3,0,4
+"SOC 451","Urban Ethnography",3,6,3,1,4
+"SOC 453","Qualitative Social Analysis",3,6,3,0,4
+"SOC 455","Comparative Sociology of Religions",3,6,3,0,4
+"SOC 457","Research Seminar on Concepts in Historical Change",3,6,3,0,4
+"SOC 458","Historical Sociology",3,6,3,0,4
+"SOC 460","Europe, the Enlightenment and Modernity",3,6,3,0,4
+"SOC 461","Modern Communitarianisms and Turkey",3,6,3,0,4
+"SOC 464","Society, Power and Justice in the Middle East",3,6,3,0,4
+"SOC 468","Introduction to Urban Research Methods",3,6,3,1,4
+"SOC 472","Education and Society",3,6,3,0,4
+"SOC 479","Sociology of Labor and Employment",3,6,3,0,4
+"SOC 480","Anthropology of Health and Illness",3,6,3,0,4
+"SOC 487","Comparative Study of Revolutions",3,6,3,0,4
+"SOC 490","Current Issues in Sociology",3,6,3,0,4
+"SOC 491","Special Topics in Urban Studies",3,6,3,0,4
+"SOC 492","Selected Topics in Sociological Theory",3,6,3,0,4
+"SOC 493","Advanced Topics in Methodology",3,6,3,0,4
+"SOC 494","Recent Developments in Social Research",3,6,3,0,4
+"SOC 495","Internship in Sociology",0,6,0,0,4
+"SOC 496","Independent Research in Sociology",3,6,3,0,4
+"SOC 499","Senior Thesis",3,6,3,0,4
+"SOP 101","Introduction To Social Service",3,5,3,0,1
+"SOP 102","Social Service Theories",3,6,3,0,1
+"SOP 103","Introduction To Psychology",3,5,3,0,1
+"SOP 104","Social Service Institutions And Organizations",2,5,2,0,1
+"SOP 105","Introduction To Sociology",3,5,3,0,1
+"SOP 106","Social Structure Of Turkey",3,5,3,0,1
+"SOP 107","Social Issues",2,4,2,0,1
+"SOP 108","Family Counseling",3,5,3,0,1
+"SOP 200",Internship,0,8,0,0,2
+"SOP 201","Social Service Legislation",3,5,3,0,2
+"SOP 202","Sosyal Hizmet Ortamlarında İnceleme ve Gözlem",3,5,3,0,2
+"SOP 203","Social Psychology",2,5,2,0,2
+"SOP 204","Social Development And Social Service",3,5,3,0,2
+"SOP 205","Primary Care Services",3,5,3,0,2
+"SOP 206","Guidelines And Techniques For Social Service Interview",3,5,3,0,2
+"SOP 208","Kriz Danışmanlığı ve Çatışma Yönetimi",2,4,2,0,2
+"SOP 209","Aile Sosyolojisi",2,4,2,0,2
+"SOP 210","Sağlık Sosyolojisi",2,4,2,0,2
+"SOP 211","Stres ve Travma Psikolojisi",2,4,2,0,2
+"SOP 212","Grup Psikoterapisi ve Psikodrama",2,4,1,2,2
+"SOP 214","Forensic Psychology",2,4,2,0,2
+"SPA 101","Spanish I",3,5,0,0,1
+"SPA 102","Spanish II",3,5,0,0,1
+"STV 201","Basic Photography",3,5,2,2,2
+"STV 202",Screenwriting,3,5,3,0,2
+"STV 203","Art of Storytelling",3,5,3,0,2
+"STV 204","Cinema History",3,5,3,0,2
+"STV 205","Basic Concepts of Cinema and TV",3,5,3,0,2
+"STV 206","Sound in Cinema",3,5,2,1,2
+"STV 207","Introduction to Cinematography and Lighting",3,5,2,2,2
+"STV 208",Editing,3,5,2,1,2
+"STV 209","Media and Cultural Identity",3,5,3,0,2
+"STV 210","İleri Fotoğrafçılık",3,5,2,2,2
+"STV 211","Silent Cinema",3,5,3,0,2
+"STV 212","Auteur Cinema",3,5,3,0,2
+"STV 213","Photography Practices",3,5,3,0,2
+"STV 217",Reklamcılık,3,5,3,0,2
+"STV 301","Television Programming",3,10,2,2,3
+"STV 302","Turkish Cinema",3,5,3,0,3
+"STV 303","Film Theories",3,5,3,0,3
+"STV 304","Film Making",3,10,2,2,3
+"STV 307","Short Film Making",3,5,3,0,3
+"STV 308","Experimental Film and Video",3,5,3,0,3
+"STV 309","Popular Culture and Media",3,5,3,0,3
+"STV 310","Türk Medya Tarihi",3,5,3,0,3
+"STV 311","Dijital Medya Ve Kültür",3,5,3,0,3
+"STV 312","Film Yapım Uygulamaları",3,5,3,0,3
+"STV 314","Sound and Music Design for Cinema",3,5,1,2,3
+"STV 347","Advanced Screenwriting",3,5,1,2,3
+"STV 401","Mezuniyet Projesi",4,10,3,2,4
+"STV 402","Mezuniyet Projesi Yapımı",4,15,3,2,4
+"STV 403","Belgesel Yapımı",3,10,2,2,4
+"STV 404","Dünya Sineması",3,5,3,0,4
+"STV 405","Film Türleri",3,5,3,0,4
+"STV 406","Radyo Programcılığı",3,5,2,2,4
+"STV 407","Tv Program Türleri",3,5,3,0,4
+"STV 408","Spor Yayıncılığı",3,5,3,0,4
+"STV 409","Televizyon Haberciliği",3,5,3,0,4
+"STV 410","Görüntü Yönetmenliği",3,5,2,2,4
+"STV 411","Yeni Medya Çalışmaları",3,5,3,0,4
+"STV 412","İletişim Teknolojileri",3,5,2,2,4
+"STV 413","Sinema Ve Televizyon Semineri",3,5,3,0,4
+"STV 414","Sinema Ve Televizyon Atölyesi",3,5,3,0,4
+"SYS 201","Political Science",3,5,3,0,2
+"SYS 202","International Relations",3,5,3,0,2
+"SYS 203","Classics of Political Thought: The Ancients",3,5,3,0,2
+"SYS 204","Classics of Political Thought: The Moderns",3,5,3,0,2
+"SYS 205","Emergence of Modern International Order",3,5,3,0,2
+"SYS 207","Fundamentals of Law",3,5,3,0,2
+"SYS 208","Constitutional Politics",3,5,3,0,2
+"SYS 214","Contemporary International Politics",3,5,3,0,2
+"SYS 219","Macro Economics",3,5,3,0,2
+"SYS 220","Micro Economics",3,5,3,0,2
+"SYS 301","International Law and Organizations",3,6,3,0,3
+"SYS 302","Contemporary Political Ideologies",3,7,3,0,3
+"SYS 303","Research Methods",3,7,3,0,3
+"SYS 305","Political Sociology",3,6,3,0,3
+"SYS 308","Comparative Political Systems",3,6,3,0,3
+"SYS 312","Ethics and Law",3,6,3,0,3
+"SYS 313",Geopolitics,3,6,3,0,3
+"SYS 315","Diplomatic Correspondence",3,6,3,0,3
+"SYS 316","European Union",3,6,3,0,3
+"SYS 317","Karşılaştırmalı Dış Politika",3,6,3,0,3
+"SYS 318","Türkiye’nin Yönetim Yapısı",3,6,3,0,3
+"SYS 319","İslam Siyaset Düşüncesi",3,6,3,0,3
+"SYS 320","Uluslararası Özel Hukuk",3,6,3,0,3
+"SYS 321","Kamu Yönetimi",3,6,3,0,3
+"SYS 323","Administrative Law",3,6,3,0,3
+"SYS 324","Türkiye Kamu Yönetimi Tarihi",3,6,3,0,3
+"SYS 325","Türk Anayasa Hukuku",3,6,3,0,3
+"SYS 328","Uluslararası İlişkiler Teorileri",3,6,3,0,3
+"SYS 339","Modern Islamic Political Thought",3,6,3,0,3
+"SYS 340",Diplomacy,3,5,3,0,3
+"SYS 402","Turkish Foreign Policy",3,6,3,0,4
+"SYS 403","International Political Economy",3,6,3,0,4
+"SYS 404","Çatışma Analizi ve Çözümü",3,6,3,0,4
+"SYS 407","China in World Politics",3,6,3,0,4
+"SYS 411","Dış Politika Analizi",3,6,3,0,4
+"SYS 412","Milliyetçilik ve Etnisite",3,6,3,0,4
+"SYS 413","Türkiye’de Devlet, Siyaset ve Toplum Tartışmaları",3,6,3,0,4
+"SYS 414","Demokratik Teori",3,6,3,0,4
+"SYS 415","Amerikan Siyaseti",3,6,3,0,4
+"SYS 418",Küreselleşme,3,6,3,0,4
+"SYS 419","Dünya Siyasetinde Rusya",3,6,3,0,4
+"SYS 420","Avrupa Birliği Hukuku",3,6,3,0,4
+"SYS 421","Dünya Siyasetinde Orta Asya",3,6,3,0,4
+"SYS 422","Amerikan Dış Politikası",3,6,3,0,4
+"SYS 423","Küreselleşme, Vatandaşlık ve Çok-Kültürlülük",3,6,3,0,4
+"SYS 424","Balkanlar’da Siyaset, Toplum ve Devlet",3,6,3,0,4
+"SYS 428","Uluslararası Güvenlik Sorunları",3,6,3,0,4
+"SYS 429","İnsan Hakları Hukuku",3,6,3,0,4
+"SYS 430","Enerji ve Kaynak Siyaseti",3,6,3,0,4
+"SYS 432","İslam ve Siyaset",3,6,3,0,4
+"SYS 434","Rusya Siyaseti",3,6,3,0,4
+"SYS 435","Siyaset Teorisinde Özel Konular",3,6,3,0,4
+"SYS 436","Karşılaştırmalı Siyaset Düşüncesi",3,6,3,0,4
+"SYS 437","Siyaset Biliminde Özel Konular",3,6,3,0,4
+"SYS 438","Medya ve Dış Politika",3,6,3,0,4
+"SYS 439","Küreselleşme ve İslam Dünyası",3,6,3,0,4
+"SYS 440","Siyasal Şiddet ve Terörizm",3,6,3,0,4
+"SYS 441","Avrupa ve İslam",3,6,3,0,4
+"SYS 492","Uluslararası İlişkilerde Özel Konular",3,6,3,0,4
+"SYS 493","Türk-Amerikan İlişkileri",3,6,3,0,4
+"SYS 494","Bölgesel Çalışmalarda Özel Konular",3,6,3,0,4
+"SYS 495","Internship in Political Science and International Relations",0,6,3,0,4
+"TRI 101","Introduction to Translation and Translation Studies I",3,5,3,0,1
+"TRI 102","Introduction to Translation and Translation Studies II",3,5,3,0,1
+"TRI 181","Spanish I",3,5,2,2,1
+"TRI 182","Spanish II",3,5,2,2,1
+"TRI 201","Technical Translation",3,5,3,0,2
+"TRI 202","Translation Technologies",3,5,3,0,2
+"TRI 203","English Literature",3,5,3,0,2
+"TRI 204","Media and Advertisement Translation",3,5,3,0,2
+"TRI 205",Linguistics,3,5,3,0,2
+"TRI 206","Introduction to Interpreting",3,5,3,0,2
+"TRI 210",Localization,3,5,3,0,2
+"TRI 281","Spanish III",3,5,2,2,2
+"TRI 282","Spanish IV",3,5,2,2,2
+"TRI 301","Translation Theories",3,5,3,0,3
+"TRI 302","Literary Translation",3,5,3,0,3
+"TRI 303","Consecutive Interpretation",3,5,3,0,3
+"TRI 304","Simultaneous Interpretation I",3,5,3,0,3
+"TRI 310","Translation of Political Texts",3,5,3,0,3
+"TRI 311","Community Interpreting",3,5,3,0,3
+"TRI 312","Translation of Economics Texts",3,5,3,0,3
+"TRI 313","Medical Translation",3,5,3,0,3
+"TRI 314","Translation of Legal Texts",3,5,3,0,3
+"TRI 381","Spanish V",3,5,2,2,3
+"TRI 382","Spanish VI",3,5,2,2,3
+"TRI 401","Translation History",3,5,3,0,4
+"TRI 402","Translation Criticism",3,6,3,0,4
+"TRI 404","Senior Project",3,9,3,0,4
+"TRI 410","Translation of Social Sciences Texts",3,5,3,0,4
+"TRI 411","Proofreading and Editing",3,5,3,0,4
+"TRI 412","Translation of Subtitles and Dubbing for Film and Television",3,5,3,0,4
+"TRI 413","Discourse Analysis",3,5,3,0,4
+"TRI 414","Turkish-English Litrary Tanslation",3,5,3,0,4
+"TRI 415","Introduction to Cultural Studies",3,5,3,0,4
+"TRI 416",Internship,0,5,0,0,4
+"TRI 420","Consecutive Interpreting II",3,5,3,0,4
+"TRI 421","Simultanoues Interpreting II",3,5,3,0,4
+"TRI 422","Media Interpreting",3,5,3,0,4
+"TRI 423","Simultaneous Interpreting Practice in Conference Situations",3,5,3,0,4
+"TRI 481","Spanish VII",3,5,2,2,4
+"TRI 482","Spanish VIII",3,5,2,2,4
+"UNI 100","Exploring İstanbul",3,5,2,2,1
+"UNI 101","Mathematical Reasoning",3,5,3,0,1
+"UNI 102","Critical Thinking",3,5,3,0,1
+"UNI 105","Understanding Society and Culture I",3,5,3,0,1
+"UNI 106","Understanding Society and Culture II",3,5,3,0,1
+"UNI 107","World Civilizations& Global Encounters I",3,5,3,0,1
+"UNI 108","World Civilizations&Global Encounters II",3,5,3,0,1
+"UNI 110","Modernity, City and Architecture",3,5,3,0,1
+"UNI 111","Critical Reading and Writing in Turkish I",3,5,3,0,1
+"UNI 112","Critical Reading and Writing in Turkish II",3,5,3,0,1
+"UNI 113","Textual Analysis and Effective Com. I",3,5,3,0,1
+"UNI 114","Textual Analysis and Effective Com. II",3,5,3,0,1
+"UNI 115","Turkish for International Students I",3,5,3,0,1
+"UNI 116","Turkish for International Students II",3,5,3,0,1
+"UNI 117","Understanding Society and Culture",3,5,3,0,1
+"UNI 118","Understanding Politics and Economy",3,5,3,0,1
+"UNI 121","World Civ.&Glo. Encounters Until 1300 CE",3,5,3,0,1
+"UNI 122","World Civ.&Glo. Encounters Since 1300 CE",3,5,3,0,1
+"UNI 123","Textual Analysis and Effective Communication",3,5,3,0,1
+"UNI 124","Textual Analysis and Academic Writing",3,5,3,0,1
+"UNI 137","Mathematics for Practice",3,5,3,0,1
+"UNI 201","Formations of Modern Turkey I",3,5,3,0,2
+"UNI 202","Formations of Modern Turkey II",3,5,3,0,2
+"UNI 203","Understanding Science and Technology",3,5,3,0,2
+"UNI 204","Understanding Nature and Knowledge",3,5,3,0,2
+"UNI 205","Understanding Science and Environment",3,5,3,0,2
+"UNI 206","Understanding Human Nature",3,5,3,0,2
+"UNI 207","Understanding Religion",3,5,3,0,2
+"UNI 209","Understanding Cultural Encounters",3,5,3,0,2
+"UNI 211","Understanding Art",3,5,3,0,2
+"UNI 212","Understanding Design",3,5,3,0,2
+"UNI 213","Understanding Ethics",3,5,3,0,2
+"UNI 215","Turkish for International Students III",3,5,3,0,2
+"UNI 216","Turkish for International Students IV",3,5,3,0,2
+"UNI 219","Music And Civilization",3,5,3,0,2
+"UNI 220","Understanding Architecture",3,5,3,0,2
+"UNI 221","World Civilizations and Global Encounters: Until 1300 CE",3,5,3,0,2
+"UNI 222","World Civilizations and Global Encounters: Since 1300 CE",3,5,3,0,2
+"UNI 315","Turkish for International Students V",3,5,3,0,3
+"UNI 316","Turkish for International Students VI",3,5,3,0,3
+"UNIM 101","Critical Reading And Writing In Turkish I",2,2,2,0,1
+"UNIM 102","Critical Reading And Writing In Turkish II",2,2,2,0,1
+"UNIM 103","Formation Of Modern Turkey I",2,2,2,0,1
+"UNIM 104","Formation Of Modern Turkey II",2,2,2,0,1
+"UNIT 100","Exploring Istanbul",3,5,2,2,1
+"UNIT 101","Mathematical Reasoning",3,5,3,0,1
+"UNIT 102","Critical Thinking",3,5,3,0,1
+"UNIT 110","Modernity, City and Architecture",3,5,3,0,1
+"UNIT 111","Critical Reading and Writing in Turkish I",3,5,3,0,1
+"UNIT 112","Critical Reading and Writing in Turkish II",3,5,3,0,1
+"UNIT 117","Understanding Society and Culture",3,5,3,0,1
+"UNIT 118","Understanding Politics and Economy",3,5,3,0,1
+"UNIT 137","Uygulamalı Matematik",3,5,2,2,1
+"UNIT 201","Formations of Modern Turkey I",3,5,3,0,2
+"UNIT 202","Formations of Modern Turkey II",3,5,3,0,2
+"UNIT 203","Bilim ve Teknolojiyi Anlamak",3,5,3,0,2
+"UNIT 204","Understanding Nature and Knowledge",3,5,3,0,2
+"UNIT 205","Bilim ve Çevreyi Anlamak",3,5,3,0,2
+"UNIT 206","Understanding Human Nature",3,5,3,0,2
+"UNIT 207","Dini Anlamak",3,5,3,0,2
+"UNIT 208","Understanding Social Mentality: Memory, Identity, History",3,5,3,0,2
+"UNIT 209","Kültürel Karşılaşmaları Anlamak",3,5,3,0,2
+"UNIT 210","İslam İktisadının Temel Kavramları",3,5,3,0,2
+"UNIT 211","Understanding Art",3,5,3,0,2
+"UNIT 212","Understanding Design",3,5,3,0,2
+"UNIT 213","Ahlakı Anlamak",3,5,3,0,2
+"UNIT 217","Understanding the State and Its Roots",3,5,3,0,2
+"UNIT 219","Music And Civilization",3,5,3,0,2
+"UNIT 220","Understanding Architecture",3,5,3,0,2
+"UNIT 221","World Civilizations and Global Encounters: Until 1300 CE",3,5,3,0,2
+"UNIT 222","World Civilizations and Global Encounters: Since 1300 CE",3,5,3,0,2
+"YBS 200","Staj I",0,5,0,0,2
+"YBS 202","Management Information Systems",3,5,3,0,2
+"YBS 300","Staj II",0,5,0,0,3
+"YBS 302","Database Management Systems",3,5,3,0,3
+"YBS 303","E-Business Technologies and Management",3,5,3,0,3
+"YBS 304","Business Analytics and Data Mining - I",3,5,3,0,3
+"YBS 305","Business Analytics and Data Mining - II",4,7,3,2,3
+"YBS 307",FinTech,3,5,3,0,3
+"YBS 401","Ağ Yönetimi ve Bilgi Güvenliği",3,5,3,0,4
+"YBS 402","İşletim Sistemleri",3,5,3,0,4
+"YBS 403","Big Data",3,7,3,0,4
+"YBS 404","Sosyal Şebeke Analizi",3,5,3,0,4
+"YBS 405","Kurumsal Kaynak Planlama",3,5,3,0,4
+"YBS 406","Web Programming",3,6,3,0,4
+"YBS 409","Selected Topics in Marketing Management",3,5,3,0,4
+"YBS 412","Business Simulation",3,5,3,0,4
+"YBS 414","Programming Practice with Java",3,5,3,0,4
+"YBS 415","Game Theory for Managers",3,5,3,0,4
+"YBS 422","Yönetsel Karar Alma",3,5,3,0,4
+"YBS 427","Coaching and Guidance in Business",3,5,3,0,4
+"YBS 428","Katılım Sigortacılığı",3,5,3,0,4
+"YBS 438","Global Management and Leadership Thought",3,5,3,0,4
+"YBS 446","CO-OP: Cooperative Learning I",3,5,3,0,4
+"YBS 449","Sustainability and Governance",3,5,3,0,4
+"YBS 451","Proje Yönetimi",3,10,3,0,4
+"YBS 453","İş Zekası ve Pazarlama Analizi",3,5,3,0,4
+"YMI 201","Yeni Medyaya Giriş",3,5,3,0,2
+"YMI 202","Yeni Medya Teknolojileri",3,5,3,0,2
+"YMI 213","Yeni Medya Programlama",3,6,2,2,2
+"YMI 214","Yeni Medya Kuramları",3,6,3,0,2
+"YMI 216","Internet Gazeteciliği",3,6,3,0,2
+"YMI 301","İçerik Üretim ve Yönetimi",3,6,3,0,3
+"YMI 302","Mobil Pazarlama",3,6,3,0,3
+"YMI 303","Büyük Veri",3,7,3,0,3
+"YMI 304","Dijital Platformlar",3,6,3,0,3
+"YMI 313","Dinamik Web Tasarımı",3,6,3,0,3
+"YMI 314","Kullanıcı Deneyimi",3,6,3,0,3
+"YMI 315","Arayüz Tasarımı",3,6,3,0,3
+"YMI 317","Dijital Hikaye Anlatıcılığı",3,6,3,0,3
+"YMI 401","Mezuniyet Projesi",4,10,3,2,4
+"YMI 402","Mezuniyet Projesi Yapımı",4,10,3,2,4
+"YMI 404","Yeni Medya Alanında Güncel Yaklaşımlar",3,5,3,0,4

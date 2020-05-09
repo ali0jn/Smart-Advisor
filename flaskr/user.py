@@ -38,7 +38,7 @@ class Student(UserMixin):
         db = get_db()
         cursor = db.cursor()
         cursor.execute("UPDATE student "
-                       "SET student_id = %s, student_semester = %s, advisor = (select instructor_google_id from instructor where instructor_name = %s), standing = %s, gpa = %s, completed_credits = %s, completed_ects = %s "
+                       "SET student_id = %s, student_semester = %s, advisor = (select instructor_email from instructor where instructor_name = %s), standing = %s, gpa = %s, completed_credits = %s, completed_ects = %s "
                        "WHERE student_google_id = %s;", (student_number, int(student_semester), advisor, standing, float(gpa), int(completed_credits), int(completed_ects), std_google_id))
         db.commit()
 
@@ -46,15 +46,16 @@ class Student(UserMixin):
     def get_details(std_google_id):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT student_id, student_semester, (SELECT instructor_name FROM instructor WHERE instructor_google_id = advisor), standing, gpa, completed_credits, completed_ects "
+        cursor.execute("SELECT student_id, student_semester, (SELECT instructor_name FROM instructor WHERE instructor_email = advisor), standing, gpa, completed_credits, completed_ects "
                        "FROM student "
                        "WHERE student_google_id = {};".format(std_google_id))
         details = cursor.fetchall()[0]
         cursor.execute("SELECT department_name FROM student_department WHERE enrolled_type = 'Main Prg' AND student_google_id = {};".format(std_google_id))
+        cursor = cursor.fetchall()
         if cursor == []:
             dept = None
         else:        
-            dept = cursor.fetchall()
+            dept = cursor[0][0]
         return details[0], details[1], details[2], details[3], details[4], details[5], details[6], dept
 
     @staticmethod

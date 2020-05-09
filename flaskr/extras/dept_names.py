@@ -1,4 +1,11 @@
-from flaskr.db import get_db
+import mysql.connector
+
+def get_db():
+    db = mysql.connector.connect(host="localhost",
+                                 user ="root",
+                                 password = 'ali109110',
+                                 database ="SMART_ADVISOR")
+    return db
 
 dept_info = {'Political Science and International Relations (English)': 'POLS',
              'Political Science and International Relations (Turkish)': 'SYS',
@@ -22,6 +29,10 @@ dept_info = {'Political Science and International Relations (English)': 'POLS',
              'Management Information Systems (Turkish)': 'YBS',
              'International Finance (English)': 'IF',
              'Economics (English)': 'ECON',
+             'Architecture (Turkish)': 'MIM',
+             'Architecture (English)': 'ARCH',
+             'Interior Architecture and Environmental Design (Turkish)': 'IMIM',
+             'Industrial Design (English)': 'INDD',
              'Cinema and Television (Turkish)': 'STV',
              'Cinema and Television (English)': 'CTV',
              'Public Relations and Advertising (Turkish)': 'HIL',
@@ -47,8 +58,11 @@ def insert_dept_names():
     db = get_db()
     cursor = db.cursor()
     for dept_name in dept_info:
-        cursor.execute("INSERT INTO department (department_name, department_code) "
-                       "VALUES(%s, %s);", (dept_name, dept_info[dept_name]))
+        try:
+            cursor.execute("INSERT INTO department (department_name, department_code) "
+                           "VALUES(%s, %s);", (dept_name, dept_info[dept_name]))
+        except mysql.connector.errors.IntegrityError:
+            pass
     db.commit()
 
 insert_dept_names()

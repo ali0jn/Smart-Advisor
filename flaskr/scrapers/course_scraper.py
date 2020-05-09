@@ -2,9 +2,17 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options  
 from selenium.common.exceptions import StaleElementReferenceException, ElementClickInterceptedException
-from flaskr.db import get_db
+import mysql.connector
+
 parent = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 os.chdir(parent)
+
+def get_db():
+    db = mysql.connector.connect(host="localhost",
+                                 user ="root",
+                                 password = 'ali109110',
+                                 database ="SMART_ADVISOR")
+    return db
 
 def setup_driver():
     chrome_options = Options()
@@ -12,10 +20,14 @@ def setup_driver():
     driver = webdriver.Chrome(executable_path=os.getcwd()+'/Smart-Advisor/flaskr/drivers/chromedriver', options=chrome_options)
     return driver
 
-def get_program_page(dept_name, electric_engr=False):
+def get_program_page(dept_name, electric_engr=False, architecture=False):
     driver = setup_driver()
     if electric_engr:
         url = 'https://www.sehir.edu.tr/tr/akademik/muhendislik-ve-doga-bilimleri-fakultesi/elektrik-ve-elektronik-muhendisligi/ders-plani'
+    elif architecture and dept_name == 'Architecture Department (in Turkish)':
+        url = 'https://www.sehir.edu.tr/en/academics/school-of-architecture-and-design/architecture/architecture-in-turkish/curriculum'
+    elif architecture and dept_name == 'Architecture Department (in English)':
+        url = 'https://www.sehir.edu.tr/en/academics/school-of-architecture-and-design/architecture/architecture-in-english/curriculum'
     else:
         url = 'https://www.sehir.edu.tr/en/academics/all-programs'
     driver.get(url)
@@ -97,6 +109,8 @@ def fetch_course_details(category, type_):
 def fetch_courses(dept_name, fetch_required=True, fetch_electives=False, vocational_school=False):
     if dept_name == 'Electrical and Electronics Engineering Department':
         driver = get_program_page(dept_name, electric_engr=True)
+    elif dept_name == 'Architecture Department (in Turkish)' or dept_name == 'Architecture Department (in English)':
+        driver = get_program_page(dept_name, architecture=True)
     elif vocational_school:
         driver = click_curriculum('Curriculum', dept_name, vocational_school=True)
     else:
@@ -141,7 +155,11 @@ dept_name_mapping = {
     'Entrepreneurship Department': 'Entrepreneurship (Turkish)', 
     'Management Information Systems Department': 'Management Information Systems (Turkish)',
     'Economics Department': 'Economics (English)', 
-    'International Finance Department': 'International Finance (English)', 
+    'International Finance Department': 'International Finance (English)',
+    'Architecture Department (in Turkish)': 'Architecture (Turkish)',
+    'Architecture Department (in English)': 'Architecture (English)',
+    'Interior Architecture and Environmental Design Department': 'Interior Architecture and Environmental Design (Turkish)',
+    'Industrial Design Department': 'Industrial Design (English)',
     'Cinema and Television Department (in Turkish)': 'Cinema and Television (Turkish)',
     'Cinema and Television Department (in English)': 'Cinema and Television (English)', 
     'Public Relations and Advertising Department': 'Public Relations and Advertising (Turkish)',
@@ -185,7 +203,11 @@ departments = [
                'Entrepreneurship Department', 
                'Management Information Systems Department',
                'Economics Department', 
-               'International Finance Department', 
+               'International Finance Department',
+               'Architecture Department (in Turkish)',
+               'Architecture Department (in English)',
+               'Interior Architecture and Environmental Design Department',
+               'Industrial Design Department',
                'Cinema and Television Department (in Turkish)',
                'Cinema and Television Department (in English)', 
                'Public Relations and Advertising Department',
@@ -196,8 +218,9 @@ departments = [
                'Social Services',
                'Occupational Health and Safety',
                'Construction Technology',
-               'Photography and Videography']
-               
+               'Photography and Videography'
+               ]
+              
 vocational_schools = [
                       'Justice',
                       'Justice (Evening education)',
@@ -206,7 +229,8 @@ vocational_schools = [
                       'Child Development',
                       'Child Development (Evening education)',
                       'Graphic Design',
-                      'Graphic Design (Evening education)']
+                      'Graphic Design (Evening education)'
+                      ]
 
 def insert_to_db(dept_list, fetch_required, fetch_electives, vocational_school):
     c = 0

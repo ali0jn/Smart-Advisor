@@ -1,1 +1,1 @@
-{"tuned_adaboost": {"loss": "linear", "n_estimators": 50}}
+{"tuned_adaboost": {"loss": "linear", "n_estimators": 200}}
