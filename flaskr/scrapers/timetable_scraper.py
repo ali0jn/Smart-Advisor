@@ -1,11 +1,18 @@
 import os
+import mysql.connector
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options  
 import re
-from flaskr.db import get_db
 
 parent = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 os.chdir(parent)
+
+def get_db():
+    db = mysql.connector.connect(host="localhost",
+                                 user ="root",
+                                 password = 'ali109110',
+                                 database ="SMART_ADVISOR")
+    return db
 
 def setup_driver():
     chrome_options = Options()
@@ -34,16 +41,17 @@ def fetch_timetable(url, semester, year):
         days = get_days(sub_elements[2])
         time_slots = get_time_slots(sub_elements[3])
         location = get_locations(sub_elements[4].text)
+        instructor = get_instructor(sub_elements[5].text.split('\n')[0])
         event_details = get_event_detail(days, time_slots, location)
         if event_details != None:
             for detail in event_details:
                 building = detail[2].split('#')[0].strip()
                 room = detail[2].split('#')[1].strip()
                 day = detail[0].strip()
-                start_hr = int(detail[1][:2].strip())
-                start_min = int(detail[1][3:5].strip())
-                end_hr = int(detail[1][6:8].strip())
-                end_min = int(detail[1][9:].strip())
+                start_hr = int(get_digits(detail[1][:2].strip()))
+                start_min = int(get_digits(detail[1][3:5].strip()))
+                end_hr = int(get_digits(detail[1][6:8].strip()))
+                end_min = int(get_digits(detail[1][9:].strip()))
     
                 try:
                     cursor.execute("INSERT INTO classroom "
@@ -58,6 +66,12 @@ def fetch_timetable(url, semester, year):
                     pass
 
                 try:
+                    cursor.execute("INSERT INTO teaches "
+                                   "VALUES (%s, %s, %s, %s, (SELECT instructor_email FROM instructor WHERE instructor_name = %s));", (section_id, semester, year, course_id, instructor))
+                except (mysql.connector.errors.IntegrityError, mysql.connector.errors.DataError):
+                    pass
+
+                try:
                     cursor.execute("INSERT INTO time_slot (section_day, start_hr, start_min, end_hr, end_min, section_id, semester, section_year, course_id) "
                                    "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);", (day, start_hr, start_min, end_hr, end_min, section_id, semester, year, course_id))
                 except mysql.connector.errors.IntegrityError:
@@ -69,6 +83,12 @@ def fetch_timetable(url, semester, year):
             except mysql.connector.errors.IntegrityError:
                 pass
         db.commit()
+
+def get_instructor(string):
+    return ' '.join(re.findall(r'\w+', string))
+
+def get_digits(string):
+    return re.findall(r'\d+', string)[0]
 
 def get_event_detail(days, time_slots, location):
     details = []
@@ -115,4 +135,4 @@ def get_days(days):
 def get_time_slots(time_slot):
     return time_slot.text.split()
 
-fetch_timetable('https://www.sehir.edu.tr/en/Announcements/2019_2020_Akademik_Yili_Bahar_Donemi_Ders_Programi', 'Spring', 2019)
+fetch_timetable('https://www.sehir.edu.tr/en/Announcements/2016-2017-academic-year-fall-semester-program', 'Fall', 2016)

@@ -65,8 +65,8 @@ class Student(UserMixin):
         for enrolment_type in dept_dict:
             try:
                 cursor.execute("INSERT INTO student_department "
-                               "VALUES (%s, %s, %s);", (std_google_id, dept_dict[enrolment_type], enrolment_type))
-            except:
+                               "VALUES (%s, %s, %s); ", (std_google_id, dept_dict[enrolment_type], enrolment_type))
+            except mysql.connector.errors.IntegrityError:
                 pass
         db.commit()
 
@@ -75,8 +75,45 @@ class Student(UserMixin):
         db = get_db()
         cursor = db.cursor()
         try:
-            cursor.execute("INSERT INTO takes "
-                           "VALUES (%s, %s, %s, %s, %s, %s);", (section_id, semester, int(section_year), course_id, std_google_id, grade))
+            cursor.execute("SELECT semester, section_year, course_id, student_google_id "
+                           "FROM takes "
+                           "WHERE student_google_id = %s AND course_id = %s AND semester = %s AND section_year = %s;", (std_google_id, course_id, semester, int(section_year)))
+
+            data = cursor.fetchall()
+            if data == []:
+                cursor.execute("INSERT INTO takes "
+                               "VALUES (%s, %s, %s, %s, %s, %s);", (section_id, semester, int(section_year), course_id, std_google_id, grade))
+            else:
+                cursor.execute("UPDATE takes "
+                               "SET grade = %s "
+                               "WHERE student_google_id = %s AND course_id = %s AND semester = %s AND section_year = %s;", (grade, std_google_id, course_id, semester, int(section_year)))
         except mysql.connector.errors.IntegrityError:
             pass
         db.commit()
+    
+    @staticmethod
+    def add_current_semester(section_id, semester, section_year, course_id, std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        try:
+            cursor.execute("SELECT course_id FROM takes WHERE student_google_id = %s AND course_id = %s AND semester = %s AND section_year = %s", (std_google_id, course_id, semester, int(section_year)))
+            data = cursor.fetchall()
+            if data == []:
+                cursor.execute("INSERT INTO takes (section_id, semester, section_year, course_id, student_google_id) "
+                               "VALUES (%s, %s, %s, %s, %s);", (section_id, semester, int(section_year), course_id, std_google_id))
+
+        except mysql.connector.errors.IntegrityError:
+            pass
+        db.commit()
+
+    @staticmethod
+    def update_current_semester(section_id, semester, section_year, course_id, std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        try:
+            cursor.execute("UPDATE takes "
+                           "SET section_id = %s "
+                           "WHERE student_google_id = %s AND course_id = %s AND semester = %s AND section_year = %s;", (section_id, std_google_id, course_id, semester, int(section_year)))
+        except mysql.connector.errors.IntegrityError:
+            pass
+        db.commit()        
