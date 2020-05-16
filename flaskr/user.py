@@ -2,6 +2,10 @@ from flask_login import UserMixin
 from flaskr.db import get_db
 import mysql.connector
 
+course_department = {'Computer Science and Engineering (English)': {'Core Course Elective': 5,
+                                                                    'General Elective': 3,
+                                                                    'Department Elective': 4}}
+
 class Student(UserMixin):
     def __init__(self, id_, name, email, profile_pic):
         self.id = id_
@@ -57,6 +61,21 @@ class Student(UserMixin):
         else:        
             dept = cursor[0][0]
         return details[0], details[1], details[2], details[3], details[4], details[5], details[6], dept
+
+    @staticmethod
+    def graduation_progress(department_name, std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT COUNT(*) "
+                       "FROM course_department "
+                       "WHERE course_type='Required' AND department_name = '{}';".format(department_name))
+        total_required = int(cursor.fetchall()[0][0])
+        extras = sum(list(course_department[department_name].values()))
+        cursor.execute("SELECT COUNT(*) "
+                       "FROM takes "
+                       "WHERE student_google_id = {} AND grade IS NOT NULL AND grade NOT IN ('F', 'IA');".format(std_google_id))
+        total_taken = int(cursor.fetchall()[0][0])
+        return int((total_taken / (total_required + extras) * 100))
 
     @staticmethod
     def add_department(dept_dict, std_google_id):

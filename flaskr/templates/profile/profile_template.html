@@ -95,6 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!--end::Global Theme Styles -->
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--begin::Layout Skins(used by all pages) -->
 
 		<!--end::Layout Skins -->
@@ -368,6 +369,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					}
 				}
 				setInterval(AutoRotate, 5000);
+				const graduation_progress = document.getElementById("graduation_progress");
+				graduation_progress.style = "width: " + graduation_progress.getAttribute("aria-valuenow") + "%;"
 			});
 		</script>
 
@@ -392,9 +395,31 @@ License: You must have a valid license purchased only from themeforest(the above
 				}
 			};
 		</script>
+	<!-- end::Global Config -->
 
-		<!-- end::Global Config -->
+	<script>
+		function highlightSelected(){
+			var subjects = document.getElementById("kt_select2_3");
+			subjects.options[subjects.options.selectedIndex].setAttribute('selected', 'selected');
+			subjects.options[subjects.options.selectedIndex].setAttribute('style', 'background-color: lightgrey;');
+		};
+	</script>
 
+	<script>
+		function sendOptions() {
+			var sel = document.getElementById('kt_select2_3');
+			var opt;
+			var options = [];
+			for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+				opt = sel.options[i];
+				if ( opt.getAttribute('selected') === "selected" ) {
+					options.push(opt.text);
+				}
+			}
+			
+		};
+	</script>
+	
 		<!--begin::Global Theme Bundle(used by all pages) -->
 
 		<!--begin:: Vendor Plugins -->

@@ -1,0 +1,276 @@
+{% extends 'profile/profile_template.html' %}
+{% block content %}
+	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+		<div class="kt-portlet">
+			<div class="kt-portlet__head">
+				<div class="kt-portlet__head-label">
+					<h3 class="kt-portlet__head-title">
+						Filters
+					</h3>
+				</div>
+			</div>
+
+			<!--begin::Form-->
+			<form class="kt-form kt-form--fit kt-form--label-right" method="POST" action="profile/predict">
+				<div class="kt-portlet__body">
+					<div style="float: left;">
+						<div class="form-group row">
+							<label class="col-form-label col-lg-3 col-sm-12">Select Subjects</label>
+							<div class=" col-lg-4 col-md-9 col-sm-12">
+								<select class="form-control kt-select2" id="kt_select2_3" name="param" multiple="multiple" onclick="highlightSelected()">
+									{% for subject in subjects %}
+										<option value="{}".format({{ subject }})>{{ subject }}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<div class="form-group form-group-last" style="width: 300px; float: right; margin-left: 20px; margin-top: 8px;">
+								<div class="alert alert-secondary" role="alert">
+									<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+									<div class="alert-text">
+										To make a prediction, please select your desired subjects and min. grade.
+									</div>
+								</div>
+							</div>	
+						</div>		
+						<div class="form-group row">
+							<label class="col-form-label col-lg-3 col-sm-12">Select Min. Grade</label>
+							<div class=" col-lg-4 col-md-9 col-sm-12">
+								<select class="form-control kt-select2" id="kt_select2_1" name="param">
+									<option value="AK">A+</option>
+									<option value="HI">A</option>
+									<option value="CA">A-</option>
+									<option value="NV">B+</option>
+									<option value="OR">B</option>
+									<option value="WA">B-</option>
+									<option value="AZ">C+</option>
+									<option value="CO">C</option>
+									<option value="ID">C-</option>
+									<option value="MT">D+</option>
+									<option value="NE">D</option>
+									<option value="NM">D-</option>
+									<option value="ND">F</option>								
+								</select>
+							</div>
+							<div class="kt-form__actions" style="margin-left: 100px;">
+								<button id="submit_button" type="submit" class="btn btn-primary" onclick="sendOptions()">Predict</button>
+								<button type="reset" class="btn btn-secondary">Reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!--begin:: Widgets/Sale Reports-->
+		<div class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+			<div class="kt-portlet__head">
+				<div class="kt-portlet__head-label">
+					<h3 class="kt-portlet__head-title">
+						Grade Predictions
+					</h3>
+				</div>
+				<div class="kt-portlet__head-toolbar">
+					<ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-brand" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#kt_widget11_tab1_content" role="tab">
+								Regression Model
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#kt_widget11_tab2_content" role="tab">
+								Collaborative Filtering
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="kt-portlet__body">
+
+				<!--Begin::Tab Content-->
+				<div class="tab-content">
+
+					<!--begin::tab 1 content-->
+					<div class="tab-pane active" id="kt_widget11_tab1_content">
+
+						<!--begin::Widget 11-->
+						<div class="kt-widget11">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<td style="width:1%">#</td>
+											<td style="width:40%">Application</td>
+											<td style="width:14%">Sales</td>
+											<td style="width:15%">Change</td>
+											<td style="width:15%">Status</td>
+											<td style="width:15%" class="kt-align-right">Total</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single">
+													<input type="checkbox"><span></span>
+												</label>
+											</td>
+											<td>
+												<a href="#" class="kt-widget11__title">Loop</a>
+												<span class="kt-widget11__sub">CRM System</span>
+											</td>
+											<td>19,200</td>
+											<td>$63</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--brand">new</span></td>
+											<td class="kt-align-right kt-font-brand kt-font-bold">$34,740</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<a href="#" class="kt-widget11__title">Selto</a>
+												<span class="kt-widget11__sub">Powerful Website Builder</span>
+											</td>
+											<td>24,310</td>
+											<td>$39</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--success">approved</span></td>
+											<td class="kt-align-right kt-font-brand kt-font-bold">$46,010</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<a href="#" class="kt-widget11__title">Jippo</a>
+												<span class="kt-widget11__sub">The Best Selling App</span>
+											</td>
+											<td>9,076</td>
+											<td>$105</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--warning">pending</span></td>
+											<td class="kt-align-right kt-font-brand kt-font-bold">$67,800</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<a href="#" class="kt-widget11__title">Verto</a>
+												<span class="kt-widget11__sub">Web Development Tool</span>
+											</td>
+											<td>11,094</td>
+											<td>$16</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--danger">on hold</span></td>
+											<td class="kt-align-right kt-font-brand kt-font-bold">$18,520</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="kt-widget11__action kt-align-right">
+								<button type="button" class="btn btn-label-brand btn-bold btn-sm">Calculate New GPA</button>
+							</div>
+						</div>
+
+						<!--end::Widget 11-->
+					</div>
+
+					<!--end::tab 1 content-->
+
+					<!--begin::tab 2 content-->
+					<div class="tab-pane" id="kt_widget11_tab2_content">
+
+						<!--begin::Widget 11-->
+						<div class="kt-widget11">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<td style="width:1%">#</td>
+											<td style="width:40%">Application</td>
+											<td style="width:14%">Sales</td>
+											<td style="width:15%">Change</td>
+											<td style="width:15%">Status</td>
+											<td style="width:15%" class="kt-align-right">Total</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single">
+													<input type="checkbox"><span></span>
+												</label>
+											</td>
+											<td>
+												<span class="kt-widget11__title">Loop</span>
+												<span class="kt-widget11__sub">CRM System</span>
+											</td>
+											<td>19,200</td>
+											<td>$63</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--danger">pending</span></td>
+											<td class="kt-align-right kt-font-brand  kt-font-bold">$23,740</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<span class="kt-widget11__title">Selto</span>
+												<span class="kt-widget11__sub">Powerful Website Builder</span>
+											</td>
+											<td>24,310</td>
+											<td>$39</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--success">new</span></td>
+											<td class="kt-align-right kt-font-success  kt-font-bold">$46,010</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<span class="kt-widget11__title">Jippo</span>
+												<span class="kt-widget11__sub">The Best Selling App</span>
+											</td>
+											<td>9,076</td>
+											<td>$105</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--brand">approved</span></td>
+											<td class="kt-align-right kt-font-danger kt-font-bold">$15,800</td>
+										</tr>
+										<tr>
+											<td>
+												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+											</td>
+											<td>
+												<span class="kt-widget11__title">Verto</span>
+												<span class="kt-widget11__sub">Web Development Tool</span>
+											</td>
+											<td>11,094</td>
+											<td>$16</td>
+											<td><span class="kt-badge kt-badge--inline kt-badge--info">done</span></td>
+											<td class="kt-align-right kt-font-warning kt-font-bold">$8,520</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="kt-widget11__action kt-align-right">
+								<button type="button" class="btn btn-label-success btn-bold btn-sm">Calculate New GPA</button>
+							</div>
+						</div>
+
+						<!--end::Widget 11-->
+					</div>
+
+					<!--end::tab 2 content-->
+
+					<!--begin::tab 3 content-->
+					<div class="tab-pane" id="kt_widget11_tab3_content">
+					</div>
+
+					<!--end::tab 3 content-->
+				</div>
+
+				<!--End::Tab Content-->
+			</div>
+		</div>
+
+		<!--end:: Widgets/Sale Reports-->
+		
+	</div>
+{% endblock %}
