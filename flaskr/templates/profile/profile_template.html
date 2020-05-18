@@ -25,7 +25,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Fonts -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://use.fontawesome.com/5a8a7bb461.js"></script>
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
@@ -94,7 +93,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Vendor Plugins for custom pages -->
 
 		<!--end::Global Theme Styles -->
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--begin::Layout Skins(used by all pages) -->
 
@@ -409,14 +407,24 @@ License: You must have a valid license purchased only from themeforest(the above
 		function sendOptions() {
 			var sel = document.getElementById('kt_select2_3');
 			var opt;
-			var options = [];
+			var dict = {};
 			for ( var i = 0, len = sel.options.length; i < len; i++ ) {
 				opt = sel.options[i];
 				if ( opt.getAttribute('selected') === "selected" ) {
-					options.push(opt.text);
+					dict[opt.textContent] = opt.textContent;
 				}
 			}
-			
+
+			const minGrade = $("#kt_select2_1").val();
+			dict[minGrade] = minGrade;
+
+			$.ajax({
+    			type: 'POST',
+    			url: "profile/predict",
+    			data: JSON.stringify(dict),
+    			contentType: 'application/json; charset=utf-8',
+				dataType: 'json',
+			});
 		};
 	</script>
 	

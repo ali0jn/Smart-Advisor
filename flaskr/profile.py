@@ -48,22 +48,62 @@ def predict():
     if request.method == 'GET':
         return render_template('profile/predict.html', name=current_user[2], profile_pic=current_user[4], subjects=subjects)
     else:
-        a = request.form.getlist('options[]')
-        print(a)
-        return render_template('profile/predict.html', name=current_user[2], profile_pic=current_user[4])
+        selected_subjects = request.get_json()
+        prediction_data = []
+        if selected_subjects != None:
+            for subject in selected_subjects:
+                prediction_data.append(subject)
+        if prediction_data != []:
+            pass
+        
+        return render_template('profile/predict.html', name=current_user[2], profile_pic=current_user[4], subjects=subjects)
 
-@bp.route('/rate_instructor')
+@bp.route('/rate_instructor', methods=['POST', 'GET'])
 @login_required
 def rate_instructor():
     current_user = g.user
-    return render_template('profile/rate_instructor.html', name=current_user[2], profile_pic=current_user[4])
+    if request.method == 'POST':
+        instructor_email = request.form['instructor_email_form']
+        course_details = request.form['course_details']
+        semester_year = request.form['semester_year']
+        rating = request.form['rating']
+        will_rec = request.form['will_rec']
+        is_suitable = request.form['is_suitable']
+        grading = request.form['grading_policy']
+        explanation = request.form['explanation']
+        take_again = request.form['take_again']
+        Student.save_instructor_rating(instructor_email, course_details, semester_year, rating, will_rec, is_suitable, grading, explanation, take_again, current_user[0])
 
+    unrated_instructors = Student.get_unrated_instructors(current_user[0])
+    for i in range(len(unrated_instructors)):
+        unrated_instructors[i] = list(unrated_instructors[i])
+        unrated_instructors[i][0] = int(unrated_instructors[i][0]) + 1
+        if unrated_instructors[i][6] == None:
+            unrated_instructors[i][6] = "static/media/users/default.jpg"
+    return render_template('profile/rate_instructor.html', name=current_user[2], profile_pic=current_user[4], unrated_instructors=unrated_instructors)
 
-@bp.route('/rate_course')
+@bp.route('/rate_course', methods=['POST', 'GET'])
 @login_required
 def rate_course():
     current_user = g.user
-    return render_template('profile/rate_course.html', name=current_user[2], profile_pic=current_user[4])
+    if request.method == 'POST':
+        course_details = request.form['course_details']
+        semster_year = request.form['semester_year']
+        rating = request.form['rating']
+        will_rec = request.form['will_rec']
+        did_enjoy = request.form['did_enjoy']
+        take_sim = request.form['take_sim']
+        good_content = request.form['good_content']
+        was_helpful = request.form['was_helpful']
+        Student.save_course_rating(course_details, semster_year, rating, will_rec, did_enjoy, take_sim, good_content, was_helpful, current_user[0])
+
+    unrated_courses = Student.get_unrated_courses(current_user[0])
+    for i in range(len(unrated_courses)):
+        unrated_courses[i] = list(unrated_courses[i])
+        unrated_courses[i][2] = int(unrated_courses[i][2]) + 1
+        unrated_courses[i] = tuple(unrated_courses[i])
+
+    return render_template('profile/rate_course.html', name=current_user[2], profile_pic=current_user[4], unrated_courses=unrated_courses)
 
 @bp.route('/analyze_instructor')
 @login_required

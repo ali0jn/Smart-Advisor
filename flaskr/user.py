@@ -135,4 +135,59 @@ class Student(UserMixin):
                            "WHERE student_google_id = %s AND course_id = %s AND semester = %s AND section_year = %s;", (section_id, std_google_id, course_id, semester, int(section_year)))
         except mysql.connector.errors.IntegrityError:
             pass
-        db.commit()        
+        db.commit()
+
+    @staticmethod
+    def get_unrated_courses(std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT section_id, semester, section_year, t.course_id, title "
+                       "FROM takes AS t, course AS c "
+                       "WHERE student_google_id = {} AND grade IS NULL AND t.course_id = c.course_id AND "
+                       "(t.course_id, section_id, student_google_id, semester, section_year) NOT IN "
+                       "(SELECT course_id, section_id, student_google_id, semester, section_year " 
+		               "FROM course_rating);".format(std_google_id))
+        unrated_courses = cursor.fetchall()
+        return unrated_courses
+
+    @staticmethod
+    def save_course_rating(course_details, semester_year, rating, will_rec, did_enjoy, take_sim, good_content, was_helpful, std_google_id):
+        course_sec = course_details.split('-')[0].strip()
+        course_id = ' '.join(course_sec.split()[:2])
+        section = course_sec.split()[-1]
+        semester = semester_year.split()[0].strip()
+        section_year = int(semester_year.split()[1].strip()) - 1
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("INSERT INTO course_rating (rating_amount, will_recommend, did_enjoy, take_similar, good_content, was_helpful, student_google_id, section_id, semester, section_year, course_id) "
+                       "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);", (int(rating), will_rec, did_enjoy, take_sim, good_content, was_helpful, std_google_id, section, semester, section_year, course_id))
+        db.commit()
+
+    @staticmethod
+    def get_unrated_instructors(std_google_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT tc.section_year, tc.semester, tk.course_id, tk.section_id, (SELECT title FROM course WHERE course_id=tk.course_id), "
+                            "(SELECT instructor_name FROM instructor WHERE instructor_email = tc.instructor_email), "
+                            "(SELECT instructor_profile_picture FROM instructor WHERE instructor_email = tc.instructor_email), "
+                            "tc.instructor_email "
+                       "FROM teaches AS tc, takes AS tk "
+                       "WHERE tc.course_id=tk.course_id AND tk.grade IS NULL AND tc.section_year=tk.section_year AND tk.student_google_id={} AND "
+                            "(tc.course_id, tc.section_year, tc.semester) NOT IN "
+                            "(SELECT course_id, section_year, semester FROM instructor_rating);".format(std_google_id))
+        
+        unrated_instructors = cursor.fetchall()
+        return unrated_instructors
+
+    @staticmethod
+    def save_instructor_rating(instructor_email, course_details, semester_year, rating, will_rec, is_suitable, grading, explanation, take_again, std_google_id):
+        course_sec = course_details.strip().split('-')[0].strip()
+        course_id = ' '.join(course_sec.split()[:2])
+        section = course_sec.split()[-1]
+        semester = semester_year.strip().split()[0]
+        section_year = int(semester_year.split()[1]) - 1
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("INSERT INTO instructor_rating (rating_amount, will_recommend, is_suitable, grading_policy, explanation_method, take_again, student_google_id, instructor_email, semester, section_year, course_id) "
+                       "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);", (int(rating), will_rec, is_suitable, grading, explanation, take_again, std_google_id, instructor_email, semester, section_year, course_id))
+        db.commit()

@@ -17,9 +17,9 @@
 						<div class="form-group row">
 							<label class="col-form-label col-lg-3 col-sm-12">Select Subjects</label>
 							<div class=" col-lg-4 col-md-9 col-sm-12">
-								<select class="form-control kt-select2" id="kt_select2_3" name="param" multiple="multiple" onclick="highlightSelected()">
+								<select class="form-control kt-select2" id="kt_select2_3" name="subjects" multiple="multiple" onclick="highlightSelected()">
 									{% for subject in subjects %}
-										<option value="{}".format({{ subject }})>{{ subject }}</option>
+										<option value={{ subject }}>{{ subject }}</option>
 									{% endfor %}
 								</select>
 							</div>
@@ -35,20 +35,20 @@
 						<div class="form-group row">
 							<label class="col-form-label col-lg-3 col-sm-12">Select Min. Grade</label>
 							<div class=" col-lg-4 col-md-9 col-sm-12">
-								<select class="form-control kt-select2" id="kt_select2_1" name="param">
-									<option value="AK">A+</option>
-									<option value="HI">A</option>
-									<option value="CA">A-</option>
-									<option value="NV">B+</option>
-									<option value="OR">B</option>
-									<option value="WA">B-</option>
-									<option value="AZ">C+</option>
-									<option value="CO">C</option>
-									<option value="ID">C-</option>
-									<option value="MT">D+</option>
-									<option value="NE">D</option>
-									<option value="NM">D-</option>
-									<option value="ND">F</option>								
+								<select class="form-control kt-select2" id="kt_select2_1" name="min-grade">
+									<option value="A+">A+</option>
+									<option value="A">A</option>
+									<option value="A-">A-</option>
+									<option value="B+">B+</option>
+									<option value="B">B</option>
+									<option value="B-">B-</option>
+									<option value="C+">C+</option>
+									<option value="C">C</option>
+									<option value="C-">C-</option>
+									<option value="D+">D+</option>
+									<option value="D">D</option>
+									<option value="D-">D-</option>
+									<option value="F">F</option>
 								</select>
 							</div>
 							<div class="kt-form__actions" style="margin-left: 100px;">
@@ -95,77 +95,46 @@
 						<!--begin::Widget 11-->
 						<div class="kt-widget11">
 							<div class="table-responsive">
-								<table class="table">
+								<table class="table" style="text-align: center;">
 									<thead>
 										<tr>
-											<td style="width:1%">#</td>
-											<td style="width:40%">Application</td>
-											<td style="width:14%">Sales</td>
-											<td style="width:15%">Change</td>
-											<td style="width:15%">Status</td>
-											<td style="width:15%" class="kt-align-right">Total</td>
+											<td style="width:10%">Course Code</td>
+											<td style="width:40%">Course Name</td>
+											<td style="width:10%">Credit</td>
+											<td style="width:12%">Prerequisite(s)</td>
+											<td style="width:12%">Predicted Grade</td>
+											<td style="width:15%">Prediction Probability</td>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>
-												<label class="kt-checkbox kt-checkbox--single">
-													<input type="checkbox"><span></span>
-												</label>
+												<span class="kt-widget11__title">CS 350</span>
 											</td>
 											<td>
-												<a href="#" class="kt-widget11__title">Loop</a>
-												<span class="kt-widget11__sub">CRM System</span>
+												<span class="kt-widget11__title">Database Systems</span>
+												<span class="kt-widget11__sub">Type: Required</span>
 											</td>
-											<td>19,200</td>
-											<td>$63</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--brand">new</span></td>
-											<td class="kt-align-right kt-font-brand kt-font-bold">$34,740</td>
+											<td>3</td>
+											<td>ENGR 102</td>
+											<td class="kt-font-bold" style="color:green">A</td>
+											<td class="kt-font-brand kt-font-bold">90%</td>
 										</tr>
 										<tr>
 											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
+												<span class="kt-widget11__title">ENGR 102</span>
 											</td>
 											<td>
-												<a href="#" class="kt-widget11__title">Selto</a>
-												<span class="kt-widget11__sub">Powerful Website Builder</span>
+												<span class="kt-widget11__title">Programming Practice</span>
+												<span class="kt-widget11__sub">Type: Required</span>
 											</td>
-											<td>24,310</td>
-											<td>$39</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--success">approved</span></td>
-											<td class="kt-align-right kt-font-brand kt-font-bold">$46,010</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
-											</td>
-											<td>
-												<a href="#" class="kt-widget11__title">Jippo</a>
-												<span class="kt-widget11__sub">The Best Selling App</span>
-											</td>
-											<td>9,076</td>
-											<td>$105</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--warning">pending</span></td>
-											<td class="kt-align-right kt-font-brand kt-font-bold">$67,800</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
-											</td>
-											<td>
-												<a href="#" class="kt-widget11__title">Verto</a>
-												<span class="kt-widget11__sub">Web Development Tool</span>
-											</td>
-											<td>11,094</td>
-											<td>$16</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--danger">on hold</span></td>
-											<td class="kt-align-right kt-font-brand kt-font-bold">$18,520</td>
+											<td>3</td>
+											<td>ENGR 101</td>
+											<td class="kt-font-bold" style="color:green">A-</td>
+											<td class="kt-font-brand kt-font-bold">96.77%</td>
 										</tr>
 									</tbody>
 								</table>
-							</div>
-							<div class="kt-widget11__action kt-align-right">
-								<button type="button" class="btn btn-label-brand btn-bold btn-sm">Calculate New GPA</button>
 							</div>
 						</div>
 
@@ -180,77 +149,33 @@
 						<!--begin::Widget 11-->
 						<div class="kt-widget11">
 							<div class="table-responsive">
-								<table class="table">
+								<table class="table" style="text-align: center;">
 									<thead>
 										<tr>
-											<td style="width:1%">#</td>
-											<td style="width:40%">Application</td>
-											<td style="width:14%">Sales</td>
-											<td style="width:15%">Change</td>
-											<td style="width:15%">Status</td>
-											<td style="width:15%" class="kt-align-right">Total</td>
+											<td style="width:10%">Course Code</td>
+											<td style="width:40%">Course Name</td>
+											<td style="width:10%">Credit</td>
+											<td style="width:12%">Prerequisite(s)</td>
+											<td style="width:12%">Predicted Grade</td>
+											<td style="width:15%">Prediction Probability</td>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+										<!-- <tr>
 											<td>
-												<label class="kt-checkbox kt-checkbox--single">
-													<input type="checkbox"><span></span>
-												</label>
+												<span class="kt-widget11__title">UNI 118</span>
 											</td>
 											<td>
-												<span class="kt-widget11__title">Loop</span>
-												<span class="kt-widget11__sub">CRM System</span>
+												<span class="kt-widget11__title">Understanding Politics and Economy</span>
+												<span class="kt-widget11__sub">Type: Core Course Elective</span>
 											</td>
-											<td>19,200</td>
-											<td>$63</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--danger">pending</span></td>
-											<td class="kt-align-right kt-font-brand  kt-font-bold">$23,740</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
-											</td>
-											<td>
-												<span class="kt-widget11__title">Selto</span>
-												<span class="kt-widget11__sub">Powerful Website Builder</span>
-											</td>
-											<td>24,310</td>
-											<td>$39</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--success">new</span></td>
-											<td class="kt-align-right kt-font-success  kt-font-bold">$46,010</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
-											</td>
-											<td>
-												<span class="kt-widget11__title">Jippo</span>
-												<span class="kt-widget11__sub">The Best Selling App</span>
-											</td>
-											<td>9,076</td>
-											<td>$105</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--brand">approved</span></td>
-											<td class="kt-align-right kt-font-danger kt-font-bold">$15,800</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="kt-checkbox kt-checkbox--single"><input type="checkbox"><span></span></label>
-											</td>
-											<td>
-												<span class="kt-widget11__title">Verto</span>
-												<span class="kt-widget11__sub">Web Development Tool</span>
-											</td>
-											<td>11,094</td>
-											<td>$16</td>
-											<td><span class="kt-badge kt-badge--inline kt-badge--info">done</span></td>
-											<td class="kt-align-right kt-font-warning kt-font-bold">$8,520</td>
-										</tr>
+											<td>3</td>
+											<td></td>
+											<td class="kt-font-bold" style="color:green">A+</td>
+											<td class="kt-font-brand kt-font-bold">100%</td>
+										</tr> -->
 									</tbody>
 								</table>
-							</div>
-							<div class="kt-widget11__action kt-align-right">
-								<button type="button" class="btn btn-label-success btn-bold btn-sm">Calculate New GPA</button>
 							</div>
 						</div>
 
