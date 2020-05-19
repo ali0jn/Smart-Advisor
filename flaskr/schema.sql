@@ -42,8 +42,8 @@ CREATE TABLE instructor_rating (
   student_google_id VARCHAR(50),
   instructor_email VARCHAR(100),
   semester VARCHAR(6) CHECK (semester IN ('Fall', 'Spring', 'Summer')),
-  add column section_year NUMERIC(4, 0) CHECK (section_year > 2009 and section_year < 2050),
-  add column course_id VARCHAR(15),
+  section_year NUMERIC(4, 0) CHECK (section_year > 2009 and section_year < 2050),
+  course_id VARCHAR(15),
   PRIMARY KEY (rating_id),
   FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
   FOREIGN KEY (instructor_email) REFERENCES instructor(instructor_email) 

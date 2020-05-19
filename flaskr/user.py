@@ -1,6 +1,8 @@
 from flask_login import UserMixin
 from flaskr.db import get_db
 import mysql.connector
+import datetime
+import random
 
 course_department = {'Computer Science and Engineering (English)': {'Core Course Elective': 5,
                                                                     'General Elective': 3,
@@ -191,3 +193,70 @@ class Student(UserMixin):
         cursor.execute("INSERT INTO instructor_rating (rating_amount, will_recommend, is_suitable, grading_policy, explanation_method, take_again, student_google_id, instructor_email, semester, section_year, course_id) "
                        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);", (int(rating), will_rec, is_suitable, grading, explanation, take_again, std_google_id, instructor_email, semester, section_year, course_id))
         db.commit()
+
+    @staticmethod
+    def get_user_timetable(std_google_id):
+        now = datetime.datetime.now()
+        today = now.strftime("%A")
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT t.course_id, c.title, ts.start_hr, ts.start_min, ts.end_hr, ts.end_min, s.building_no, s.room_no "
+                       "FROM takes AS t, time_slot AS ts, section AS s, course AS c "
+                       "WHERE student_google_id = %s AND grade IS NULL AND t.course_id=ts.course_id AND t.section_id=ts.section_id "
+                       "AND t.section_year=ts.section_year AND t.semester=ts.semester AND c.course_id=s.course_id AND "
+                       "s.section_id=t.section_id AND s.semester=t.semester AND s.section_year=t.section_year "
+                       "AND s.course_id=t.course_id AND ts.section_day=%s;", (std_google_id, today))
+        
+        time_table = cursor.fetchall()
+        for i in range(len(time_table)):
+            time_table[i] = list(time_table[i])
+            time_table[i].append("flaticon2-open-text-book")
+            time_table[i][2] = str(time_table[i][2])
+            time_table[i][3] = str(time_table[i][3])
+            time_table[i][4] = str(time_table[i][4])
+            time_table[i][5] = str(time_table[i][5])
+            if len(time_table[i][2]) == 1:
+                time_table[i][2] = '0' + time_table[i][2]
+            if len(time_table[i][3]) == 1:
+                time_table[i][3] = '0' + time_table[i][3]
+            if len(time_table[i][4]) == 1:
+                time_table[i][4] = '0' + time_table[i][4]
+            if len(time_table[i][5]) == 1:
+                time_table[i][5] = '0' + time_table[i][5]
+
+        temp = []
+        for i in range(len(time_table)):
+            start_hr = int(time_table[i][2])
+            end_hr = int(time_table[i][4])
+            for j in range(start_hr, end_hr+1):
+                if j not in temp:
+                    temp.append(j)
+
+        for i in range(9, 19):
+            if i in temp:
+                temp.pop(temp.index(i))
+            else:
+                temp.append(i)
+
+        if len(temp) > 1:
+            coffee = str(random.choice(temp))
+            if len(coffee) == 1:
+                coffee = '0' + coffee
+            temp.pop(temp.index(int(coffee)))
+            time_table.append(('Coffee Break', '', coffee, '00', '', '', 'Student Center', 'Zem Mekan', 'fas fa-mug-hot'))
+        
+        if len(temp) > 1:
+            gym = str(random.choice(temp))
+            if len(gym) == 1:
+                gym = '0' + gym
+            temp.pop(temp.index(int(gym)))
+            time_table.append(('Gym', '', gym, '00', '', '', 'Student Center', 'Sports Center', 'fas fa-dumbbell'))
+        
+        if len(temp) > 1:
+            lib = str(random.choice(temp))
+            if len(lib) == 1:
+                lib = '0' + lib
+            temp.pop(temp.index(int(lib)))
+            time_table.append(('Study Time', '', lib, '00', '', '', 'Library', 'East Wing', 'fas fa-book'))
+                
+        return sorted(time_table, key=lambda x: x[2])

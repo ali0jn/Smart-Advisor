@@ -106,6 +106,56 @@
 
 		<!--End::Section-->
 
+		<div class="row">
+			<div class="col-xl-6 col-lg-12">
+
+				<!--Begin::Portlet-->
+				<div class="kt-portlet kt-portlet--height-fluid">
+					<div class="kt-portlet__head">
+						<div class="kt-portlet__head-label">
+							<h3 class="kt-portlet__head-title" style="font-weight: 500;">
+								We've made your plan for today. Check it out!
+							</h3>
+						</div>
+						<div class="kt-portlet__head-toolbar">
+						</div>
+					</div>
+					<div class="kt-portlet__body">
+						<div class="tab-content">
+							<div class="tab-pane active" id="kt_widget3_tab1_content">
+
+								<!--Begin::Timeline 3 -->
+								<div class="kt-timeline-v3">
+									<div class="kt-timeline-v3__items">
+										{% for timeline in time_table %}
+											<div class="kt-timeline-v3__item kt-timeline-v3__item--info" style="font-size: medium;">
+												<span class="kt-timeline-v3__item-time" style="font-size: larger;">{{ timeline[2] }}:{{ timeline[3] }}</span>
+												<div class="kt-timeline-v3__item-desc">
+													<i class="{{ timeline[8] }}"></i>
+													<span class="kt-timeline-v3__item-text" style="font-size: medium;">
+														{{ timeline[0] }} {{ timeline[1] }}
+													</span><br>
+													<i class="flaticon2-location"></i>
+													<span class="kt-timeline-v3__item-user-name">
+														<a class="kt-link kt-link--dark kt-timeline-v3__itek-link" style="font-size: medium;">
+															{{ timeline[6] }} - {{ timeline[7] }}
+														</a>
+													</span>
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								</div>
+								<!--End::Timeline 3 -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--End::Portlet-->
+			</div>
+		</div>
+
 		<!-- Begin::Team Section-->
 		<div class="team-section" style="margin-left: 0px; margin-right: 0px;">
 			<div class="inner-width">

@@ -20,9 +20,10 @@ def profile():
     graduation_progress = 100
     if department != None:
         graduation_progress = Student.graduation_progress(department, current_user[0])
+    time_table = Student.get_user_timetable(current_user[0])
     return render_template('profile/profile.html', name=current_user[2], email=current_user[3], profile_pic=current_user[4], testifiers=block, radio_buttons=radio, labels=label,
                            student_number=student_number, semester_of_student=semester_of_student, advisor=advisor, standing=standing, gpa=gpa, completed_credits=completed_credits,
-                           completed_ects=completed_ects, department=department, graduation_progress=graduation_progress)
+                           completed_ects=completed_ects, department=department, graduation_progress=graduation_progress, time_table=time_table)
 
 @bp.route('/fetch_sap', methods=['POST', 'GET'])
 @login_required
