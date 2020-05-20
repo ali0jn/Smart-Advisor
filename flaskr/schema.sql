@@ -28,7 +28,8 @@ CREATE TABLE testimonial (
   testifier_position VARCHAR(50),
   student_google_id VARCHAR(50),
   PRIMARY KEY (testimonial_ID),
-  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id) ON DELETE CASCADE
+  FOREIGN KEY (student_google_id) REFERENCES student(student_google_id) 
+  ON DELETE CASCADE
 );
 
 CREATE TABLE instructor_rating (
@@ -42,7 +43,8 @@ CREATE TABLE instructor_rating (
   student_google_id VARCHAR(50),
   instructor_email VARCHAR(100),
   semester VARCHAR(6) CHECK (semester IN ('Fall', 'Spring', 'Summer')),
-  section_year NUMERIC(4, 0) CHECK (section_year > 2009 and section_year < 2050),
+  section_year NUMERIC(4, 0) CHECK (section_year > 2009 AND 
+  section_year < 2050),
   course_id VARCHAR(15),
   PRIMARY KEY (rating_id),
   FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
@@ -77,12 +79,14 @@ CREATE TABLE classroom (
 CREATE TABLE section (
   section_id VARCHAR(5),
   semester VARCHAR(6) CHECK (semester IN ('Fall', 'Spring', 'Summer')),
-  section_year NUMERIC(4, 0) CHECK (section_year > 2009 and section_year < 2050),
+  section_year NUMERIC(4, 0) CHECK (section_year > 2009 AND 
+  section_year < 2050),
   course_id VARCHAR(15),
   building_no VARCHAR(30),
   room_no VARCHAR(15),
   PRIMARY KEY (section_id, semester, section_year, course_id),
-  FOREIGN KEY (building_no, room_no) REFERENCES classroom(building_no, room_no),
+  FOREIGN KEY (building_no, room_no) REFERENCES 
+  classroom(building_no, room_no),
   FOREIGN KEY (course_id) REFERENCES course(course_id) ON DELETE CASCADE
 );
 
@@ -101,7 +105,8 @@ CREATE TABLE course_rating (
   course_id VARCHAR(15),
   PRIMARY KEY (rating_id),
   FOREIGN KEY (student_google_id) REFERENCES student(student_google_id),
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id) 
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES 
+  section(section_id, semester, section_year, course_id) 
 );
 
 CREATE TABLE takes (
@@ -111,8 +116,10 @@ CREATE TABLE takes (
   course_id VARCHAR(15),
   student_google_id VARCHAR(50),
   grade VARCHAR(5),
-  PRIMARY KEY (section_id, semester, section_year, course_id, student_google_id),
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id),
+  PRIMARY KEY (section_id, semester, section_year, course_id, 
+  student_google_id),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES 
+  section(section_id, semester, section_year, course_id),
   FOREIGN KEY (student_google_id) REFERENCES student(student_google_id)
 );
 
@@ -122,8 +129,10 @@ CREATE TABLE teaches (
   section_year NUMERIC(4, 0),
   course_id VARCHAR(15),
   instructor_email VARCHAR(100),
-  PRIMARY KEY (section_id, semester, section_year, course_id, instructor_email),
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id),
+  PRIMARY KEY (section_id, semester, section_year, course_id, 
+  instructor_email),
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES 
+  section(section_id, semester, section_year, course_id),
   FOREIGN KEY (instructor_email) REFERENCES instructor(instructor_email)
 );
 
@@ -162,14 +171,15 @@ CREATE TABLE course_department (
 CREATE TABLE time_slot (
   time_slot_id INTEGER UNSIGNED AUTO_INCREMENT,
   section_day VARCHAR(10),
-  start_hr NUMERIC(2, 0) CHECK (start_hr >= 0 and start_hr < 24),
-  start_min NUMERIC(2, 0) CHECK (start_min >= 0 and start_min < 60),
-  end_hr NUMERIC(2, 0) CHECK (end_hr >= 0 and end_hr < 24),
-  end_min NUMERIC(2, 0) CHECK (end_min >= 0 and end_min < 60),
+  start_hr NUMERIC(2, 0) CHECK (start_hr >= 0 AND start_hr < 24),
+  start_min NUMERIC(2, 0) CHECK (start_min >= 0 AND start_min < 60),
+  end_hr NUMERIC(2, 0) CHECK (end_hr >= 0 AND end_hr < 24),
+  end_min NUMERIC(2, 0) CHECK (end_min >= 0 AND end_min < 60),
   section_id VARCHAR(5),
   semester VARCHAR(6),
   section_year NUMERIC(4, 0),
   course_id VARCHAR(15),
   PRIMARY KEY (time_slot_id),
-  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES section(section_id, semester, section_year, course_id) ON DELETE CASCADE
+  FOREIGN KEY (section_id, semester, section_year, course_id) REFERENCES 
+  section(section_id, semester, section_year, course_id) ON DELETE CASCADE
 );
