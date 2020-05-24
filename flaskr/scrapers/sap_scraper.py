@@ -40,7 +40,7 @@ def change_language(username, password):
     driver.implicitly_wait(10)
     return driver
 
-def fetch_sap_data(username, password, std_google_id):
+def fetch_sap_data(username, password, std_obj):
     driver = change_language(username, password)
     home_page = driver.current_url
     wait = WebDriverWait(driver, 14).until(EC.element_to_be_clickable((By.ID, '__tile3')))
@@ -55,16 +55,15 @@ def fetch_sap_data(username, password, std_google_id):
     general_gpa = details[6].split()[-1].strip()
     general_credit = details[7].split()[-1].strip().split('.')[0]
     general_ects = details[8].split()[-1].strip().split('.')[0]
-    student_object = Student.get(std_google_id)
-    student_object.add_department(dept_dict, std_google_id)
-    student_object.update_profile(student_number, semester_of_student, advisor, standing, general_gpa, general_credit, general_ects, std_google_id)
+    std_obj.add_department(dept_dict)
+    std_obj.update_profile(student_number, semester_of_student, advisor, standing, general_gpa, general_credit, general_ects)
     wait = WebDriverWait(driver, 14).until(EC.element_to_be_clickable((By.ID, 'application-Student-MyInformation-component---worklist--iconTabAcademic-icon')))
     wait.click()
     driver.implicitly_wait(10)
     return driver, home_page
 
-def fetch_transcript(username, password, std_google_id):
-    driver, home_page = fetch_sap_data(username, password, std_google_id)
+def fetch_transcript(username, password, std_obj):
+    driver, home_page = fetch_sap_data(username, password, std_obj)
     semesters = driver.find_elements_by_xpath('//div[@id="__xmlview2--PanelRegTables-content"]/div[@role="toolbar"]')
     courses = driver.find_elements_by_xpath('//div[@id="__xmlview2--PanelRegTables-content"]/div[@role="application"]')
     for i in range(len(semesters)):
@@ -77,14 +76,14 @@ def fetch_transcript(username, password, std_google_id):
                 if len(semester_courses[j+2]) > 4:
                     course_code = semester_courses[j]
                     grade = semester_courses[j+2].split()[0].strip()
-                    Student.add_transcript('01', semester_name, year, course_code, std_google_id, grade)
+                    std_obj.add_transcript('01', semester_name, year, course_code, grade)
                 else:
                     course_code = semester_courses[j]
                     current_sem, current_year = semester_name, year
-                    Student.add_current_semester('01', semester_name, year, course_code, std_google_id)
+                    std_obj.add_current_semester('01', semester_name, year, course_code)
     driver.get(home_page)
     driver.implicitly_wait(10)
-    fetch_current_semester(driver, current_sem, current_year, std_google_id)               
+    fetch_current_semester(driver, current_sem, current_year, std_obj)               
 
 def get_department(dept):
     dept_dict = {}
@@ -108,7 +107,7 @@ def get_department(dept):
         dept_dict['Minor'] = minor
     return dept_dict
 
-def fetch_current_semester(driver, semester, year, std_google_id):
+def fetch_current_semester(driver, semester, year, std_obj):
     wait = WebDriverWait(driver, 14).until(EC.element_to_be_clickable((By.ID, '__tile0')))
     wait.click()
     driver.implicitly_wait(10)
@@ -122,4 +121,4 @@ def fetch_current_semester(driver, semester, year, std_google_id):
         if len(matches) == 1:
             course_code = ' '.join(string.split()[:2])
             section = string.split()[-1]
-            Student.update_current_semester(section, semester, year, course_code, std_google_id)
+            std_obj.update_current_semester(section, semester, year, course_code)

@@ -16,16 +16,21 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- begin::Head -->
 	<head>
-		<base href="../../">
+		<base href="../../../">
 		<meta charset="utf-8" />
-		<title>Smart Advisor | Rate Course</title>
-		<meta name="description" content="Modal examples">
+		<title>Smart Advisor | Profile</title>
+		<meta name="description" content="User profile block example">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!--begin::Fonts -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/5a8a7bb461.js"></script>
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
 
 		<!--end::Fonts -->
+		<link href="static/css/team_testimonial.css" rel="stylesheet" type="text/css" />
 
 		<!--begin::Global Theme Styles(used by all pages) -->
 
@@ -88,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Vendor Plugins for custom pages -->
 
 		<!--end::Global Theme Styles -->
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--begin::Layout Skins(used by all pages) -->
 
 		<!--end::Layout Skins -->
@@ -143,13 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 							<ul class="kt-menu__nav ">
 								<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-user"></i><span class="kt-menu__link-text">Profile</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/fetch_sap" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-arrow-down"></i><span class="kt-menu__link-text">Fetch My Courses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/predict" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-statistics"></i><span class="kt-menu__link-text">Predict Grades</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-poll-symbol"></i><span class="kt-menu__link-text">Rate Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics"></i><span class="kt-menu__link-text">Rate Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Analyze Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text">Analyze Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/testify" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-comment"></i><span class="kt-menu__link-text">Give Feedback</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/student_progress" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-statistics"></i><span class="kt-menu__link-text">Student Progress</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -292,152 +291,227 @@ License: You must have a valid license purchased only from themeforest(the above
 
 					<!-- end:: Header -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
 						<!-- begin:: Subheader -->
 						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							
 						</div>
-
 						<!-- end:: Subheader -->
-
 						<!-- begin:: Content -->
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+							<!--Begin::Section-->
 							<div class="row">
-								<div class="col">
-									<div class="alert alert-light alert-elevate fade show" role="alert">
-										<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
-										<div class="alert-text">
-											Please fill in all of the questions from the form to record your rating successfully. You can rate a course only once.
+								<div class="col-xl-12">
+
+									<!--begin:: Widgets/Applications/User/Profile3-->
+									<div class="kt-portlet kt-portlet--height-fluid">
+										<div class="kt-portlet__body">
+											<div class="kt-widget kt-widget--user-profile-3">
+												<div class="kt-widget__top">
+													<div class="kt-widget__media kt-hidden-">
+														<img src={{ profile_pic }} alt="image">
+													</div>
+													<div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+														JM
+													</div>
+													<div class="kt-widget__content">
+														<div class="kt-widget__head">
+															<a class="kt-widget__username">
+																{{ name }}
+																<i class="flaticon2-correct"></i>
+															</a>
+														</div>
+														<div class="kt-widget__subhead">
+															<a><i class="flaticon2-new-email"></i>{{ email }}</a>
+															<a><i class="flaticon-home"></i>Istanbul Sehir University</a>
+															<br><br>
+															<a><i class="flaticon2-open-text-book"></i>{{ department }}</a>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
+
+									<!--end:: Widgets/Applications/User/Profile3-->
 								</div>
 							</div>
 
-							<!--begin::Portlet-->
+							<!--End::Section-->
+
 							<div class="kt-portlet">
 								<div class="kt-portlet__head">
 									<div class="kt-portlet__head-label">
-										<h3 class="kt-portlet__head-title">
-											Rate Course
+										<h3 class="kt-portlet__head-title" style="font-weight: 500;">
+											Student Statistics
 										</h3>
 									</div>
+									<div class="kt-portlet__head-toolbar">
+									</div>
 								</div>
-								<div class="kt-portlet__body">				
+
+								<div class="kt-portlet__body kt-portlet__body--fit">
 									<div class="row row-no-padding row-col-separator-xl">
 										<div class="col-md-12 col-lg-12 col-xl-4">
-											<form action="profile/rate_course" method="POST" id="course_rating_form">
-												<!--begin:: Widgets/Stats2-1 -->
-												{% for course in unrated_courses %}
-												<div class="kt-widget1">
+
+											<!--begin:: Widgets/Stats2-1 -->
+											<div class="kt-widget1" style="text-align: center;">
+												{% for course_code in course_stats %}
+													<div class="kt-widget1__info kt-widget1__title" style="width: 100%; color: black; font-size: x-large; font-weight: 500; margin-top: 10px;">{{ course_code }}</div>
 													<div class="kt-widget1__item">
-														<div class="kt-widget1__info">
-															<h3 class="kt-widget1__title">{{ course[3] }} {{ course[0] }} - {{ course[4] }}</h3>
-															<span class="kt-widget1__desc">{{ course[1] }} {{ course[2] }}</span>
+														<div style="display: flex; overflow: hidden; justify-content: space-evenly;">
+															<div id="{{ course_code }} pie" style="width: 720px; height: 400px;"></div>
+															<div id="{{ course_code}} column" style="flex-grow: 1;"></div>
 														</div>
-														<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#kt_modal_4" onclick="checkId(this)"><i class="fa flaticon2-sheet"></i>Rate Now!</button>
 													</div>
-												</div>
 												{% endfor %}
-												<!--end:: Widgets/Stats2-1 -->
-											</form>
-										</div>
-									</div>
-								</div>
-					
-							</div>
+											</div>
 
-							<!--end::Portlet-->
-
-							<!--begin::Modal-->
-							<div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											</button>
-										</div>
-										<div class="modal-body">
-											<form method="POST" action="profile/rate_course">
-												<input id="course_details" name="course_details" type="hidden" value="">
-												<input id="semester_year" name="semester_year" type="hidden" value="">
-												<div class="form-group">
-													<label for="exampleSelectd">Rate this course out of 10</label>
-													<select class="form-control" name="rating" required>
-														<option value="">-- None --</option>
-														<option value="1">1</option>
-														<option value="2">2</option>
-														<option value="3">3</option>
-														<option value="4">4</option>
-														<option value="5">5</option>
-														<option value="6">6</option>
-														<option value="7">7</option>
-														<option value="8">8</option>
-														<option value="9">9</option>
-														<option value="10">10</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label for="exampleSelectd">Will you recommend this course to your friends?</label>												
-													<select class="form-control" name="will_rec" required>
-														<option value="">-- None --</option>
-														<option value="Yes">Yes</option>
-														<option value="No">No</option>
-														<option value="Not Sure Yet">Not Sure Yet</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label for="exampleSelectd">Did you enjoy this course?</label>
-													<select class="form-control" name="did_enjoy" required>
-														<option value="">-- None --</option>
-														<option value="Yes, I am absolutely sure this is a nice course">Yes, I am absolutely sure this is a nice course</option>
-														<option value="Yes, but I don't think the course is really interesting">Yes, but I don't think the course is really interesting</option>
-														<option value="No, but I do not have any opinion">No, but I do not have any opinion</option>
-														<option value="No, this course should never be taught again">No, this course should never be taught again</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label for="exampleSelectd">Are you interested in taking similar courses in the future?</label>												
-													<select class="form-control" name="take_sim" required>
-														<option value="">-- None --</option>
-														<option value="Yes, I will take a course similar to this in the future">Yes, I will take a course similar to this in the future</option>
-														<option value="No, I really did not like this kind of course">No, I really did not like this kind of course</option>
-														<option value="I do not have any opinion">I do not have any opinion</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label for="exampleSelectd">Do you think this course has good content?</label>
-													<select class="form-control" name="good_content" required>
-														<option value="">-- None --</option>
-														<option value="Yes, course content is really rich">Yes, course content is really rich</option>
-														<option value="Yes, the content is nice but I am not interested in this course">Yes, the content is nice but I am not interested in this course</option>
-														<option value="No, I am not satisfied with the course content">No, I am not satisfied with the course content</option>
-														<option value="I do not have any opinion">I do not have any opinion</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label for="exampleSelectd">Do you think this course was helpful for you?</label>
-													<select class="form-control" name="was_helpful" required>
-														<option value="">-- None --</option>
-														<option value="Definitely, Yes!">Definitely, Yes!</option>
-														<option value="Impossible, No!">Impossible, No!</option>
-														<option value="I do not have any opinion">I do not have any opinion</option>
-													</select>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-													<button type="submit" class="btn btn-primary">Send message</button>
-												</div>
-											</form>
+											<!--end:: Widgets/Stats2-1 -->
 										</div>
 									</div>
 								</div>
 							</div>
-							<!--end::Modal-->
+							<div class="row">
+								<div class="col-xl-6 col-lg-12">
+
+									<!--Begin::Portlet-->
+									<div class="kt-portlet kt-portlet--height-fluid">
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<h3 class="kt-portlet__head-title" style="font-weight: 500;">
+													We've made your plan for today. Check it out!
+												</h3>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+											</div>
+										</div>
+										<div class="kt-portlet__body">
+											<div class="tab-content">
+												<div class="tab-pane active" id="kt_widget3_tab1_content">
+
+													<!--Begin::Timeline 3 -->
+													<div class="kt-timeline-v3">
+														<div class="kt-timeline-v3__items">
+															{% for timeline in time_table %}
+																<div class="kt-timeline-v3__item kt-timeline-v3__item--info" style="font-size: medium;">
+																	<span class="kt-timeline-v3__item-time" style="font-size: larger;">{{ timeline[2] }}:{{ timeline[3] }}</span>
+																	<div class="kt-timeline-v3__item-desc">
+																		<i class="{{ timeline[8] }}"></i>
+																		<span class="kt-timeline-v3__item-text" style="font-size: medium;">
+																			{{ timeline[0] }} {{ timeline[1] }}
+																		</span><br>
+																		<i class="flaticon2-location"></i>
+																		<span class="kt-timeline-v3__item-user-name">
+																			<a class="kt-link kt-link--dark kt-timeline-v3__itek-link" style="font-size: medium;">
+																				{{ timeline[6] }} - {{ timeline[7] }}
+																			</a>
+																		</span>
+																	</div>
+																</div>
+															{% endfor %}
+														</div>
+													</div>
+													<!--End::Timeline 3 -->
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--End::Portlet-->
+								</div>
+							</div>
+
+							<!-- Begin::Team Section-->
+							<div class="team-section" style="margin-left: 0px; margin-right: 0px;">
+								<div class="inner-width">
+									<h1>Meet Our Team</h1>
+									<div class="pers">
+										<div class="pe">
+											<img src="static/media/users/alicakmak.png" alt="Dr. Ali Cakmak">
+											<div class="p-name">Dr. Ali Cakmak</div>
+											<div class="p-des">PhD, Case Western Reserve University<br>Istanbul Sehir University</div>
+											<div class="p-sm">
+												<a href="https://tr.linkedin.com/in/alicakmak" target="_blank"><i class="fab fa-linkedin"></i></a>
+												<a href="https://www.sehir.edu.tr/en/academics/academic-staff/alicakmak" target="_blank"><i class="fas fa-user-circle"></i></a>
+												<a href="https://www.researchgate.net/profile/Ali_Cakmak2" target="_blank"><i class="fab fa-researchgate"></i></a>
+
+												
+											</div>
+
+										</div>
+									</div>
+									<div class="pers">
+										<div class="pe">
+											<img src="static/media/users/alireza.png" alt="Ali Reza Ibrahimzada">
+											<div class="p-name">Ali Reza Ibrahimzada</div>
+											<div class="p-des">Computer Science and Engineering<br>Istanbul Sehir University</div>
+											<div class="p-sm">
+												<a href="https://www.linkedin.com/in/ali-reza-ibrahimzada-9057bb114/?originalSubdomain=tr" target="_blank"><i class="fab fa-linkedin"></i></a>
+												<a href="https://www.github.com/ali0jn" target="_blank"><i class="fab fa-github"></i></a>
+												<a href="https://www.researchgate.net/profile/Ali_Reza_Ibrahimzada" target="_blank"><i class="fab fa-researchgate"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--End::Team Section-->
+
+							<div class="inner" style="margin-top: 30px;">
+								<h1 style="text-align: center;">What Our Users Say</h1>
+								<div class="border"></div>
+							</div>
+
+							<div class="testimonial_slider_2" style="margin-left: 0px; margin-right: 0px;">
+								{{ radio_buttons }}
+								<div class="boo_inner clearfix">
+									{{ testifiers }}
+								</div>
+								<div id="controls">
+									{{ labels }}
+								</div>
+								<div class="team-section">
+									<label id="counterLabel" style="text-align: center;">1 of 4</label>
+								</div>				
+							</div>
+							
+							<!--Begin::Contact Us-->
+							<div class="inner" style="margin-top: 30px; text-align: center;">
+								<h1>Contact Us</h1>
+								<div class="border"></div>
+							</div>
+
+							<div class="contact_info" style="margin-right: 0px; margin-left: 0px;">
+								<div class="box">
+									<div class="icon">
+										<i class="kt-menu__link-icon flaticon-email-black-circular-button" style="font-size: 70px; cursor: pointer;"></i>
+										<h4>Email</h4>
+										<h3>aliibrahimzada@std.sehir.edu.tr</h3>
+									</div>
+								</div>
+								<div class="box">
+									<div class="icon">
+										<i class="kt-menu__link-icon flaticon2-phone" style="font-size: 70px; cursor: pointer;"></i>
+										<h4>Phone</h4>
+										<h3>+90 xxx xxx xxxx</h3>
+									</div>
+								</div>
+								<div class="box" style="margin-top: 17px;">
+									<div class="icon">
+										<i class="kt-menu__link-icon flaticon2-pin" style="font-size: 70px; cursor: pointer;"></i>
+										<h4>Address</h4>
+										<h3>Istanbul Sehir University, 34865<br>Kartal - Istanbul / Turkey</h3>
+									</div>
+								</div>
+							</div>
+
+							<!--End::Contact Us -->
+
 						</div>
 
 						<!-- end:: Content -->
+
 					</div>
+
 
 					<!-- begin:: Footer -->
 					<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
@@ -460,7 +534,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!-- end:: Page -->
 
-
 		<!-- begin::Scrolltop -->
 		<div id="kt_scrolltop" class="kt-scrolltop">
 			<i class="fa fa-arrow-up"></i>
@@ -469,16 +542,33 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- end::Scrolltop -->
 
 		<script>
-			function checkId(elem){
-				course_detail = elem.parentNode.children[0].children[0].innerHTML;
-				semester_year = elem.parentNode.children[0].children[1].innerHTML;
-				document.getElementById('course_details').setAttribute('value', course_detail);
-				document.getElementById('semester_year').setAttribute('value', semester_year);
-				document.getElementById('exampleModalLabel').innerHTML = 'You are rating ' + course_detail;
-
-			};
+			$(document).ready(function(){
+				pagenum = 1;
+				var counterLabel = document.getElementById("counterLabel");
+				function AutoRotate() {
+					var myele = null;
+					var allElements = document.getElementsByTagName('label');
+					for (var i = 0, n = allElements.length; i < n; i++) {
+						var myfor = allElements[i].getAttribute('for');
+						if ((myfor !== null) && (myfor == ('slide_2_' + pagenum))) {
+							allElements[i].click();
+							counterLabel.textContent = pagenum + ' of ' + 4;
+							break;
+						}
+					}
+				
+					if (pagenum == 4) {
+						pagenum = 1;
+					} else {
+						pagenum++;
+					}
+				}
+				setInterval(AutoRotate, 5000);
+				const graduation_progress = document.getElementById("graduation_progress");
+				graduation_progress.style = "width: " + graduation_progress.getAttribute("aria-valuenow") + "%;"
+			});
 		</script>
-	
+
 		<!-- begin::Global Config(global config for global JS sciprts) -->
 		<script>
 			var KTAppOptions = {
@@ -500,8 +590,56 @@ License: You must have a valid license purchased only from themeforest(the above
 				}
 			};
 		</script>
+	<!-- end::Global Config -->
 
-		<!-- end::Global Config -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	{% for course in course_stats %}
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var options = {
+					title: 'Departments Ratio',
+					chartArea: {left: 250}
+				};
+				
+				var data = google.visualization.arrayToDataTable(JSON.parse('{{ course_stats[course]|safe }}'));
+				var chart = new google.visualization.PieChart(document.getElementById('{{ course }} pie'));
+				chart.draw(data, options);
+			}
+		</script>
+	{% endfor %}
+	
+	{% for course in gpa_stats %}
+		<script type="text/javascript">
+			google.charts.load("current", {packages:['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable(JSON.parse('{{ gpa_stats[course]|safe }}'));
+				var view = new google.visualization.DataView(data);
+				view.setColumns([0, 1,
+								{ calc: "stringify",
+									sourceColumn: 1,
+									type: "string",
+									role: "annotation" },
+								2]);
+
+				var options = {
+					title: "Average GPA of Departments",
+					width: 600,
+					height: 400,
+					chartArea: {left: 0},
+					bar: {groupWidth: "95%"},
+					legend: { position: "none" }
+				};
+		
+				var chart = new google.visualization.ColumnChart(document.getElementById("{{ course }} column"));
+				chart.draw(view, options);
+
+			}
+		</script>
+	{% endfor %} 
 
 		<!--begin::Global Theme Bundle(used by all pages) -->
 
@@ -626,6 +764,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Vendor Plugins for custom pages -->
 
 		<!--end::Global Theme Bundle -->
+
+		<!--begin::Page Scripts(used by this page) -->
+		<script src="static/js/pages/dashboard.js" type="text/javascript"></script>
+
+		<!--end::Page Scripts -->
 	</body>
 
 	<!-- end::Body -->

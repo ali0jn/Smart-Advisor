@@ -262,9 +262,7 @@ def insert_to_db(dept_list, fetch_required, fetch_electives, vocational_school):
                                 pre_req = pre_req.strip()
                                 cursor.execute(
                                     "INSERT INTO prerequisite (course_id, prereq_id) "
-                                    "SELECT course_id, %s "
-                                    "FROM course "
-                                    "WHERE course_id = %s;", (pre_req, course[1]))
+                                    "VALUES (%s, %s);", (course[1], pre_req))
                     except:
                         pass
             db.commit()

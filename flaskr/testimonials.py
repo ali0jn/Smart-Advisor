@@ -45,12 +45,9 @@ def fetch_testifiers():
 	result = cursor.fetchall()
 	html_ = ''
 	random_testimonies = []
-	c = 0
-	while c < 4 and result != []:
+	for i in range(4):
 		random_idx = random.randint(0, len(result)-1)
-		if result[random_idx] not in random_testimonies:
-			random_testimonies.append(result[random_idx])
-			c += 1
+		random_testimonies.append(result.pop(random_idx))
 	for res in random_testimonies:
 		html_ += slide_content(res[1], res[3], res[0], res[2])
 	radio_button_block = create_radio_button(4)

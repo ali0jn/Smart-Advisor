@@ -11,12 +11,13 @@
 			</div>
 
 			<!--begin::Form-->
-			<form class="kt-form kt-form--fit kt-form--label-right" method="POST" action="profile/predict">
+			<form id="filterForm" class="kt-form kt-form--fit kt-form--label-right" method="POST" action="profile/predict">
 				<div class="kt-portlet__body">
 					<div style="float: left;">
 						<div class="form-group row">
 							<label class="col-form-label col-lg-3 col-sm-12">Select Subjects</label>
 							<div class=" col-lg-4 col-md-9 col-sm-12">
+								<input id="subject_filters" name="subject_filters" type="hidden" value="">
 								<select class="form-control kt-select2" id="kt_select2_3" name="subjects" multiple="multiple" onclick="highlightSelected()">
 									{% for subject in subjects %}
 										<option value={{ subject }}>{{ subject }}</option>
@@ -52,7 +53,7 @@
 								</select>
 							</div>
 							<div class="kt-form__actions" style="margin-left: 100px;">
-								<button id="submit_button" type="submit" class="btn btn-primary" onclick="sendOptions()">Predict</button>
+								<button id="submit_button" type="submit" class="btn btn-primary" onclick="getSubjects()">Predict</button>
 								<button type="reset" class="btn btn-secondary">Reset</button>
 							</div>
 						</div>
@@ -99,11 +100,12 @@
 									<thead>
 										<tr>
 											<td style="width:10%">Course Code</td>
-											<td style="width:40%">Course Name</td>
+											<td style="width:35%">Course Name</td>
 											<td style="width:10%">Credit</td>
 											<td style="width:12%">Prerequisite(s)</td>
-											<td style="width:12%">Predicted Grade</td>
-											<td style="width:15%">Prediction Probability</td>
+											<td style="width:10%">Predicted Grade</td>
+											<td style="width:13%">Worst Scenario Grade</td>
+											<td style="width:13%">Best Scenario Grade</td>
 										</tr>
 									</thead>
 									<tbody>
@@ -117,8 +119,9 @@
 											</td>
 											<td>3</td>
 											<td>ENGR 102</td>
-											<td class="kt-font-bold" style="color:green">A</td>
-											<td class="kt-font-brand kt-font-bold">90%</td>
+											<td class="kt-font-brand kt-font-bold">A</td>
+											<td class="kt-font-bold" style="color:red">B</td>
+											<td class="kt-font-bold" style="color:green">A+</td>
 										</tr>
 										<tr>
 											<td>
@@ -130,8 +133,9 @@
 											</td>
 											<td>3</td>
 											<td>ENGR 101</td>
-											<td class="kt-font-bold" style="color:green">A-</td>
-											<td class="kt-font-brand kt-font-bold">96.77%</td>
+											<td class="kt-font-brand kt-font-bold">B+</td>
+											<td class="kt-font-bold" style="color:red">C</td>
+											<td class="kt-font-bold" style="color:green">A+</td>
 										</tr>
 									</tbody>
 								</table>
@@ -153,11 +157,12 @@
 									<thead>
 										<tr>
 											<td style="width:10%">Course Code</td>
-											<td style="width:40%">Course Name</td>
+											<td style="width:35%">Course Name</td>
 											<td style="width:10%">Credit</td>
 											<td style="width:12%">Prerequisite(s)</td>
 											<td style="width:12%">Predicted Grade</td>
-											<td style="width:15%">Prediction Probability</td>
+											<td style="width:10%">Worst Case Grade</td>
+											<td style="width:10%">Worst Case Grade</td>
 										</tr>
 									</thead>
 									<tbody>
@@ -198,4 +203,37 @@
 		<!--end:: Widgets/Sale Reports-->
 		
 	</div>
+
+	<script>
+		function highlightSelected(){
+			var subjects = document.getElementById("kt_select2_3");
+			var selected = subjects.options[subjects.options.selectedIndex];
+			if (selected.getAttribute('selected') === 'selected'){
+				subjects.options[subjects.options.selectedIndex].setAttribute('selected', false);
+				subjects.options[subjects.options.selectedIndex].setAttribute('style', 'background-color: white;');
+			} 
+			else {
+				subjects.options[subjects.options.selectedIndex].setAttribute('selected', 'selected');
+				subjects.options[subjects.options.selectedIndex].setAttribute('style', 'background-color: lightgrey;');
+			}			
+		};
+	</script>
+
+	<script>
+		function getSubjects(){
+			var subject_filters = document.getElementById("subject_filters");
+			var sel = document.getElementById('kt_select2_3');
+			var opt;
+			var val;
+			for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+				opt = sel.options[i];
+				if ( opt.getAttribute('selected') === "selected" ) {
+					val = subject_filters.getAttribute("value");
+					subject_filters.setAttribute('value', val+' '+opt.textContent);
+				}
+			}
+
+		};
+	</script>
+
 {% endblock %}

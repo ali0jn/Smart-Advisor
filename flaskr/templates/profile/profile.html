@@ -16,9 +16,6 @@
 								<div class="kt-widget__media kt-hidden-">
 									<img src={{ profile_pic }} alt="image">
 								</div>
-								<div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
-									JM
-								</div>
 								<div class="kt-widget__content">
 									<div class="kt-widget__head">
 										<a class="kt-widget__username">
@@ -99,13 +96,71 @@
 						</div>
 					</div>
 				</div>
-
 				<!--end:: Widgets/Applications/User/Profile3-->
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-xl-6 col-lg-12">
+				<!--begin:: Widgets/Sale Reports-->
+				<div class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+					<div class="kt-portlet__head">
+						<div class="kt-portlet__head-label">
+							<h3 class="kt-portlet__head-title">
+								Required Courses For Graduation
+							</h3>
+						</div>
+					</div>
+					<div class="kt-portlet__body">
 
-		<!--End::Section-->
+						<!--Begin::Tab Content-->
+						<div class="tab-content">
 
+							<!--begin::tab 1 content-->
+							<div class="tab-pane active" id="kt_widget11_tab1_content">
+
+								<!--begin::Widget 11-->
+								<div class="kt-widget11">
+									<div class="table-responsive">
+										<table class="table" style="text-align: center;" id="incompletedRequiredCoursesTable">
+											<thead>
+												<tr>
+													<td style="width:10%">Course Code</td>
+													<td style="width:40%">Course Name</td>
+													<td style="width:10%">Credit</td>
+													<td style="width:10%">ECTS</td>
+													<td style="width:10%">Course Year</td>
+												</tr>
+											</thead>
+											<tbody>
+												{% for course in incompleted_courses %}
+												<tr>
+													<td>
+														<span class='kt-widget11__title'>{{ course }}</span>
+													</td>
+													<td>
+														<span class='kt-widget11__title'>{{ incompleted_courses[course]["title"] }}</span>
+														<span class='kt-widget11__sub'>{{ incompleted_courses[course]["course_type"] }}</span>
+													</td>
+													<td>{{ incompleted_courses[course]["credit"] }}</td>
+													<td>{{ incompleted_courses[course]["ects"] }}</td>
+													<td class='kt-font'>{{ incompleted_courses[course]["course_year"] }}</td>
+												</tr>
+												{% endfor %}
+											</tbody>		
+										</table>
+									</div>
+								</div>
+								<!--end::Widget 11-->
+							</div>
+							<!--end::tab 1 content-->
+						</div>
+						<!--End::Tab Content-->
+					</div>
+				</div>
+
+				<!--end:: Widgets/Sale Reports-->
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xl-6 col-lg-12">
 

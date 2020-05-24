@@ -395,38 +395,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		</script>
 	<!-- end::Global Config -->
 
-	<script>
-		function highlightSelected(){
-			var subjects = document.getElementById("kt_select2_3");
-			subjects.options[subjects.options.selectedIndex].setAttribute('selected', 'selected');
-			subjects.options[subjects.options.selectedIndex].setAttribute('style', 'background-color: lightgrey;');
-		};
-	</script>
-
-	<script>
-		function sendOptions() {
-			var sel = document.getElementById('kt_select2_3');
-			var opt;
-			var dict = {};
-			for ( var i = 0, len = sel.options.length; i < len; i++ ) {
-				opt = sel.options[i];
-				if ( opt.getAttribute('selected') === "selected" ) {
-					dict[opt.textContent] = opt.textContent;
-				}
-			}
-
-			const minGrade = $("#kt_select2_1").val();
-			dict[minGrade] = minGrade;
-
-			$.ajax({
-    			type: 'POST',
-    			url: "profile/predict",
-    			data: JSON.stringify(dict),
-    			contentType: 'application/json; charset=utf-8',
-				dataType: 'json',
-			});
-		};
-	</script>
 	
 		<!--begin::Global Theme Bundle(used by all pages) -->
 

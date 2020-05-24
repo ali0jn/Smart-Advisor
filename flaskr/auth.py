@@ -15,7 +15,7 @@ from flask_login import (
 )
 from flaskr.testimonials import fetch_testifiers
 from oauthlib.oauth2 import WebApplicationClient
-from flaskr.user import Student
+from flaskr.user import Student, Instructor
 from flaskr.db import get_db
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
@@ -78,29 +78,44 @@ def callback():
     else:
         return "User email not available or not verified by Google.", 400
 
-    if users_email.split('@')[1] != 'std.sehir.edu.tr':
+    if users_email.split('@')[1] == 'std.sehir.edu.tr':
+        student = Student(unique_id, users_name, users_email, picture)
+        
+        if not Student.get(unique_id):
+            student.create()
+        
+        session['user_id'] = student.student_google_id
+        return redirect(url_for('profile.profile'))
+
+    elif users_email.split('@')[1] == 'gmail.com':   # change this later to sehir.edu.tr
+        instructor = Instructor(unique_id, users_name, 'alicakmak@sehir.edu.tr', picture)
+        
+        if not instructor.get():
+            instructor.create()
+        
+        session['user_id'] = instructor.instructor_email
+        return redirect(url_for('profile.profile'))
+    
+    else:        
         return render_template('auth/error.html')
 
-    std = Student(id_=unique_id, name=users_name, email=users_email, profile_pic=picture)
-
-    # Doesn't exist? Add it to the database.
-    if not Student.get(unique_id):
-        Student.create(unique_id, users_name, users_email, picture)
-
-    # Begin user session by logging the user in
-    session['user_id'] = std.id
-    return redirect(url_for('profile.profile'))
 
 @bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
+    db = get_db()
+    cursor = db.cursor()
     if user_id is None:
         g.user = None
+
+    elif len(user_id.split('@')) == 1:    
+        query = cursor.execute("SELECT student_google_id, student_name, student_email, student_profile_picture "
+                               "FROM student WHERE student_google_id = {};".format(user_id))
+        g.user = cursor.fetchone()
+
     else:
-        db = get_db()
-        cursor = db.cursor()
-        query = cursor.execute('SELECT * FROM student WHERE student_google_id = {}'.format(user_id))
-        g.user = cursor.fetchall()[0]
+        query = cursor.execute("SELECT * FROM instructor WHERE instructor_email = '{}';".format(user_id))
+        g.user = cursor.fetchone()
 
 @bp.route('/logout')
 def logout():
