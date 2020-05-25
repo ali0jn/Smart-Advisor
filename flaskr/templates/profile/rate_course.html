@@ -1,19 +1,5 @@
 <!DOCTYPE html>
-
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<html lang="en">
-
+<html lang="en" style="scroll-behavior: smooth;">
 	<!-- begin::Head -->
 	<head>
 		<base href="../../">
@@ -105,13 +91,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- begin:: Header Mobile -->
 		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="padding-left: 7px;">
 			<div class="kt-header-mobile__logo">
-				<a href="index&demo=demo12.html">
+				<a href="{{ url_for('profile.profile') }}">
 					<img alt="Logo" src="static/media/logos/logo.png" style="width: 200px; height: 40.1px; margin-right: 7px;">
 				</a>
 			</div>
 			<div class="kt-header-mobile__toolbar">
 				<button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
-				<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
 				<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
 			</div>
 		</div>
@@ -123,11 +108,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- begin:: Aside -->
 				<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
 				<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
-
 					<!-- begin:: Aside -->
 					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand" style="padding-left: 7px;">
 						<div class="kt-aside__brand-logo">
-							<a href="/home">
+							<a href="{{ url_for('profile.profile') }}">
 								<img alt="Logo" src="static/media/logos/logo.png" style="width: 200px; height: 40.1px; margin-right: 7px;">
 							</a>
 						</div>
@@ -135,34 +119,27 @@ License: You must have a valid license purchased only from themeforest(the above
 							<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler"><span></span></button>
 						</div>
 					</div>
-
 					<!-- end:: Aside -->
-
 					<!-- begin:: Aside Menu -->
 					<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 						<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 							<ul class="kt-menu__nav ">
 								<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-user"></i><span class="kt-menu__link-text">Profile</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/fetch_sap" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-arrow-down"></i><span class="kt-menu__link-text">Fetch My Courses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/predict" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-statistics"></i><span class="kt-menu__link-text">Predict Grades</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-poll-symbol"></i><span class="kt-menu__link-text">Rate Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/rate_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics"></i><span class="kt-menu__link-text">Rate Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_instructor" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Analyze Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/analyze_course" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text">Analyze Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="profile/testify" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-comment"></i><span class="kt-menu__link-text">Give Feedback</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="{{ url_for('profile.profile') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-arrow-down"></i><span class="kt-menu__link-text">Fetch My Courses</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="{{ url_for('profile.predict') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-statistics"></i><span class="kt-menu__link-text">Predict Grades</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="{{ url_for('profile.rate_instructor') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-poll-symbol"></i><span class="kt-menu__link-text">Rate Instructor</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="{{ url_for('profile.rate_course') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-analytics"></i><span class="kt-menu__link-text">Rate Course</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="{{ url_for('profile.testify') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-comment"></i><span class="kt-menu__link-text">Give Feedback</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
 							</ul>
 						</div>
 					</div>
-
 					<!-- end:: Aside Menu -->
 				</div>
-
 				<!-- end:: Aside -->
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 
 					<!-- begin:: Header -->
 					<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
-
 						<!-- begin: Header Menu -->
 						<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 						<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
@@ -171,12 +148,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								</ul>
 							</div>
 						</div>
-
 						<!-- end: Header Menu -->
 
 						<!-- begin:: Header Topbar -->
 						<div class="kt-header__topbar">
-
 							<!--begin: User Bar -->
 							<div class="kt-header__topbar-item kt-header__topbar-item--user">
 								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
@@ -184,21 +159,13 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
 										<span class="kt-header__topbar-username kt-hidden-mobile">{{ name }}</span>
 										<img alt="Pic" class="kt-radius-100" src={{ profile_pic }} />
-
-										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-
-										<!--<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold">S</span>-->
 									</div>
 								</div>
 								<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
-
 									<!--begin: Head -->
 									<div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(static/media/misc/bg-1.jpg)">
 										<div class="kt-user-card__avatar">
-											<img class="kt-hidden" alt="Pic" src="static/media/users/300_25.jpg" />
-
-											<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-											<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
+											<img alt="Pic" src={{ profile_pic }} />
 										</div>
 										<div class="kt-user-card__name">
 											{{ name }}
@@ -209,7 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 									<!--begin: Navigation -->
 									<div class="kt-notification">
-										<a href="custom/apps/user/profile-1/personal-information&demo=demo12.html" class="kt-notification__item">
+										<a href="{{ url_for('profile.profile') }}" class="kt-notification__item">
 											<div class="kt-notification__item-icon">
 												<i class="flaticon2-calendar-3 kt-font-success"></i>
 											</div>
@@ -218,78 +185,73 @@ License: You must have a valid license purchased only from themeforest(the above
 													My Profile
 												</div>
 												<div class="kt-notification__item-time">
-													Account settings and more
+													graduation progress and more
 												</div>
 											</div>
 										</a>
-										<a href="custom/apps/user/profile-3&demo=demo12.html" class="kt-notification__item">
+										<a href="{{ url_for('profile.fetch_sap') }}" class="kt-notification__item">
 											<div class="kt-notification__item-icon">
-												<i class="flaticon2-mail kt-font-warning"></i>
+												<i class="flaticon2-arrow-down kt-font-warning"></i>
 											</div>
 											<div class="kt-notification__item-details">
 												<div class="kt-notification__item-title kt-font-bold">
-													My Messages
+													Fetch SAP
 												</div>
 												<div class="kt-notification__item-time">
-													Inbox and tasks
+													update data and courses
 												</div>
 											</div>
 										</a>
-										<a href="custom/apps/user/profile-2&demo=demo12.html" class="kt-notification__item">
+										<a href="{{ url_for('profile.predict') }}" class="kt-notification__item">
 											<div class="kt-notification__item-icon">
-												<i class="flaticon2-rocket-1 kt-font-danger"></i>
+												<i class="flaticon-statistics kt-font-danger"></i>
 											</div>
 											<div class="kt-notification__item-details">
 												<div class="kt-notification__item-title kt-font-bold">
-													My Activities
+													Predict Grades
 												</div>
 												<div class="kt-notification__item-time">
-													Logs and notifications
+													possible grades and intervals
 												</div>
 											</div>
 										</a>
-										<a href="custom/apps/user/profile-3&demo=demo12.html" class="kt-notification__item">
+										<a href="{{ url_for('profile.rate_instructor') }}" class="kt-notification__item">
 											<div class="kt-notification__item-icon">
-												<i class="flaticon2-hourglass kt-font-brand"></i>
+												<i class="flaticon2-poll-symbol kt-font-brand"></i>
 											</div>
 											<div class="kt-notification__item-details">
 												<div class="kt-notification__item-title kt-font-bold">
-													My Tasks
+													Rate My Instructors
 												</div>
 												<div class="kt-notification__item-time">
-													latest tasks and projects
+													your experience and thoughts
 												</div>
 											</div>
 										</a>
-										<a href="custom/apps/user/profile-1/overview&demo=demo12.html" class="kt-notification__item">
+										<a href="{{ url_for('profile.rate_course') }}" class="kt-notification__item">
 											<div class="kt-notification__item-icon">
-												<i class="flaticon2-cardiogram kt-font-warning"></i>
+												<i class="flaticon2-analytics kt-font-warning"></i>
 											</div>
 											<div class="kt-notification__item-details">
 												<div class="kt-notification__item-title kt-font-bold">
-													Billing
+													Rate My Courses
 												</div>
 												<div class="kt-notification__item-time">
-													billing & statements <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill kt-badge--rounded">2 pending</span>
+													your recommendations and opinions
 												</div>
 											</div>
 										</a>
 										<div class="kt-notification__custom kt-space-between">
-											<a href="auth/logout" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
-								
+											<a href="{{ url_for('auth.logout') }}" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
 										</div>
 									</div>
-
 									<!--end: Navigation -->
 								</div>
 							</div>
-
 							<!--end: User Bar -->
 						</div>
-
 						<!-- end:: Header Topbar -->
 					</div>
-
 					<!-- end:: Header -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -426,7 +388,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-													<button type="submit" class="btn btn-primary">Send message</button>
+													<button type="submit" class="btn btn-primary">Rate</button>
 												</div>
 											</form>
 										</div>
@@ -443,16 +405,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
 						<div class="kt-container  kt-container--fluid ">
 							<div class="kt-footer__copyright">
-								2020&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Smart Advisor</a>
+								2020&nbsp;&copy;&nbsp;Smart Advisor
 							</div>
 							<div class="kt-footer__menu">
-								<a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">About</a>
-								<a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
-								<a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
+								<a href="/profile/#reviews" class="kt-footer__menu-link kt-link">Reviews</a>
+								<a href="/profile/#team" class="kt-footer__menu-link kt-link">Team</a>
+								<a href="/profile/#contact_us" class="kt-footer__menu-link kt-link">Contact</a>
 							</div>
 						</div>
 					</div>
-
 					<!-- end:: Footer -->
 				</div>
 			</div>

@@ -182,43 +182,43 @@ dept_name_mapping = {
 }
 
 departments = [
-               'Political Science and International Relations Department (in Turkish)',
-               'Political Science and International Relations Department (in English)',
-               'Psychology Department (in Turkish)', 
-               'Psychology Department (in English)',
-               'Sociology Department', 
-               'Philosophy Department',
-               'History Department', 
-               'Turkish Language and Literature Department',
-               'English Language and Literature Department', 
-               'Translation and Interpretation Department', 
-               'Industrial Engineering Department (in English)',
-               'Industrial Engineering Department (in Turkish)',
+            #    'Political Science and International Relations Department (in Turkish)',
+            #    'Political Science and International Relations Department (in English)',
+            #    'Psychology Department (in Turkish)', 
+            #    'Psychology Department (in English)',
+            #    'Sociology Department', 
+            #    'Philosophy Department',
+            #    'History Department', 
+            #    'Turkish Language and Literature Department',
+            #    'English Language and Literature Department', 
+            #    'Translation and Interpretation Department', 
+            #    'Industrial Engineering Department (in English)',
+            #    'Industrial Engineering Department (in Turkish)',
                'Computer Science and Engineering Department',
-               'Electrical and Electronics Engineering Department',
-               'Civil Engineering Department',
-               'Mechanical Engineering Department',
-               'Management Department', 
-               'International Trade and Management Department', 
-               'Entrepreneurship Department', 
-               'Management Information Systems Department',
-               'Economics Department', 
-               'International Finance Department',
-               'Architecture Department (in Turkish)',
-               'Architecture Department (in English)',
-               'Interior Architecture and Environmental Design Department',
-               'Industrial Design Department',
-               'Cinema and Television Department (in Turkish)',
-               'Cinema and Television Department (in English)', 
-               'Public Relations and Advertising Department',
-               'New Media and Communication Department', 
-               'Islamic Studies', 
-               'Law',
-               'Public Relations and Publicity',
-               'Social Services',
-               'Occupational Health and Safety',
-               'Construction Technology',
-               'Photography and Videography'
+            #    'Electrical and Electronics Engineering Department',
+            #    'Civil Engineering Department',
+            #    'Mechanical Engineering Department',
+            #    'Management Department', 
+            #    'International Trade and Management Department', 
+            #    'Entrepreneurship Department', 
+            #    'Management Information Systems Department',
+            #    'Economics Department', 
+            #    'International Finance Department',
+            #    'Architecture Department (in Turkish)',
+            #    'Architecture Department (in English)',
+            #    'Interior Architecture and Environmental Design Department',
+            #    'Industrial Design Department',
+            #    'Cinema and Television Department (in Turkish)',
+            #    'Cinema and Television Department (in English)', 
+            #    'Public Relations and Advertising Department',
+            #    'New Media and Communication Department', 
+            #    'Islamic Studies', 
+            #    'Law',
+            #    'Public Relations and Publicity',
+            #    'Social Services',
+            #    'Occupational Health and Safety',
+            #    'Construction Technology',
+            #    'Photography and Videography'
                ]
               
 vocational_schools = [
@@ -248,11 +248,11 @@ def insert_to_db(dept_list, fetch_required, fetch_electives, vocational_school):
                                        "VALUES (%s, %s, %s, %s, %s, %s, %s);", (course[1], course[2], int(course[7]), int(course[8]), int(course[5]), int(course[6]), int(course[1].split()[1][0])))
                     except mysql.connector.errors.IntegrityError:
                         pass
-
+                    
                     try:
                         cursor.execute("INSERT INTO course_department (course_id, department_name, course_type) "
-                                       "VALUES (%s, %s, %s);", (course[1], course[0], course[3]))
-                    except:
+                                        "VALUES (%s, %s, %s);", (course[1], course[0], course[3]))
+                    except mysql.connector.errors.IntegrityError:
                         pass
 
                     try:
@@ -273,5 +273,5 @@ def insert_to_db(dept_list, fetch_required, fetch_electives, vocational_school):
 
 insert_to_db(departments, True, False, False)
 insert_to_db(departments, False, True, False)
-insert_to_db(vocational_schools, True, False, True)
-insert_to_db(vocational_schools, False, True, True)
+# insert_to_db(vocational_schools, True, False, True)
+# insert_to_db(vocational_schools, False, True, True)

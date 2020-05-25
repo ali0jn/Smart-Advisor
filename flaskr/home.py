@@ -13,7 +13,7 @@ def home():
         return redirect(url_for('profile.profile', current_user=user_id))
     else:
         block, radio, label = fetch_testifiers()
-        return render_template('home/home.html', radio_buttons=radio, testifiers=block, labels=label)
+        return render_template('home/home.html', title='Home', radio_buttons=radio, testifiers=block, labels=label)
 
 @bp.route('/faq')
 def faqs():

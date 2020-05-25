@@ -21,16 +21,16 @@ def profile():
         return redirect(url_for('profile.instructor_profile'))
     student = Student.get(current_user[0])
     block, radio, label = fetch_testifiers()
-    student_number, semester_of_student, advisor, standing, gpa, completed_credits, completed_ects = student.get_details()
+    details = student.get_details()
     department = student.get_department()
     graduation_progress = 100
     if department != None:
         graduation_progress = student.graduation_progress()
     incompleted_required_courses = student.get_incompleted_required_courses()
     time_table = student.get_timetable()
-    return render_template('profile/profile.html', name=student.student_name, email=student.student_email, profile_pic=student.student_profile_picture, testifiers=block, 
-                           radio_buttons=radio, labels=label, student_number=student_number, semester_of_student=semester_of_student, advisor=advisor, standing=standing, 
-                           gpa=gpa, completed_credits=completed_credits, completed_ects=completed_ects, department=department, graduation_progress=graduation_progress, 
+    return render_template('profile/profile.html', title='Profile', name=student.student_name, email=student.student_email, profile_pic=student.student_profile_picture, testifiers=block, 
+                           radio_buttons=radio, labels=label, student_number=details[0], semester_of_student=details[1], advisor=details[2], standing=details[3], 
+                           gpa=details[4], completed_credits=details[5], completed_ects=details[6], department=department, graduation_progress=graduation_progress, 
                            time_table=time_table, incompleted_courses=incompleted_required_courses)
 
 @bp.route('/fetch_sap', methods=['POST', 'GET'])
@@ -39,7 +39,7 @@ def fetch_sap():
     current_user = g.user
     student = Student.get(current_user[0])
     if request.method == 'GET':
-        return render_template('profile/fetch_sap.html', name=student.student_name, profile_pic=student.student_profile_picture)
+        return render_template('profile/fetch_sap.html', title='Fetch SAP', name=student.student_name, profile_pic=student.student_profile_picture)
     else:
         email = request.form['email']
         password = request.form['password']
@@ -57,12 +57,12 @@ def predict():
             subjects.append(subject.strip())
             
     if request.method == 'GET':
-        return render_template('profile/predict.html', name=student.student_name, profile_pic=student.student_profile_picture, subjects=subjects)
+        return render_template('profile/predict.html', title='Predict', name=student.student_name, profile_pic=student.student_profile_picture, subjects=subjects)
     else:
         subject_filters = request.form['subject_filters']
         min_grade = request.form['min-grade']
         predictions = get_predictions(subject_filters.strip().split(), min_grade, student)
-        return render_template('profile/predict.html', name=student.student_name, profile_pic=student.student_profile_picture, subjects=subjects)
+        return render_template('profile/predict.html', title='Predict', name=student.student_name, profile_pic=student.student_profile_picture, subjects=subjects, predictions=predictions)
 
 @bp.route('/rate_instructor', methods=['POST', 'GET'])
 @login_required
@@ -119,7 +119,7 @@ def testify():
     current_user = g.user
     student_object = Student.get(current_user[0])
     if request.method == 'GET':
-        return render_template('profile/testimonial.html', name=student_object.student_name, profile_pic=student_object.student_profile_picture)
+        return render_template('profile/testimonial.html', title='Testimonial', name=student_object.student_name, profile_pic=student_object.student_profile_picture)
     else:
         headline = request.form['headline']
         testimony = request.form['testimony']
@@ -169,5 +169,4 @@ def student_progress():
                                     'completed_courses': completed_courses,
                                     'incompleted_required_courses': incompleted_required_courses,
                                     'graduation_progress': str(graduation_progress)}
-
     return render_template('profile/student_progress.html', name=instructor.instructor_name, profile_pic=instructor.instructor_profile_pic, advisees_details=json.dumps(advisees_details), advisees=advisees)

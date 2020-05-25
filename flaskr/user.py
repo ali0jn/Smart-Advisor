@@ -125,6 +125,7 @@ class Instructor(UserMixin):
         return advisees
     
     def get_course_stats(self):
+        colors = ['gold', 'green', 'blue', 'yellow', 'red', 'grey', 'purple']
         db = get_db()
         cursor = db.cursor()
         cursor.execute("SELECT res.course_id, c.title, res.department_code, res.total_enrolled, res.avg_gpa "
@@ -149,7 +150,7 @@ class Instructor(UserMixin):
             course_stats.setdefault(course_id, [['Department Code', 'Ratios']])
             gpa_stats.setdefault(course_id, [["Department", "Avg. GPA", {"role": "style"}]])
             course_stats[course_id].append([department_code, total_enrolled])
-            gpa_stats[course_id].append([department_code, round(float(avg_gpa), 2), 'gold'])
+            gpa_stats[course_id].append([department_code, round(float(avg_gpa), 2), random.choice(colors)])
         for key in course_stats:
             course_stats[key] = json.dumps(course_stats[key])
             gpa_stats[key] = json.dumps(gpa_stats[key])
@@ -195,8 +196,7 @@ class Student(UserMixin):
         cursor.execute("SELECT student_id, student_semester, (SELECT instructor_name FROM instructor WHERE instructor_email = advisor), standing, gpa, completed_credits, completed_ects "
                        "FROM student "
                        "WHERE student_google_id = {};".format(self.student_google_id))
-        details = cursor.fetchone()
-        return details[0], details[1], details[2], details[3], details[4], details[5], details[6]
+        return cursor.fetchone()
 
     def get_department(self):
         db = get_db()
@@ -311,8 +311,8 @@ class Student(UserMixin):
                             "tc.instructor_email "
                        "FROM teaches AS tc, takes AS tk "
                        "WHERE tc.course_id=tk.course_id AND tk.grade IS NULL AND tc.section_year=tk.section_year AND tc.semester=tk.semester AND tc.section_id=tk.section_id AND tk.student_google_id={} AND "
-                            "(tc.course_id, tc.section_year, tc.semester) NOT IN "
-                            "(SELECT course_id, section_year, semester FROM instructor_rating);".format(self.student_google_id))
+                            "(tc.course_id, tc.section_year, tc.semester, tk.student_google_id, tc.instructor_email) NOT IN "
+                            "(SELECT course_id, section_year, semester, student_google_id, instructor_email FROM instructor_rating);".format(self.student_google_id))
         
         unrated_instructors = cursor.fetchall()
         return unrated_instructors

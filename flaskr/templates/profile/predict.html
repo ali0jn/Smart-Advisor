@@ -99,44 +99,40 @@
 								<table class="table" style="text-align: center;">
 									<thead>
 										<tr>
-											<td style="width:10%">Course Code</td>
-											<td style="width:35%">Course Name</td>
-											<td style="width:10%">Credit</td>
-											<td style="width:12%">Prerequisite(s)</td>
-											<td style="width:10%">Predicted Grade</td>
-											<td style="width:13%">Worst Scenario Grade</td>
-											<td style="width:13%">Best Scenario Grade</td>
+											<td style="width:10%;">Course Code</td>
+											<td style="width:35%;">Course Name</td>
+											<td style="width:10%;">Credit</td>
+											<td style="width:10%;">Predicted Grade</td>
+											<td style="width:13%;">Worst Scenario Grade</td>
+											<td style="width:13%;">Best Scenario Grade</td>
+											<td style="width:25%;">GPA Drop/Rise</td>
+
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>
-												<span class="kt-widget11__title">CS 350</span>
-											</td>
-											<td>
-												<span class="kt-widget11__title">Database Systems</span>
-												<span class="kt-widget11__sub">Type: Required</span>
-											</td>
-											<td>3</td>
-											<td>ENGR 102</td>
-											<td class="kt-font-brand kt-font-bold">A</td>
-											<td class="kt-font-bold" style="color:red">B</td>
-											<td class="kt-font-bold" style="color:green">A+</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="kt-widget11__title">ENGR 102</span>
-											</td>
-											<td>
-												<span class="kt-widget11__title">Programming Practice</span>
-												<span class="kt-widget11__sub">Type: Required</span>
-											</td>
-											<td>3</td>
-											<td>ENGR 101</td>
-											<td class="kt-font-brand kt-font-bold">B+</td>
-											<td class="kt-font-bold" style="color:red">C</td>
-											<td class="kt-font-bold" style="color:green">A+</td>
-										</tr>
+										{% for course_code in predictions %}
+											<tr>
+												<td>
+													<span class="kt-widget11__title">{{ course_code }}</span>
+												</td>
+												<td>
+													<span class="kt-widget11__title">{{ predictions[course_code]["title"] }}</span>
+													<span class="kt-widget11__sub">Type: {{ predictions[course_code]["type"] }}</span>
+												</td>
+												<td>{{ predictions[course_code]["credit"] }}</td>
+												<td class="kt-font-brand kt-font-bold">{{ predictions[course_code]["prediction"] }}</td>
+												<td class="kt-font-bold" style="color:red">{{ predictions[course_code]["worst"] }}</td>
+												<td class="kt-font-bold" style="color:green">{{ predictions[course_code]["best"] }}</td>
+												{% if "-" in predictions[course_code]["change"] %}
+													<td class="kt-font-bold" style="color:red"><i class="flaticon2-arrow-down"></i> {{ predictions[course_code]["change"] }}</td>
+												{% elif "+" in predictions[course_code]["change"] %}
+													<td class="kt-font-bold" style="color:green"><i class="flaticon2-arrow-up"></i> {{ predictions[course_code]["change"] }}</td>
+												{% else %}
+													<td class="kt-font-bold" style="color:yellow"><i class="flaticon2-line"></i> {{ predictions[course_code]["change"] }}</td>
+												{% endif %}
+												
+											</tr>
+										{% endfor %}
 									</tbody>
 								</table>
 							</div>
@@ -203,6 +199,13 @@
 		<!--end:: Widgets/Sale Reports-->
 		
 	</div>
+	<script>
+		function activateSpinnerPredict(){
+			var spinning_button = document.getElementById("submit_button");
+			spinning_button.className = "btn btn-primary kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light";
+			spinning_button.textContent = "Please Wait! ...";
+		}
+	</script>
 
 	<script>
 		function highlightSelected(){
@@ -221,6 +224,7 @@
 
 	<script>
 		function getSubjects(){
+			activateSpinnerPredict();
 			var subject_filters = document.getElementById("subject_filters");
 			var sel = document.getElementById('kt_select2_3');
 			var opt;
