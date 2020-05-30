@@ -88,7 +88,7 @@ def callback():
         return redirect(url_for('profile.profile'))
 
     elif users_email.split('@')[1] == 'gmail.com':   # change this later to sehir.edu.tr
-        instructor = Instructor(unique_id, users_name, 'kerimkar@sehir.edu.tr', picture)
+        instructor = Instructor(unique_id, users_name, 'alicakmak@sehir.edu.tr', picture)
         
         if not instructor.get():
             instructor.create()

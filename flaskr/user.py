@@ -54,20 +54,19 @@ class Instructor(UserMixin):
         db = get_db()
         cursor = db.cursor()
         cursor.execute("SELECT ts.course_id, sd.title, ts.start_hr, ts.start_min, ts.end_hr, ts.end_min, sd.building_no, sd.room_no "
-                       "FROM time_slot as ts, (SELECT t.course_id, t.semester, t.section_year, t.section_id, c.title, s.building_no, s.room_no "
-                                              "FROM teaches AS t, section AS s, course AS c "
-                                              "WHERE instructor_email = %s "
-                                                "AND t.section_year = %s "
-                                                "AND t.semester = %s "
-                                                "AND t.section_id=s.section_id "
-                                                "AND t.semester=s.semester "
-                                                "AND t.section_year=s.section_year "
-                                                "AND t.course_id=s.course_id "
-                                                "AND c.course_id=t.course_id) AS sd "
-                       "WHERE ts.section_id=sd.section_id "
-                        "AND ts.course_id=sd.course_id "
+                       "FROM time_slot as ts, (SELECT s.section_id, s.semester, s.section_year, s.course_id, s.building_no, s.room_no, c.title "
+                                              "FROM course AS c, (SELECT * "
+                                                                 "FROM section "
+                                                                 "WHERE (section_id, course_id, semester, section_year) IN (SELECT section_id, course_id, semester, section_year "
+                                                                                                                           "FROM teaches "
+                                                                                                                           "WHERE instructor_email = %s "
+                                                                                                                           "AND section_year = %s "
+                                                                                                                           "AND semester = %s)) as s "
+                                              "WHERE c.course_id = s.course_id) as sd "
+                        "WHERE ts.section_id=sd.section_id "
                         "AND ts.section_year=sd.section_year "
                         "AND ts.semester=sd.semester "
+                        "AND ts.course_id=sd.course_id "
                         "AND ts.section_day = %s;", (self.instructor_email, parameters['current_year'], parameters['current_semester'], today))
         
         time_table = cursor.fetchall()
@@ -125,7 +124,8 @@ class Instructor(UserMixin):
         return advisees
     
     def get_course_stats(self):
-        colors = ['gold', 'green', 'blue', 'yellow', 'red', 'grey', 'purple']
+        colors = ['gold', 'green', 'blue', 'yellow', 'red', 'grey', 'purple', 'lavendar', 'lightblue',
+                  'lightgreen', 'cyan', 'magenta']
         db = get_db()
         cursor = db.cursor()
         cursor.execute("SELECT res.course_id, c.title, res.department_code, res.total_enrolled, res.avg_gpa "
@@ -150,7 +150,8 @@ class Instructor(UserMixin):
             course_stats.setdefault(course_id, [['Department Code', 'Ratios']])
             gpa_stats.setdefault(course_id, [["Department", "Avg. GPA", {"role": "style"}]])
             course_stats[course_id].append([department_code, total_enrolled])
-            gpa_stats[course_id].append([department_code, round(float(avg_gpa), 2), random.choice(colors)])
+            random_color = random.randint(0, len(colors)-1)
+            gpa_stats[course_id].append([department_code, round(float(avg_gpa), 2), colors.pop(random_color)])
         for key in course_stats:
             course_stats[key] = json.dumps(course_stats[key])
             gpa_stats[key] = json.dumps(gpa_stats[key])
@@ -218,7 +219,9 @@ class Student(UserMixin):
         extras = sum(list(dept_course_reqs[department_name].values()))
         cursor.execute("SELECT COUNT(*) "
                        "FROM takes "
-                       "WHERE student_google_id = '{}' AND grade IS NOT NULL AND grade NOT IN ('F', 'IA');".format(self.student_google_id))
+                       "WHERE student_google_id = '{}' "
+                       "AND grade IS NOT NULL "
+                       "AND grade NOT IN ('F', 'IA', 'W');".format(self.student_google_id))
         total_taken = int(cursor.fetchone()[0])
         return int((total_taken / (total_required + extras) * 100))
 
@@ -281,12 +284,16 @@ class Student(UserMixin):
     def get_unrated_courses(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT section_id, semester, section_year, t.course_id, title "
-                       "FROM takes AS t, course AS c "
-                       "WHERE student_google_id = {} AND grade IS NULL AND t.course_id = c.course_id AND "
-                       "(t.course_id, section_id, student_google_id, semester, section_year) NOT IN "
-                       "(SELECT course_id, section_id, student_google_id, semester, section_year " 
-		               "FROM course_rating);".format(self.student_google_id))
+        cursor.execute("SELECT res.section_id, res.semester, res.section_year, res.course_id, c.title "
+                       "FROM course AS c, (SELECT section_id, semester, section_year, course_id "
+                                          "FROM takes AS t "
+                                          "WHERE student_google_id = {} "
+                                          "AND grade IS NULL "
+                                          "AND (course_id, section_id, semester, section_year) NOT IN "
+                                          "(SELECT course_id, section_id, semester, section_year "
+                                          "FROM course_rating AS cr "
+                                          "WHERE cr.student_google_id = t.student_google_id)) AS res "
+                       "WHERE res.course_id = c.course_id;".format(self.student_google_id))
         unrated_courses = cursor.fetchall()
         return unrated_courses
 
@@ -305,14 +312,22 @@ class Student(UserMixin):
     def get_unrated_instructors(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT tc.section_year, tc.semester, tk.course_id, tk.section_id, (SELECT title FROM course WHERE course_id=tk.course_id), "
-                            "(SELECT instructor_name FROM instructor WHERE instructor_email = tc.instructor_email), "
-                            "(SELECT instructor_profile_picture FROM instructor WHERE instructor_email = tc.instructor_email), "
-                            "tc.instructor_email "
-                       "FROM teaches AS tc, takes AS tk "
-                       "WHERE tc.course_id=tk.course_id AND tk.grade IS NULL AND tc.section_year=tk.section_year AND tc.semester=tk.semester AND tc.section_id=tk.section_id AND tk.student_google_id={} AND "
-                            "(tc.course_id, tc.section_year, tc.semester, tk.student_google_id, tc.instructor_email) NOT IN "
-                            "(SELECT course_id, section_year, semester, student_google_id, instructor_email FROM instructor_rating);".format(self.student_google_id))
+        cursor.execute("SELECT res.section_year, res.semester, res.course_id, res.section_id, (SELECT title "
+																	                          "FROM course "
+                                                                                              "WHERE course_id = res.course_id), "
+	                          "(SELECT instructor_name FROM instructor WHERE instructor_email = res.instructor_email), "
+                              "(SELECT instructor_profile_picture FROM instructor WHERE instructor_email = res.instructor_email), "
+                              "res.instructor_email "
+                       "FROM (SELECT * "
+                             "FROM teaches "
+                             "WHERE (section_id, semester, section_year, course_id) IN (SELECT section_id, semester, section_year, course_id "
+                                                                                       "FROM takes as t "
+                                                                                       "WHERE student_google_id = {} "
+                                                                                       "AND t.grade IS NULL "
+                                                                                       "AND (course_id, semester, section_year) NOT IN "
+                                                                                           "(SELECT course_id, semester, section_year "
+                                                                                            "FROM instructor_rating AS ir "
+                                                                                            "WHERE t.student_google_id = ir.student_google_id))) as res;".format(self.student_google_id))
         
         unrated_instructors = cursor.fetchall()
         return unrated_instructors
@@ -335,21 +350,19 @@ class Student(UserMixin):
         db = get_db()
         cursor = db.cursor()
         cursor.execute("SELECT ts.course_id, sd.title, ts.start_hr, ts.start_min, ts.end_hr, ts.end_min, sd.building_no, sd.room_no "
-                       "FROM time_slot as ts, (SELECT t.course_id, t.semester, t.section_year, t.section_id, c.title, s.building_no, s.room_no "
-                                              "FROM takes AS t, section AS s, course AS c "
-                                              "WHERE student_google_id = %s "
-                                                "AND t.section_year = %s "
-                                                "AND t.semester = %s "
-                                                "AND t.section_id=s.section_id "
-                                                "AND t.semester=s.semester "
-                                                "AND t.section_year=s.section_year "
-                                                "AND t.course_id=s.course_id "
-                                                "AND c.course_id=t.course_id) AS sd "
-                       "WHERE ts.section_id=sd.section_id "
-                        "AND ts.course_id=sd.course_id "
-                        "AND ts.section_year=sd.section_year "
-                        "AND ts.semester=sd.semester "
-                        "AND ts.section_day = %s;", (self.student_google_id, parameters['current_year'], parameters['current_semester'], today))
+                       "FROM time_slot AS ts, (SELECT c.course_id, res.semester, res.section_year, res.section_id, c.title, res.building_no, res.room_no "
+                                                "FROM course as c, (SELECT * "
+                                                                    "FROM section "
+                                                                    "WHERE (section_id, semester, section_year, course_id) IN (SELECT section_id, semester, section_year, course_id "
+                                                                                                                                "FROM takes "
+                                                                                                                                "WHERE student_google_id = %s "
+                                                                                                                                "AND grade IS NULL)) AS res "
+					                           "WHERE c.course_id = res.course_id) AS sd "
+                       "WHERE ts.section_id = sd.section_id "
+                       "AND ts.course_id=sd.course_id "
+                       "AND ts.section_year=sd.section_year "
+                       "AND ts.semester=sd.semester "
+                       "AND ts.section_day = %s;", (self.student_google_id, today))
         
         time_table = cursor.fetchall()
         for i in range(len(time_table)):
@@ -408,15 +421,18 @@ class Student(UserMixin):
     def get_completed_courses(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT t.course_id, c.title, t.semester, t.section_year, t.grade, cd.course_type "
-                       "FROM takes AS t, course_department AS cd, course AS c "
-                       "WHERE t.student_google_id = %s "
-                       "AND t.grade IS NOT NULL "
-                       "AND c.course_id = t.course_id "
-                       "AND t.course_id=cd.course_id "
-                       "AND (SELECT department_name "
-							"FROM student_department "
-                            "WHERE student_google_id = %s) = cd.department_name "
+        cursor.execute("SELECT t.course_id, t.title, t.semester, t.section_year, t.grade, cd.course_type "
+                       "FROM course_department as cd, (SELECT c.course_id, c.title, res.semester, res.section_year, res.grade "
+                                                      "FROM course AS c, (SELECT semester, section_year, course_id, grade "
+                                                                         "FROM takes "
+                                                                         "WHERE student_google_id = %s "
+                                                                         "AND grade IS NOT NULL) AS res "
+                                                      "WHERE c.course_id = res.course_id) AS t "
+                       "WHERE cd.course_id = t.course_id "
+                       "AND cd.department_name = (SELECT department_name "
+						                         "FROM student_department "
+                                                 "WHERE student_google_id = %s "
+                                                 "AND enrolled_type = 'Main Prg') "
                        "ORDER BY t.section_year, t.semester, t.course_id;", (self.student_google_id, self.student_google_id))
         
         completed_courses = cursor.fetchall()
