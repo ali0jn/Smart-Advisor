@@ -132,5 +132,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# styles and scripts
-**/static/
+flaskr/static
