@@ -127,6 +127,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 .dmypy.json
+
+# styles
+flaskr/static/
+
 dmypy.json
 
 # Pyre type checker
