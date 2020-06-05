@@ -133,4 +133,4 @@ dmypy.json
 .pyre/
 
 # styles and scripts
-static/
+**/static/
